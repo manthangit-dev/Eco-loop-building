@@ -89,4 +89,30 @@ JSONL and CSV output
 Sensor validation
 ```
 
-This path is observational only. Module 5 actuator control is not implemented.
+This Module 4 path remains observational; the separate bounded Module 5 test path
+is shown below.
+
+## Implemented Module 5 deterministic test path
+
+```text
+Live sensor state
+       ↓
+Deterministic test plan
+       ↓
+Approved single actuator
+       ↓
+Actuation callback
+       ↓
+set_actuator_value
+       ↓
+EnergyPlus physical response
+       ↓
+reset_actuator
+       ↓
+Normal EnergyPlus control resumes
+       ↓
+Sensor and event validation
+```
+
+This is a fixed actuator-functionality test. The Module 6 state bus and autonomous
+control are not implemented.

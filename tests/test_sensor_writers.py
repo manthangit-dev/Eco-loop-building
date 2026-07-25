@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 from src.energyplus.sensor_writers import SensorWriters
+
 from tests.test_sensor_snapshot import snapshot
 
 

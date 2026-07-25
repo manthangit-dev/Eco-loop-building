@@ -1,5 +1,6 @@
 from pathlib import Path
 from types import SimpleNamespace
+from typing import Any
 
 from src.energyplus.sensor_collector import SensorCollector
 from src.energyplus.sensor_definitions import (
@@ -56,7 +57,7 @@ class Exchange:
     def kind_of_sim(self, _state: object) -> int:
         return self.environment_type
 
-    def __getattr__(self, name: str):
+    def __getattr__(self, name: str) -> Any:
         values = {
             "current_environment_num": 1,
             "year": 2024,

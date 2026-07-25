@@ -50,7 +50,7 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 2 | Baseline EnergyPlus building | Completed |
 | 3 | Python EnergyPlus runner | Completed |
 | 4 | Live sensor extraction | Completed |
-| 5 | Actuator injection | Pending |
+| 5 | Actuator injection | Completed |
 | 6 | State bus and storage | Pending |
 | 7 | Rule-based fallback controller | Pending |
 | 8 | Safety guard | Pending |
@@ -111,6 +111,17 @@ See [docs/LIVE_SENSOR_EXTRACTION.md](docs/LIVE_SENSOR_EXTRACTION.md). The verifi
 annual run captured 35,040 read-only weather-period snapshots with zero callback or
 API exchange errors and passed comparison with Module 3. No actuator control, AI,
 optimization, or energy-saving claim exists.
+
+## Safe runtime actuator injection — Module 5
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_actuator_injection.ps1
+```
+
+See [docs/RUNTIME_ACTUATOR_INJECTION.md](docs/RUNTIME_ACTUATOR_INJECTION.md).
+The deterministic one-zone test applied a bounded cooling-setpoint override,
+observed its response, and released it with `reset_actuator`. No autonomous control,
+AI, optimisation, or verified energy-saving claim exists.
 
 ## Results — not yet generated
 

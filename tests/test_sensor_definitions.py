@@ -1,5 +1,6 @@
 from dataclasses import replace
 from pathlib import Path
+from typing import Any
 
 import pytest
 from src.energyplus.sensor_definitions import (
@@ -13,7 +14,7 @@ from src.energyplus.sensor_definitions import (
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def definition(**overrides: object) -> SensorDefinition:
+def definition(**overrides: Any) -> SensorDefinition:
     base = SensorDefinition(
         "temperature",
         "Temperature",

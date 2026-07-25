@@ -1,0 +1,86 @@
+actuator_test:
+  name: ThermoLedger Module 5 safe runtime actuator injection
+  enabled: true
+  experiment_type: deterministic_single_zone_setpoint_test
+  output_root: data/output/module_5_actuator_test
+  control_run_directory: control/current
+  intervention_run_directory: intervention/current
+  discovery_csv: available_actuator_data.csv
+  event_jsonl: actuator_events.jsonl
+  event_csv: actuator_events.csv
+  manifest_json: actuator_manifest.json
+  summary_json: actuator_run_summary.json
+  validation_json: actuator_validation_summary.json
+  comparison_json: actuator_comparison_summary.json
+
+discovery:
+  require_runtime_discovery: true
+  preferred_component_type: Zone Temperature Control
+  preferred_control_type: Cooling Setpoint
+  require_zone_specific: true
+  reject_shared_schedule: true
+  require_occupied_zone: true
+  require_non_plenum_zone: true
+
+target:
+  selection_policy: highest_zone_temperature_at_hottest_occupied_summer_afternoon
+  zone_name: SPACE3-1
+  component_type: Zone Temperature Control
+  control_type: Cooling Setpoint
+  unique_key: SPACE3-1
+  units: C
+  effective_setpoint_variable: Zone Thermostat Cooling Setpoint Temperature
+
+intervention:
+  month: 7
+  day: 19
+  start_hour: 14
+  start_minute: 0
+  end_hour: 15
+  end_minute: 30
+  baseline_setpoint_celsius: 23.9
+  offset_celsius: 1.0
+  minimum_setpoint_celsius: 22.0
+  maximum_setpoint_celsius: 26.0
+  maximum_offset_celsius: 1.0
+  minimum_meaningful_change_celsius: 0.5
+  expected_zone_timesteps: 6
+  require_occupancy: true
+  require_weather_run: true
+  reset_after_window: true
+
+callbacks:
+  actuation_callback: after_predictor_before_hvac_managers
+  observation_callback: end_zone_timestep_after_zone_reporting
+
+validation:
+  setpoint_tolerance_celsius: 0.15
+  recovery_tolerance_celsius: 0.25
+  require_valid_actuator_handle: true
+  require_control_run: true
+  require_intervention_run: true
+  require_at_least_one_write: true
+  require_at_least_one_reset: true
+  require_no_writes_outside_window: true
+  require_effective_setpoint_response: true
+  require_post_reset_recovery: true
+  require_zero_api_errors: true
+  require_zero_callback_errors: true
+  require_zero_severe_errors: true
+  require_zero_fatal_errors: true
+  require_all_sensor_snapshots: true
+  require_source_checksum_match: true
+  require_weather_checksum_match: true
+
+safety:
+  maximum_actuators: 1
+  allow_schedule_actuator: false
+  allow_shared_schedule: false
+  allow_ventilation_control: false
+  allow_weather_control: false
+  allow_equipment_control: false
+  allow_multiple_zone_control: false
+  allow_idf_modification: false
+  allow_weather_modification: false
+  allow_network_calls: false
+  allow_llm_calls: false

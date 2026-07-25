@@ -1,8 +1,9 @@
 # Acceptance Criteria
 
-Modules 0 through 4 are complete. Read-only live extraction produced 35,040 validated
-weather-period snapshots with all six zones, zero callback/API errors, unchanged inputs, and
-physical parity with Module 3. Actuation and all later criteria remain future work.
+Modules 0 through 5 are complete. A deterministic isolated-zone test acquired one
+cooling-setpoint handle, applied a bounded override, observed the response, reset the
+actuator, and verified normal control recovery. Autonomous control and later criteria
+remain future work.
 
 ## Required MVP acceptance criteria
 
