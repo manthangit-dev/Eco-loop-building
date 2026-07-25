@@ -1,8 +1,8 @@
 project:
   name: ThermoLedger AI
   full_title: "ThermoLedger AI — A Fair, Carbon-Aware Thermal Battery Agent for Autonomous Building Control"
-  stage: module_1_environment_complete
-  current_module: 1
+  stage: module_2_baseline_complete
+  current_module: 2
 runtime:
   python_version: "3.12"
   energyplus_version: "26.1.0"

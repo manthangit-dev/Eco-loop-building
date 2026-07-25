@@ -47,7 +47,7 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | --- | --- | --- |
 | 0 | Scope and repository foundation | Completed |
 | 1 | Development environment | Completed |
-| 2 | Baseline EnergyPlus building | Pending |
+| 2 | Baseline EnergyPlus building | Completed |
 | 3 | Python EnergyPlus runner | Pending |
 | 4 | Live sensor extraction | Pending |
 | 5 | Actuator injection | Pending |
@@ -75,6 +75,20 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 ## Setup — Module 1
 
 Follow [docs/INSTALLATION.md](docs/INSTALLATION.md). Module 1 verification is read-only and does not run a building simulation.
+
+## Baseline simulation — Module 2
+
+Module 2 preserves the EnergyPlus 26.1 five-zone example and runs an uncontrolled Chicago
+O'Hare TMY3 baseline using the EnergyPlus command line:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/run_baseline.ps1
+python scripts/validate_baseline.py --config config/baseline.yaml
+```
+
+See [docs/BASELINE_MODEL.md](docs/BASELINE_MODEL.md) and
+[docs/BASELINE_EXECUTION.md](docs/BASELINE_EXECUTION.md). No AI control or optimization exists
+yet, and the baseline establishes no energy-saving claim.
 
 ## Results — not yet generated
 

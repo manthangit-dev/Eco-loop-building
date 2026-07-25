@@ -1,0 +1,11 @@
+diff --git a/models/source/5ZoneAirCooled_v26_1_original.idf b/models/baseline/thermoledger_5zone_baseline.idf
+index 345e25a..550764f 100644
+--- a/models/source/5ZoneAirCooled_v26_1_original.idf
++++ b/models/baseline/thermoledger_5zone_baseline.idf
+@@ -3535,3 +3535,6 @@
+   Output:Surfaces:List,ViewFactorInfo;
+ 
++  ! ThermoLedger Module 2 reporting-only addition.
++  Output:SQLite,
++    SimpleAndTabular;        !- Option Type
++

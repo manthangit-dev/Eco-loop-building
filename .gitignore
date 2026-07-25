@@ -11,8 +11,7 @@ htmlcov/
 *.db
 *.sqlite
 *.sqlite3
-data/output/*.csv
-data/output/*.json
+data/output/
 *.eso
 *.eio
 *.err
@@ -22,7 +21,7 @@ data/output/*.json
 *.rdd
 *.rvaudit
 eplusout.*
-weather/*.epw
+weather/**/*.epw
 models/ollama/
 *.gguf
 *.tmp

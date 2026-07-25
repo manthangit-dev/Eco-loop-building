@@ -1,0 +1,44 @@
+baseline:
+  name: ThermoLedger five-zone baseline
+  description: Uncontrolled EnergyPlus example-model baseline with reporting-only additions.
+  energyplus_version: "26.1"
+  source_model: models/source/5ZoneAirCooled_v26_1_original.idf
+  baseline_model: models/baseline/thermoledger_5zone_baseline.idf
+  weather_filename: USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+  output_directory: data/output/module_2_baseline/current
+  output_prefix: thermoledger
+  run_period_policy: model_defined_run_periods
+  expected_zone_count: 6
+  preserve_source_model: true
+  physical_model_modified: false
+
+execution:
+  platform: native_windows_amd64
+  executable_resolution:
+    - process_environment
+    - local_dotenv
+  weather_resolution_order:
+    - repository_weather_input
+    - energyplus_weather_path
+    - energyplus_home_weather_data
+  clean_output_before_run: true
+  retain_previous_run: timestamped_archive
+  timeout_seconds: 1800
+
+validation:
+  require_zero_fatal_errors: true
+  require_zero_severe_errors: true
+  warning_policy: report
+  required_output_files:
+    - thermoledger.err
+    - thermoledger.eio
+    - thermoledger.csv
+    - thermoledgerTable.htm
+    - thermoledger.sql
+  optional_dictionary_files:
+    - thermoledger.rdd
+    - thermoledger.mdd
+  minimum_non_empty_output_files: 5
+  verify_model_checksum: true
+  verify_weather_checksum: true
+

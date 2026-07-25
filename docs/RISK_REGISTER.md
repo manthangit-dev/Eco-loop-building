@@ -23,3 +23,5 @@
 | Codex implements modules out of sequence | Medium | Medium | Module-plan review | Persistent AGENTS.md rules | Stop, revert scoped changes safely |
 | Python 3.12 launcher is unavailable or inaccessible | High | High | `py -3.12 --version` and environment checker | Install or repair Python 3.12 and recreate `.venv` | Use a supported WSL Python 3.12 environment |
 | `ENERGYPLUS_HOME` is unset or invalid | High | High | Module 1 environment checker | Configure local `.env` with the real installation directory | Install and verify EnergyPlus 26.1.0 on the selected platform |
+| Source header names Chicago TMY2 while Module 2 requires Chicago O'Hare TMY3 | Medium | Medium | Compare IDF header, configured EPW filename, and manifest checksum | Record exact TMY3 provenance with every baseline result | Reject comparisons that do not use the manifest weather checksum |
+| Baseline EnergyPlus warnings obscure validity | Low | High | Parse the authoritative final ERR summary | Require zero severe/fatal errors and report every warning | Keep Module 2 incomplete until reviewed; verified run produced zero warnings |

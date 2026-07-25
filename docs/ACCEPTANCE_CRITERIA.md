@@ -1,7 +1,8 @@
 # Acceptance Criteria
 
-Modules 0 and 1 are complete. The real Module 1 checker passed on native Windows with Python
-3.12 and EnergyPlus 26.1.0. All later criteria remain future work.
+Modules 0 through 2 are complete. The preserved five-zone source and reporting-only derivative
+both completed real EnergyPlus 26.1.0 runs with the declared Chicago O'Hare TMY3 weather,
+exit code zero, and zero severe or fatal errors. All later criteria remain future work.
 
 ## Required MVP acceptance criteria
 
