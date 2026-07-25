@@ -1,0 +1,50 @@
+project:
+  name: ThermoLedger AI
+  full_title: "ThermoLedger AI — A Fair, Carbon-Aware Thermal Battery Agent for Autonomous Building Control"
+  stage: module_1_environment_complete
+  current_module: 1
+runtime:
+  python_version: "3.12"
+  energyplus_version: "26.1.0"
+  preferred_platform: Windows 11 or WSL
+  fallback_platform: WSL or supported Linux environment
+  control_interval_minutes: 15
+simulation:
+  building_type: five-zone office
+  starting_model: 5ZoneAirCooled.idf
+  live_demo_days: 1
+  evaluation_days: 7
+  baseline_execution: sequential, using identical inputs to AI execution
+  ai_execution: sequential, using identical inputs to baseline execution
+controls:
+  primary: zone cooling set-point
+  secondary: ventilation multiplier
+  future_controls: []
+sensors:
+  required:
+    - zone mean air temperature
+    - zone occupant count
+    - outdoor dry-bulb temperature
+    - outdoor relative humidity
+    - facility electrical demand
+    - facility electricity consumption
+    - HVAC/cooling energy where available
+    - simulation date and time
+  optional:
+    - Fanger PMV
+    - zone CO2 concentration
+    - zone relative humidity
+storage:
+  database: SQLite
+  exports: [CSV, JSON]
+llm:
+  runtime: Ollama
+  model: pending hardware inspection
+  model_selection_status: postponed until available hardware is inspected
+  structured_output_required: true
+  direct_actuator_access_allowed: false
+evaluation:
+  energy_reduction_target_percent: 10
+  peak_reduction_target_percent: 10
+  comfort_compliance_target_percent: 95
+  successful_control_cycle_target_percent: 98
