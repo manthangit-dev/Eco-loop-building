@@ -71,3 +71,22 @@ The LLM proposes actions. Deterministic code validates actions. Only validated a
 ## Evaluation architecture
 
 Separate baseline and AI runs consume identical inputs and periods. Their stored outputs are compared afterward for energy, peak demand, comfort, reliability, and fairness; no simultaneous execution is required for the MVP.
+# Implemented Module 4 read-only path
+
+```text
+EnergyPlus
+    ↓
+Data Exchange API
+    ↓
+Read-only sensor registry
+    ↓
+End-of-zone-timestep callback
+    ↓
+Timestamped sensor snapshot
+    ↓
+JSONL and CSV output
+    ↓
+Sensor validation
+```
+
+This path is observational only. Module 5 actuator control is not implemented.

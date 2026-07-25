@@ -1,6 +1,6 @@
 # Module Plan
 
-Modules 0 through 3 are completed. Module 4 is next and remains pending; no later module may
+Modules 0 through 4 are completed. Module 5 is next and remains pending; no later module may
 be implemented early.
 
 | # | Module / status | Purpose | Inputs | Expected outputs | Dependencies | Tests or verification | Definition of done |
@@ -9,7 +9,7 @@ be implemented early.
 | 1 | Development environment — **Completed** | Prepare reproducible local environment | Version decisions, host details | Documented environment and path configuration | 0 | Validate Python/EnergyPlus discovery | Prerequisites are verified and documented |
 | 2 | Baseline EnergyPlus building — **Completed** | Establish baseline office model | Original IDF, weather | Preserved source and runnable derived setup | 1 | Real baseline run | Model runs with declared inputs |
 | 3 | Python EnergyPlus runner — **Completed** | Launch and coordinate simulation | Environment, model | Minimal runner interface | 1, 2 | Executed runner check | Runner starts simulation reproducibly |
-| 4 | Live sensor extraction — Pending | Read declared state | Running simulation, sensor map | Timestamped structured observations | 3 | Compare reads to output records | Required available sensors are captured |
+| 4 | Live sensor extraction — **Completed** | Read declared state | Running simulation, sensor map | Timestamped structured observations | 3 | Compare reads to output records | Required available sensors are captured |
 | 5 | Actuator injection — Pending | Apply validated controls | Handles, safe action | Observed actuator effect | 3, 4 | Handle and response check | Primary actuator injection works safely |
 | 6 | State bus and storage — Pending | Normalize and persist state | Observations, action records | State schema and SQLite records | 4, 5 | Schema and persistence checks | Replayable state/action records exist |
 | 7 | Rule-based fallback controller — Pending | Provide LLM-independent control | State bus, policy limits | Deterministic proposed action | 6 | Boundary and outage tests | Valid fallback operates without LLM |

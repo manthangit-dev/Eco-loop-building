@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import shutil
 import threading
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from time import monotonic
-from typing import Any
+from typing import Any, Protocol
 from uuid import uuid4
 
 from scripts.compare_runner_outputs import comparison_exit_code, run_comparison
@@ -39,6 +40,14 @@ _GENERATED_SUFFIXES = {
     ".rvaudit",
     ".sql",
 }
+
+
+class RunnerExtension(Protocol):
+    def before_run(self, api: Any, state: Any, config: RunnerConfig) -> None: ...
+
+    def register_callbacks(self, api: Any, state: Any) -> None: ...
+
+    def close(self) -> None: ...
 
 
 def _installation_outputs(home: Path) -> list[str]:
@@ -129,6 +138,9 @@ class EnergyPlusRunner:
         skip_validation: bool = False,
         skip_comparison: bool = False,
         loaded_api: LoadedAPI | None = None,
+        output_root_override: Path | None = None,
+        output_directory_override: Path | None = None,
+        extension: RunnerExtension | None = None,
     ) -> RunResult:
         if not _RUN_LOCK.acquire(blocking=False):
             raise RuntimeError("A concurrent in-process EnergyPlus run is not allowed.")
@@ -141,9 +153,23 @@ class EnergyPlusRunner:
         collector: CallbackCollector | None = None
         config: RunnerConfig | None = None
         result: RunResult | None = None
+        extension_error = ""
         try:
             loaded = loaded or load_energyplus_api(self.root)
             config = load_run_config(self.config_path, loaded.energyplus_home)
+            if output_root_override is not None or output_directory_override is not None:
+                if output_root_override is None or output_directory_override is None:
+                    raise ValueError("Both output overrides are required together.")
+                resolved_root = output_root_override.resolve()
+                resolved_output = output_directory_override.resolve()
+                resolved_output.relative_to(resolved_root)
+                if resolved_output == resolved_root:
+                    raise ValueError("Output must be a child of its approved root.")
+                config = replace(
+                    config,
+                    output_root=resolved_root,
+                    output_directory=resolved_output,
+                )
             _prepare_output(config, no_clean)
             collector = CallbackCollector(
                 config.output_directory / "energyplus_api_messages.log",
@@ -167,6 +193,9 @@ class EnergyPlusRunner:
                 api.runtime.callback_after_new_environment_warmup_complete(
                     state, collector.warmup_complete_callback()
                 )
+            if extension is not None:
+                extension.before_run(api, state, config)
+                extension.register_callbacks(api, state)
             api.runtime.set_console_output_status(state, config.console_output and not quiet)
             timeout = timeout_override or config.timeout_seconds
             exit_code, timed_out, cancelled, error = run_with_soft_timeout(
@@ -239,6 +268,11 @@ class EnergyPlusRunner:
             elif result is None:
                 raise
         finally:
+            if extension is not None:
+                try:
+                    extension.close()
+                except (OSError, RuntimeError, ValueError, TypeError) as exc:
+                    extension_error = f"{type(exc).__name__}: {exc}"
             if loaded is not None and state is not None:
                 try:
                     loaded.api.runtime.clear_callbacks()
@@ -252,6 +286,10 @@ class EnergyPlusRunner:
 
         if result is None or config is None:
             raise RuntimeError("Runner failed before a structured result could be created.")
+        if extension_error:
+            result.callback_errors.append(f"Extension close failed: {extension_error}")
+            if not result.error_message:
+                result.error_message = f"Extension close failed: {extension_error}"
         result.callbacks_cleared = callbacks_cleared
         result.state_deleted = state_deleted
         metadata_path = config.output_directory / "run_metadata.json"

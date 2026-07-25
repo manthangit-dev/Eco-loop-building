@@ -118,8 +118,10 @@ def compare_outputs(
         ),
         (
             "Exit code",
-            metadata_2.get("energyplus_exit_code") == metadata_3.get("exit_code") == 0,
-            metadata_2.get("energyplus_exit_code"),
+            metadata_2.get("energyplus_exit_code", metadata_2.get("exit_code"))
+            == metadata_3.get("exit_code")
+            == 0,
+            metadata_2.get("energyplus_exit_code", metadata_2.get("exit_code")),
             metadata_3.get("exit_code"),
         ),
         (

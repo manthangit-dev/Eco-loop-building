@@ -1,8 +1,8 @@
 # Acceptance Criteria
 
-Modules 0 through 3 are complete. The verified baseline also completed through the EnergyPlus
-Python Runtime API with lifecycle/progress/message callback evidence, safe state cleanup,
-output validation, and structural parity with Module 2. All later criteria remain future work.
+Modules 0 through 4 are complete. Read-only live extraction produced 35,040 validated
+weather-period snapshots with all six zones, zero callback/API errors, unchanged inputs, and
+physical parity with Module 3. Actuation and all later criteria remain future work.
 
 ## Required MVP acceptance criteria
 

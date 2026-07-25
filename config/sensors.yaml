@@ -1,0 +1,129 @@
+sensor_extraction:
+  name: ThermoLedger Module 4 read-only sensors
+  enabled: true
+  callback: end_zone_timestep_after_zone_reporting
+  collection_frequency: every_zone_timestep
+  collect_during_warmup: false
+  collect_design_days: false
+  collect_weather_run_period: true
+  weather_run_environment_type: 3
+  output_root: data/output/module_4_sensor_extraction
+  snapshots_jsonl: sensor_snapshots.jsonl
+  snapshots_csv: sensor_snapshots.csv
+  discovery_csv: available_api_data.csv
+  manifest_json: sensor_manifest.json
+  validation_json: sensor_validation_summary.json
+  flush_every_snapshots: 100
+  maximum_callback_errors: 0
+
+variables:
+  required:
+    - logical_id: zone_mean_air_temperature
+      display_name: Zone mean air temperature
+      name: Zone Mean Air Temperature
+      key: "{zone}"
+      units: C
+      scope: zone
+    - logical_id: zone_occupant_count
+      display_name: Zone occupant count
+      name: Zone People Occupant Count
+      key: "{zone}"
+      units: person
+      scope: zone
+      fallback_values_by_key:
+        PLENUM-1: 0.0
+    - logical_id: outdoor_dry_bulb
+      display_name: Outdoor dry-bulb temperature
+      name: Site Outdoor Air Drybulb Temperature
+      key: Environment
+      units: C
+      scope: environment
+    - logical_id: outdoor_relative_humidity
+      display_name: Outdoor relative humidity
+      name: Site Outdoor Air Relative Humidity
+      key: Environment
+      units: percent
+      scope: environment
+    - logical_id: facility_demand_rate
+      display_name: Facility total electricity demand rate
+      name: Facility Total Electricity Demand Rate
+      key: Whole Building
+      units: W
+      scope: building
+  optional:
+    - logical_id: zone_relative_humidity
+      display_name: Zone relative humidity
+      name: Zone Air Relative Humidity
+      key: "{zone}"
+      units: percent
+      scope: zone
+    - logical_id: zone_fanger_pmv
+      display_name: Zone Fanger PMV
+      name: Zone Thermal Comfort Fanger Model PMV
+      key: "{zone}"
+      units: dimensionless
+      scope: zone
+      enabled: false
+      unavailable_reason: Not present in the Module 2 RDD.
+    - logical_id: zone_co2
+      display_name: Zone CO2 concentration
+      name: Zone Air CO2 Concentration
+      key: "{zone}"
+      units: ppm
+      scope: zone
+      enabled: false
+      unavailable_reason: Not present in the Module 2 RDD and contaminant simulation is not enabled.
+
+meters:
+  required:
+    - logical_id: facility_electricity
+      display_name: Facility purchased electricity
+      name: ElectricityPurchased:Facility
+      key: ""
+      units: J
+      scope: building
+    - logical_id: hvac_electricity
+      display_name: HVAC electricity
+      name: Electricity:HVAC
+      key: ""
+      units: J
+      scope: building
+  optional:
+    - {logical_id: facility_electricity_meter_unavailable, display_name: Facility electricity meter API audit, name: "Electricity:Facility", key: "", units: J, scope: building}
+    - {logical_id: cooling_electricity, display_name: Cooling electricity, name: "Cooling:Electricity", key: "", units: J, scope: building}
+    - {logical_id: heating_electricity, display_name: Heating electricity, name: "Heating:Electricity", key: "", units: J, scope: building}
+    - {logical_id: fans_electricity, display_name: Fans electricity, name: "Fans:Electricity", key: "", units: J, scope: building}
+    - {logical_id: pumps_electricity, display_name: Pumps electricity, name: "Pumps:Electricity", key: "", units: J, scope: building}
+    - {logical_id: interior_equipment_electricity, display_name: Interior equipment electricity, name: "InteriorEquipment:Electricity", key: "", units: J, scope: building}
+    - {logical_id: interior_lighting_electricity, display_name: Interior lighting electricity, name: "InteriorLights:Electricity", key: "", units: J, scope: building}
+
+timestamp:
+  include_environment: true
+  include_calendar_fields: true
+  include_day_of_year: true
+  include_day_of_week: true
+  include_zone_timestep: true
+  include_current_sim_time: true
+
+validation:
+  require_all_zones: true
+  require_required_handles: true
+  require_finite_values: true
+  require_unique_timestamps: true
+  require_monotonic_simulation_time: true
+  require_no_warmup_rows: true
+  require_weather_run_period_only: true
+  require_zero_callback_errors: true
+  require_zero_api_errors: true
+  expected_zone_count: 6
+  minimum_snapshots: 35040
+  maximum_missing_fraction: 0.0
+
+safety:
+  read_only: true
+  allow_actuator_handles: false
+  allow_actuator_reads: false
+  allow_actuator_writes: false
+  allow_internal_variable_access: false
+  allow_idf_modification: false
+  allow_weather_modification: false

@@ -49,7 +49,7 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 1 | Development environment | Completed |
 | 2 | Baseline EnergyPlus building | Completed |
 | 3 | Python EnergyPlus runner | Completed |
-| 4 | Live sensor extraction | Pending |
+| 4 | Live sensor extraction | Completed |
 | 5 | Actuator injection | Pending |
 | 6 | State bus and storage | Pending |
 | 7 | Rule-based fallback controller | Pending |
@@ -99,8 +99,18 @@ python scripts/run_api_baseline.py --config config/api_runner.yaml
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_api_runner.ps1
 ```
 
-See [docs/PYTHON_API_RUNNER.md](docs/PYTHON_API_RUNNER.md). Module 4 is next and remains
-pending. No sensors, actuators, AI control, optimization, or energy-saving claims exist yet.
+See [docs/PYTHON_API_RUNNER.md](docs/PYTHON_API_RUNNER.md).
+
+## Live sensor extraction — Module 4
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_sensor_extraction.ps1
+```
+
+See [docs/LIVE_SENSOR_EXTRACTION.md](docs/LIVE_SENSOR_EXTRACTION.md). The verified
+annual run captured 35,040 read-only weather-period snapshots with zero callback or
+API exchange errors and passed comparison with Module 3. No actuator control, AI,
+optimization, or energy-saving claim exists.
 
 ## Results — not yet generated
 
