@@ -1,0 +1,60 @@
+runner:
+  name: ThermoLedger Module 3 API baseline
+  energyplus_version: "26.1"
+  execution_mode: python_energyplus_runtime_api
+  input_model: models/baseline/thermoledger_5zone_baseline.idf
+  weather_filename: USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+  output_root: data/output/module_3_api_runner
+  output_prefix: thermoledger
+  clean_current_output: true
+  retain_previous_run: timestamped_archive
+  timeout_seconds: 1800
+  timeout_grace_seconds: 30
+  console_output: false
+  capture_messages: true
+  capture_progress: true
+  capture_environment_events: true
+  validate_after_run: true
+  compare_with_module_2: true
+
+paths:
+  energyplus_home_source:
+    - process_environment
+    - local_dotenv
+  idf_resolution_order:
+    - configured_module_2_baseline
+    - energyplus_idf_path
+  weather_resolution_order:
+    - repository_weather_input
+    - energyplus_weather_path
+    - energyplus_home_weather_data
+  module_2_output: data/output/module_2_baseline/current
+  module_3_output: data/output/module_3_api_runner/current
+
+callbacks:
+  progress: true
+  message: true
+  begin_environment: true
+  warmup_complete: true
+  maximum_stored_messages: 200
+  maximum_message_length: 2000
+
+validation:
+  require_exit_code_zero: true
+  require_zero_severe_errors: true
+  require_zero_fatal_errors: true
+  require_progress_callback: true
+  require_message_callback: true
+  require_environment_callback: true
+  require_output_validation: true
+  require_source_checksum_match: true
+  require_weather_checksum_match: true
+
+safety:
+  allow_output_only_inside_repository: true
+  allow_idf_modification: false
+  allow_weather_modification: false
+  allow_exchange_api: false
+  allow_actuator_access: false
+  allow_concurrent_in_process_runs: false
+

@@ -165,6 +165,18 @@ def test_output_directory_safety(tmp_path: Path) -> None:
     assert not is_safe_output_directory(allowed, allowed)
 
 
+def test_validation_accepts_explicit_module_3_output_root(tmp_path: Path) -> None:
+    config, original = _project(
+        tmp_path, "EnergyPlus Completed Successfully-- 0 Warning; 0 Severe Errors;"
+    )
+    api_root = tmp_path / "data/output/module_3_api_runner"
+    api_output = api_root / "current"
+    api_root.mkdir(parents=True)
+    original.rename(api_output)
+    checks, _ = validate_run(config, api_output, api_root)
+    assert validation_exit_code(checks) == 0
+
+
 def test_validation_exit_code() -> None:
     assert validation_exit_code([Check("pass", Status.PASS, "ok")]) == 0
     assert validation_exit_code([Check("fail", Status.FAIL, "bad")]) == 1

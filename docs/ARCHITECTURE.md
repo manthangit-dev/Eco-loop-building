@@ -1,5 +1,20 @@
 # Architecture
 
+## Implemented execution path through Module 3
+
+```mermaid
+flowchart TD
+  BM[Verified EnergyPlus baseline model] --> AL[Python API loader]
+  AL --> RR[Runtime API runner]
+  RR --> CB[Lifecycle, progress, and bounded message callbacks]
+  CB --> OUT[Run metadata and EnergyPlus outputs]
+  OUT --> VAL[Existing baseline validator]
+```
+
+This implemented path starts the unchanged baseline and observes execution lifecycle only. It
+does not yet read EnergyPlus variables, obtain actuator handles, control equipment, or invoke
+AI.
+
 ## System architecture
 
 ```mermaid

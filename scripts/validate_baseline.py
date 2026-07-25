@@ -155,14 +155,16 @@ def _pass_fail(name: str, condition: bool, detail: str, remediation: str) -> Che
 
 
 def validate_run(
-    config_path: Path, output_override: Path | None = None
+    config_path: Path,
+    output_override: Path | None = None,
+    allowed_root_override: Path | None = None,
 ) -> tuple[list[Check], Path]:
     root = config_path.resolve().parents[1]
     config = load_yaml(config_path)
     manifest = load_manifest(root / "models" / "MODEL_MANIFEST.json")
     baseline = config["baseline"]
     validation = config["validation"]
-    allowed_root = root / "data" / "output" / "module_2_baseline"
+    allowed_root = allowed_root_override or root / "data" / "output" / "module_2_baseline"
     output = output_override or root / baseline["output_directory"]
     checks: list[Check] = []
 
@@ -192,7 +194,7 @@ def validate_run(
     metadata: dict[str, Any] = {}
     if metadata_check.status is Status.PASS:
         metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
-        code = metadata.get("energyplus_exit_code")
+        code = metadata.get("energyplus_exit_code", metadata.get("exit_code"))
         checks.append(
             _pass_fail(
                 "EnergyPlus exit code",
@@ -304,8 +306,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=Path("config/baseline.yaml"))
     parser.add_argument("--output-directory", type=Path)
+    parser.add_argument("--allowed-output-root", type=Path)
     args = parser.parse_args(argv)
-    checks, output = validate_run(args.config, args.output_directory)
+    checks, output = validate_run(
+        args.config, args.output_directory, args.allowed_output_root
+    )
     for check in checks:
         print(f"[{check.status.value}] {check.name}: {check.detail}")
         if check.remediation and check.status is not Status.PASS:

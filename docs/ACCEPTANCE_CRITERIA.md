@@ -1,8 +1,8 @@
 # Acceptance Criteria
 
-Modules 0 through 2 are complete. The preserved five-zone source and reporting-only derivative
-both completed real EnergyPlus 26.1.0 runs with the declared Chicago O'Hare TMY3 weather,
-exit code zero, and zero severe or fatal errors. All later criteria remain future work.
+Modules 0 through 3 are complete. The verified baseline also completed through the EnergyPlus
+Python Runtime API with lifecycle/progress/message callback evidence, safe state cleanup,
+output validation, and structural parity with Module 2. All later criteria remain future work.
 
 ## Required MVP acceptance criteria
 

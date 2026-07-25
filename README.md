@@ -48,7 +48,7 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 0 | Scope and repository foundation | Completed |
 | 1 | Development environment | Completed |
 | 2 | Baseline EnergyPlus building | Completed |
-| 3 | Python EnergyPlus runner | Pending |
+| 3 | Python EnergyPlus runner | Completed |
 | 4 | Live sensor extraction | Pending |
 | 5 | Actuator injection | Pending |
 | 6 | State bus and storage | Pending |
@@ -89,6 +89,18 @@ python scripts/validate_baseline.py --config config/baseline.yaml
 See [docs/BASELINE_MODEL.md](docs/BASELINE_MODEL.md) and
 [docs/BASELINE_EXECUTION.md](docs/BASELINE_EXECUTION.md). No AI control or optimization exists
 yet, and the baseline establishes no energy-saving claim.
+
+## Python Runtime API — Module 3
+
+Run and fully verify the unchanged baseline through the EnergyPlus Runtime API:
+
+```powershell
+python scripts/run_api_baseline.py --config config/api_runner.yaml
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify_api_runner.ps1
+```
+
+See [docs/PYTHON_API_RUNNER.md](docs/PYTHON_API_RUNNER.md). Module 4 is next and remains
+pending. No sensors, actuators, AI control, optimization, or energy-saving claims exist yet.
 
 ## Results — not yet generated
 
