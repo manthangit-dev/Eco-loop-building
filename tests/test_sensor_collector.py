@@ -88,23 +88,46 @@ def settings(tmp_path: Path) -> SensorSettings:
     )
     definitions = tuple(
         SensorDefinition(
-            logical_id, logical_id, ExchangeKind.VARIABLE, logical_id, "Z", "",
-            scope, True
+            logical_id, logical_id, ExchangeKind.VARIABLE, logical_id, "Z", "", scope, True
         )
         for logical_id, scope in required
     ) + (
         SensorDefinition(
-            "facility_electricity", "Facility", ExchangeKind.METER,
-            "Electricity:Facility", "", "J", SensorScope.BUILDING, True
+            "facility_electricity",
+            "Facility",
+            ExchangeKind.METER,
+            "Electricity:Facility",
+            "",
+            "J",
+            SensorScope.BUILDING,
+            True,
         ),
         SensorDefinition(
-            "hvac_electricity", "HVAC", ExchangeKind.METER,
-            "Electricity:HVAC", "", "J", SensorScope.BUILDING, True
+            "hvac_electricity",
+            "HVAC",
+            ExchangeKind.METER,
+            "Electricity:HVAC",
+            "",
+            "J",
+            SensorScope.BUILDING,
+            True,
         ),
     )
     return SensorSettings(
-        tmp_path, tmp_path / "current", "a.jsonl", "a.csv", "d.csv", "m.json",
-        "v.json", 1, 3, 1, 1, definitions, ("Z",), ()
+        tmp_path,
+        tmp_path / "current",
+        "a.jsonl",
+        "a.csv",
+        "d.csv",
+        "m.json",
+        "v.json",
+        1,
+        3,
+        1,
+        1,
+        definitions,
+        ("Z",),
+        (),
     )
 
 

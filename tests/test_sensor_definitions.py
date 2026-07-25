@@ -37,8 +37,10 @@ def test_module_4_config_expands_every_manifest_zone() -> None:
     ]
     assert len(settings.zones) == settings.expected_zone_count == 6
     assert {item.key for item in temperatures} == set(settings.zones)
-    assert all(item.exchange_kind in {ExchangeKind.VARIABLE, ExchangeKind.METER}
-               for item in settings.definitions)
+    assert all(
+        item.exchange_kind in {ExchangeKind.VARIABLE, ExchangeKind.METER}
+        for item in settings.definitions
+    )
     assert {item.logical_id for item in settings.unavailable_configured} == {
         "zone_fanger_pmv",
         "zone_co2",

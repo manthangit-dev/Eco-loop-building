@@ -71,9 +71,7 @@ def validate_sensor_output(
     metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
     sensor_manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
     extraction = json.loads(summary_path.read_text(encoding="utf-8-sig"))
-    counts = parse_error_summary(
-        error_path.read_text(encoding="utf-8", errors="replace")
-    )
+    counts = parse_error_summary(error_path.read_text(encoding="utf-8", errors="replace"))
     checks.extend(
         [
             _check(
@@ -137,8 +135,10 @@ def validate_sensor_output(
                 data_errors.append(f"warmup row at line {line_number}")
             if int(timestamp["environment_type"]) != settings.weather_run_environment_type:
                 data_errors.append(f"unapproved environment at line {line_number}")
-            if not 1 <= int(timestamp["zone_timestep_number"]) <= int(
-                timestamp["timesteps_per_hour"]
+            if (
+                not 1
+                <= int(timestamp["zone_timestep_number"])
+                <= int(timestamp["timesteps_per_hour"])
             ):
                 data_errors.append(f"invalid timestep at line {line_number}")
             required_values = [
@@ -150,9 +150,7 @@ def validate_sensor_output(
             ]
             for zone in row["zones"]:
                 zones_seen.add(str(zone["zone_name"]))
-                required_values.extend(
-                    [zone["mean_air_temperature_c"], zone["occupant_count"]]
-                )
+                required_values.extend([zone["mean_air_temperature_c"], zone["occupant_count"]])
                 if float(zone["occupant_count"]) < 0:
                     data_errors.append(f"negative occupancy at line {line_number}")
                 humidity = zone.get("relative_humidity_percent")
@@ -176,9 +174,7 @@ def validate_sensor_output(
         ]
     )
 
-    project_manifest = json.loads(
-        (root / "models/MODEL_MANIFEST.json").read_text(encoding="utf-8")
-    )
+    project_manifest = json.loads((root / "models/MODEL_MANIFEST.json").read_text(encoding="utf-8"))
     checks.extend(
         [
             check_checksum(

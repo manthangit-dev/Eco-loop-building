@@ -31,3 +31,11 @@
 | Unoccupied plenum has no occupant-count runtime key | High | Low | Cross-check API listing and model `People` objects | Configure a documented zero only for `PLENUM-1`; require handles for occupied zones | Remove the fallback if occupancy is added to the plenum |
 | Actuator callback repeats within one zone timestep | High | Low | Count set calls and unique simulation periods | Reapply only the same bounded value and distinguish set calls from unique periods | Revisit timing if a future control strategy requires zone-only writes |
 | External override is not released | Low | High | Require reset event and post-reset set-point recovery | Call `reset_actuator` after the window and during active-state cleanup if needed | Fail validation and stop before autonomous control |
+| SQLite throughput or queue backpressure | Medium | High | Queue high-water, delay, timeout counters | Bounded queue, batching, WAL | Fail rather than silently drop state |
+| State subscriber failure | Medium | Medium | Subscriber error counter | Execute outside lock and isolate exceptions | Unsubscribe failed consumer |
+| Database corruption or incomplete shutdown | Low | High | Integrity/FK checks and drained metadata | Dedicated owner thread and ordered close | Reject DB and replay Module 4 JSONL |
+| WAL sidecars after interruption | Medium | Medium | Output/Git inspection | Ignore generated DB artifacts | Archive or safely checkpoint the directory |
+| Sequence or schema mismatch | Low | High | Constraints and validation | Reject duplicates/decreases/unsupported versions | Future explicit migration only |
+| Large annual database (~499 MB) | High | Medium | File-size monitoring | Generated output exclusion | Revisit retention in a future module |
+| Future concurrent readers | Medium | Medium | Busy-time and reader tests | WAL and read-only predefined queries | Serialize or redesign later |
+| Generated database committed | Medium | High | Git status and ignore checks | Ignore DB, WAL, SHM, output trees | Remove from index; retain locally |

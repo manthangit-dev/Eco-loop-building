@@ -73,9 +73,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         comparison_ok = comparison_code == 0
     summary["sensor_validation_status"] = "PASS" if sensor_validation_ok else "FAIL"
-    summary["baseline_comparison_status"] = (
-        "PASS" if comparison_ok else "FAIL"
-    )
+    summary["baseline_comparison_status"] = "PASS" if comparison_ok else "FAIL"
     summary_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
 
     counters = collector.counters
@@ -106,4 +104,3 @@ def main(argv: Sequence[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -31,13 +31,10 @@ def _run(
         encoding="utf-8",
     )
     (directory / "thermoledger.err").write_text(
-        f"EnergyPlus Completed Successfully-- {warnings} Warnings; "
-        f"{severe} Severe Errors;",
+        f"EnergyPlus Completed Successfully-- {warnings} Warnings; {severe} Severe Errors;",
         encoding="utf-8",
     )
-    (directory / "thermoledger.csv").write_text(
-        "\n".join((header, *rows)) + "\n", encoding="utf-8"
-    )
+    (directory / "thermoledger.csv").write_text("\n".join((header, *rows)) + "\n", encoding="utf-8")
     for suffix in ("eio", "htm", "sql", "rdd", "mdd"):
         (directory / f"thermoledger.{suffix}").write_text("result", encoding="utf-8")
 
@@ -104,4 +101,3 @@ def test_checksum_reporting(tmp_path: Path) -> None:
 def test_comparison_exit_code() -> None:
     assert comparison_exit_code([Comparison("ok", True, 1, 1, "match")]) == 0
     assert comparison_exit_code([Comparison("bad", False, 1, 2, "mismatch")]) == 1
-

@@ -37,12 +37,8 @@ class SensorWriters:
         self._optional_meter_ids = optional_meter_ids
         self._flush_every = flush_every
         self._count = 0
-        self._json_stream: TextIO = self._jsonl_temp.open(
-            "w", encoding="utf-8", newline="\n"
-        )
-        self._csv_stream: TextIO = self._csv_temp.open(
-            "w", encoding="utf-8", newline=""
-        )
+        self._json_stream: TextIO = self._jsonl_temp.open("w", encoding="utf-8", newline="\n")
+        self._csv_stream: TextIO = self._csv_temp.open("w", encoding="utf-8", newline="")
         self._headers = csv_headers(zones, optional_meter_ids)
         self._writer = csv.DictWriter(
             self._csv_stream, fieldnames=self._headers, extrasaction="raise"
@@ -54,9 +50,7 @@ class SensorWriters:
         if self.closed:
             raise RuntimeError("Sensor writers are closed.")
         self._json_stream.write(snapshot.to_json() + "\n")
-        self._writer.writerow(
-            flatten_snapshot(snapshot, self._zones, self._optional_meter_ids)
-        )
+        self._writer.writerow(flatten_snapshot(snapshot, self._zones, self._optional_meter_ids))
         self._count += 1
         if self._count % self._flush_every == 0:
             self.flush()
@@ -80,4 +74,3 @@ class SensorWriters:
 
     def __exit__(self, *_args: object) -> None:
         self.close()
-

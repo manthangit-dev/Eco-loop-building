@@ -158,9 +158,7 @@ def flatten_snapshot(
         "hvac_electricity_raw_j": snapshot.building.hvac_electricity_raw_j,
     }
     for logical_id in optional_meter_ids:
-        row[f"meter.{logical_id}.raw_j"] = snapshot.building.optional_meters_raw_j.get(
-            logical_id
-        )
+        row[f"meter.{logical_id}.raw_j"] = snapshot.building.optional_meters_raw_j.get(logical_id)
     zone_map = {zone.zone_name: zone for zone in snapshot.zones}
     for zone_name in zones:
         zone = zone_map[zone_name]
@@ -170,4 +168,3 @@ def flatten_snapshot(
         row[f"zone.{zone_name}.fanger_pmv"] = zone.fanger_pmv
         row[f"zone.{zone_name}.co2_ppm"] = zone.co2_ppm
     return row
-

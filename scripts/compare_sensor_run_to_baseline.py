@@ -20,9 +20,7 @@ from scripts.compare_runner_outputs import (  # noqa: E402
 )
 
 
-def compare_sensor_run(
-    api_config: Path, sensor_output: Path | None = None
-) -> tuple[int, Path]:
+def compare_sensor_run(api_config: Path, sensor_output: Path | None = None) -> tuple[int, Path]:
     root = api_config.resolve().parents[1]
     config = yaml.safe_load(api_config.read_text(encoding="utf-8"))
     manifest = json.loads((root / "models/MODEL_MANIFEST.json").read_text(encoding="utf-8"))

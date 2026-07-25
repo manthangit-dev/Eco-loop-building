@@ -117,8 +117,7 @@ def test_fatal_error_summary() -> None:
 
 def test_final_summary_wins_over_detailed_lines() -> None:
     text = (
-        "** Warning ** one\n** Severe ** one\n"
-        "EnergyPlus Completed-- 4 Warnings; 2 Severe Errors;"
+        "** Warning ** one\n** Severe ** one\nEnergyPlus Completed-- 4 Warnings; 2 Severe Errors;"
     )
     counts = parse_error_summary(text)
     assert counts.warnings == 4

@@ -1,0 +1,71 @@
+state_model:
+  schema_version: 1
+  source: EnergyPlus
+  require_all_model_zones: true
+  classify_plenums: true
+  preserve_exact_zone_names: true
+  deterministic_zone_order: true
+  reject_non_finite_required_values: true
+  optional_missing_policy: preserve_null_with_availability
+
+state_bus:
+  enabled: true
+  history_capacity: 256
+  subscriber_error_policy: isolate_and_record
+  sequence_gap_policy: record
+  publish_after_normalisation: true
+  wait_default_timeout_seconds: 5.0
+
+storage:
+  enabled: true
+  database_name: thermoledger_state.db
+  schema_version: 1
+  journal_mode: WAL
+  synchronous_mode: NORMAL
+  foreign_keys: true
+  busy_timeout_ms: 5000
+  batch_size: 100
+  commit_interval_seconds: 1.0
+  persistence_queue_capacity: 512
+  enqueue_timeout_seconds: 5.0
+  clean_current_database: true
+  archive_previous_database: true
+  integrity_check_after_run: true
+
+execution:
+  output_root: data/output/module_6_state_bus
+  replay_output_directory: replay/current
+  live_output_directory: live/current
+  expected_snapshot_count: 35040
+  expected_zone_count: 6
+  run_module: 6
+  replay_execution_mode: module_4_jsonl_replay
+  live_execution_mode: python_energyplus_runtime_api_state_bus
+
+validation:
+  require_bus_publish_count: true
+  require_database_state_count: true
+  require_zone_rows_for_every_state: true
+  require_sequence_continuity: true
+  require_unique_states: true
+  require_monotonic_time: true
+  require_all_zones: true
+  require_plenum_classification: true
+  require_zero_persistence_errors: true
+  require_zero_subscriber_errors: true
+  require_queue_drained: true
+  require_integrity_check: true
+  require_foreign_key_check: true
+  require_source_checksum_match: true
+  require_weather_checksum_match: true
+
+safety:
+  allow_actuator_access: false
+  allow_actuator_writes: false
+  allow_control_decisions: false
+  allow_network_server: false
+  allow_external_database: false
+  allow_idf_modification: false
+  allow_weather_modification: false
+  allow_unbounded_history: false
+  allow_unbounded_queue: false

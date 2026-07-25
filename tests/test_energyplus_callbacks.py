@@ -54,4 +54,3 @@ def test_callback_exception_containment(tmp_path: Path) -> None:
     collector.log_path.mkdir()
     collector.message_callback()(b"cannot write")
     assert collector.errors
-

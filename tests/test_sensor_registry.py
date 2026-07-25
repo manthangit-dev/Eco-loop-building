@@ -47,16 +47,26 @@ class Exchange:
 
 def settings(tmp_path: Path) -> SensorSettings:
     variable = SensorDefinition(
-        "v", "V", ExchangeKind.VARIABLE, "Variable", "Key", "C",
-        SensorScope.ZONE, True
+        "v", "V", ExchangeKind.VARIABLE, "Variable", "Key", "C", SensorScope.ZONE, True
     )
     meter = SensorDefinition(
-        "m", "M", ExchangeKind.METER, "Meter", "", "J",
-        SensorScope.BUILDING, False
+        "m", "M", ExchangeKind.METER, "Meter", "", "J", SensorScope.BUILDING, False
     )
     return SensorSettings(
-        tmp_path, tmp_path / "current", "a.jsonl", "a.csv", "available.csv",
-        "manifest.json", "validation.json", 1, 3, 1, 1, (variable, meter), ("Z",), ()
+        tmp_path,
+        tmp_path / "current",
+        "a.jsonl",
+        "a.csv",
+        "available.csv",
+        "manifest.json",
+        "validation.json",
+        1,
+        3,
+        1,
+        1,
+        (variable, meter),
+        ("Z",),
+        (),
     )
 
 
@@ -88,4 +98,3 @@ def test_registry_waits_for_readiness_and_fails_required_handle(tmp_path: Path) 
     assert registry.handle_for("m") is None
     with pytest.raises(RuntimeError, match="not ready"):
         registry.read(exchange, object(), "v")
-

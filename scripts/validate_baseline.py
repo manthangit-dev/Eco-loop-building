@@ -308,9 +308,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--output-directory", type=Path)
     parser.add_argument("--allowed-output-root", type=Path)
     args = parser.parse_args(argv)
-    checks, output = validate_run(
-        args.config, args.output_directory, args.allowed_output_root
-    )
+    checks, output = validate_run(args.config, args.output_directory, args.allowed_output_root)
     for check in checks:
         print(f"[{check.status.value}] {check.name}: {check.detail}")
         if check.remediation and check.status is not Status.PASS:

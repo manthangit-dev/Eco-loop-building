@@ -67,4 +67,3 @@ def test_required_file_verification(tmp_path: Path) -> None:
 def test_summary_exit_code() -> None:
     assert exit_code([CheckResult("ok", Status.PASS, "ok")]) == 0
     assert exit_code([CheckResult("bad", Status.FAIL, "bad")]) == 1
-

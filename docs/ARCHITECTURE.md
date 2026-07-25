@@ -114,5 +114,25 @@ Normal EnergyPlus control resumes
 Sensor and event validation
 ```
 
-This is a fixed actuator-functionality test. The Module 6 state bus and autonomous
-control are not implemented.
+This is a fixed actuator-functionality test. Autonomous control is not implemented.
+
+## Implemented Module 6 state path
+
+```text
+EnergyPlus sensor callback
+        |
+SensorSnapshot
+        |
+State normaliser
+        |
+Canonical BuildingState
+        |
+Thread-safe StateBus
+       /             \
+Bounded history    Persistence worker
+                          |
+                    SQLite database
+```
+
+This implemented path is sensing-only. The future fallback, controller, comfort ledger,
+LLM, and dashboard are not implemented by Module 6.

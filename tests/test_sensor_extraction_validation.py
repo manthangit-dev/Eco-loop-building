@@ -10,4 +10,3 @@ def test_validator_fails_cleanly_for_missing_output(tmp_path: Path) -> None:
     checks, output = validate_sensor_output(ROOT / "config/sensors.yaml", tmp_path / "missing")
     assert output == tmp_path / "missing"
     assert any(check.status is Status.FAIL for check in checks)
-

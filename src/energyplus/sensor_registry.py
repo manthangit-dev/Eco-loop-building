@@ -49,9 +49,7 @@ class SensorRegistry:
     def _handle(self, exchange: Any, state: Any, definition: SensorDefinition) -> int:
         exchange.reset_api_error_flag(state)
         if definition.exchange_kind is ExchangeKind.VARIABLE:
-            handle = int(
-                exchange.get_variable_handle(state, definition.name, definition.key)
-            )
+            handle = int(exchange.get_variable_handle(state, definition.name, definition.key))
         else:
             handle = int(exchange.get_meter_handle(state, definition.name))
         if exchange.api_error_flag(state):

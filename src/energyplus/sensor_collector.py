@@ -38,7 +38,11 @@ class CollectorCounters:
 
 
 class SensorCollector:
-    def __init__(self, settings: SensorSettings) -> None:
+    def __init__(
+        self,
+        settings: SensorSettings,
+        snapshot_hook: Callable[[SensorSnapshot], None] | None = None,
+    ) -> None:
         self.settings = settings
         self.registry = SensorRegistry(settings, settings.output_directory)
         self.writers: SensorWriters | None = None
@@ -47,13 +51,13 @@ class SensorCollector:
         self._seen: set[tuple[int, int, int, int, int]] = set()
         self._last_sim_time: float | None = None
         self._reference: Callable[[Any], None] | None = None
+        self._snapshot_hook = snapshot_hook
 
     def before_run(self, api: Any, state: Any, _config: RunnerConfig) -> None:
         optional_meter_ids = tuple(
             definition.logical_id
             for definition in self.settings.definitions
-            if definition.exchange_kind is ExchangeKind.METER
-            and not definition.required
+            if definition.exchange_kind is ExchangeKind.METER and not definition.required
         )
         self.writers = SensorWriters(
             self.settings.output_directory,
@@ -68,9 +72,7 @@ class SensorCollector:
 
     def register_callbacks(self, api: Any, state: Any) -> None:
         self._reference = self.callback(api)
-        api.runtime.callback_end_zone_timestep_after_zone_reporting(
-            state, self._reference
-        )
+        api.runtime.callback_end_zone_timestep_after_zone_reporting(state, self._reference)
 
     def _timestamp(self, exchange: Any, state: Any) -> SimulationTimestamp:
         return SimulationTimestamp(
@@ -115,9 +117,7 @@ class SensorCollector:
                 mean_air_temperature_c=self._required(
                     exchange, state, f"zone_mean_air_temperature.{zone}"
                 ),
-                occupant_count=self._required(
-                    exchange, state, f"zone_occupant_count.{zone}"
-                ),
+                occupant_count=self._required(exchange, state, f"zone_occupant_count.{zone}"),
                 relative_humidity_percent=self._optional(
                     exchange, state, f"zone_relative_humidity.{zone}"
                 ),
@@ -125,16 +125,12 @@ class SensorCollector:
             for zone in self.settings.zones
         )
         optional_meters = {
-            definition.logical_id: self._optional(
-                exchange, state, definition.logical_id
-            )
+            definition.logical_id: self._optional(exchange, state, definition.logical_id)
             for definition in self.settings.definitions
-            if definition.exchange_kind is ExchangeKind.METER
-            and not definition.required
+            if definition.exchange_kind is ExchangeKind.METER and not definition.required
         }
         availability = {
-            definition.logical_id: self.registry.handle_for(definition.logical_id)
-            is not None
+            definition.logical_id: self.registry.handle_for(definition.logical_id) is not None
             for definition in self.settings.definitions
             if not definition.required
         }
@@ -148,15 +144,9 @@ class SensorCollector:
                 ),
             ),
             building=BuildingSensorState(
-                facility_electricity_raw_j=self._required(
-                    exchange, state, "facility_electricity"
-                ),
-                facility_demand_rate_w=self._required(
-                    exchange, state, "facility_demand_rate"
-                ),
-                hvac_electricity_raw_j=self._required(
-                    exchange, state, "hvac_electricity"
-                ),
+                facility_electricity_raw_j=self._required(exchange, state, "facility_electricity"),
+                facility_demand_rate_w=self._required(exchange, state, "facility_demand_rate"),
+                hvac_electricity_raw_j=self._required(exchange, state, "hvac_electricity"),
                 optional_meters_raw_j=optional_meters,
             ),
             zones=zones,
@@ -189,12 +179,9 @@ class SensorCollector:
                 if not self.registry.initialized:
                     ready = self.registry.initialize(exchange, state)
                     self.registry.capture_available_data(exchange, state)
-                    self.counters.api_error_flag_activations = (
-                        self.registry.api_error_count
-                    )
+                    self.counters.api_error_flag_activations = self.registry.api_error_count
                     self.counters.missing_required_handles = sum(
-                        not item.available and item.required
-                        for item in self.registry.discoveries
+                        not item.available and item.required for item in self.registry.discoveries
                     )
                     self.counters.missing_optional_handles = sum(
                         not item.available and not item.required
@@ -216,6 +203,8 @@ class SensorCollector:
                 if self.writers is None:
                     raise RuntimeError("Sensor writers were not initialized.")
                 self.writers.write(snapshot)
+                if self._snapshot_hook is not None:
+                    self._snapshot_hook(snapshot)
                 self._seen.add(identity)
                 self._last_sim_time = timestamp.current_simulation_time
                 self.counters.successful_snapshots += 1
@@ -225,9 +214,7 @@ class SensorCollector:
                 self.counters.last_snapshot_time = label
                 self.counters.api_error_flag_activations = self.registry.api_error_count
             except BaseException as exc:
-                self.callback_errors.append(
-                    f"{type(exc).__name__}: {exc}"
-                )
+                self.callback_errors.append(f"{type(exc).__name__}: {exc}")
                 self.counters.sensor_read_errors += 1
 
         return collect

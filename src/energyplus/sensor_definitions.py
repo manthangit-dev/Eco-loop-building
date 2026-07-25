@@ -67,9 +67,7 @@ class SensorSettings:
     unavailable_configured: tuple[SensorDefinition, ...]
 
 
-def _definition(
-    raw: dict[str, Any], kind: ExchangeKind, required: bool
-) -> SensorDefinition:
+def _definition(raw: dict[str, Any], kind: ExchangeKind, required: bool) -> SensorDefinition:
     return SensorDefinition(
         logical_id=str(raw.get("logical_id", "")),
         display_name=str(raw.get("display_name", "")),
@@ -85,8 +83,7 @@ def _definition(
         enabled=bool(raw.get("enabled", True)),
         unavailable_reason=str(raw.get("unavailable_reason", "")),
         fallback_values_by_key=tuple(
-            (str(key), float(value))
-            for key, value in raw.get("fallback_values_by_key", {}).items()
+            (str(key), float(value)) for key, value in raw.get("fallback_values_by_key", {}).items()
         ),
     )
 

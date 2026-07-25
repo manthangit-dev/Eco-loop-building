@@ -83,19 +83,18 @@ def compare_outputs(
             suffix
             for suffix in required
             if any(
-                path.is_file() and path.stat().st_size > 0
-                for path in directory.glob(f"*{suffix}")
+                path.is_file() and path.stat().st_size > 0 for path in directory.glob(f"*{suffix}")
             )
         )
 
     version_2 = str(metadata_2.get("energyplus_version", ""))
     version_3 = str(metadata_3.get("energyplus_version", ""))
-    completion_2 = "Completed Successfully" in (
-        module_2 / f"{prefix}.err"
-    ).read_text(encoding="utf-8", errors="replace")
-    completion_3 = "Completed Successfully" in (
-        module_3 / f"{prefix}.err"
-    ).read_text(encoding="utf-8", errors="replace")
+    completion_2 = "Completed Successfully" in (module_2 / f"{prefix}.err").read_text(
+        encoding="utf-8", errors="replace"
+    )
+    completion_3 = "Completed Successfully" in (module_3 / f"{prefix}.err").read_text(
+        encoding="utf-8", errors="replace"
+    )
     sql_2 = module_2 / f"{prefix}.sql"
     sql_3 = module_3 / f"{prefix}.sql"
 
@@ -155,9 +154,7 @@ def compare_outputs(
         ("Run completion", completion_2 and completion_3, completion_2, completion_3),
         (
             "SQL output",
-            all(
-                path.is_file() and path.stat().st_size > 0 for path in (sql_2, sql_3)
-            ),
+            all(path.is_file() and path.stat().st_size > 0 for path in (sql_2, sql_3)),
             size_or_zero(sql_2),
             size_or_zero(sql_3),
         ),

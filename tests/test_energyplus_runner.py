@@ -31,9 +31,7 @@ class FakeRuntime:
     def callback_begin_new_environment(self, _state: object, callback: Any) -> None:
         self.callbacks["environment"] = callback
 
-    def callback_after_new_environment_warmup_complete(
-        self, _state: object, callback: Any
-    ) -> None:
+    def callback_after_new_environment_warmup_complete(self, _state: object, callback: Any) -> None:
         self.callbacks["warmup"] = callback
 
     def set_console_output_status(self, _state: object, _enabled: bool) -> None:
@@ -118,9 +116,7 @@ def _loaded(tmp_path: Path, api: FakeAPI) -> LoadedAPI:
     return LoadedAPI(api, tmp_path, "0.2", library, "EnergyPlus 26.1")
 
 
-def _patch_dependencies(
-    monkeypatch: pytest.MonkeyPatch, config: RunnerConfig
-) -> None:
+def _patch_dependencies(monkeypatch: pytest.MonkeyPatch, config: RunnerConfig) -> None:
     monkeypatch.setattr(runner_module, "load_run_config", lambda *_args, **_kwargs: config)
     monkeypatch.setattr(
         runner_module,
@@ -162,9 +158,7 @@ def test_nonzero_exit_code_fails(tmp_path: Path, monkeypatch: pytest.MonkeyPatch
 def test_callback_error_fails_run(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     config = _config(tmp_path)
     _patch_dependencies(monkeypatch, config)
-    result = EnergyPlusRunner().run(
-        loaded_api=_loaded(tmp_path, FakeAPI(invalid_progress=True))
-    )
+    result = EnergyPlusRunner().run(loaded_api=_loaded(tmp_path, FakeAPI(invalid_progress=True)))
     assert result.status is RunStatus.FAIL
     assert result.callback_errors
 

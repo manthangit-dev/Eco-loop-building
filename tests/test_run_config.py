@@ -59,9 +59,7 @@ def _project(tmp_path: Path) -> tuple[Path, Path]:
         "derived_baseline_sha256": sha256_file(model),
         "weather_sha256": sha256_file(weather),
     }
-    (tmp_path / "models/MODEL_MANIFEST.json").write_text(
-        json.dumps(manifest), encoding="utf-8"
-    )
+    (tmp_path / "models/MODEL_MANIFEST.json").write_text(json.dumps(manifest), encoding="utf-8")
     config_path = tmp_path / "config/api_runner.yaml"
     config_path.parent.mkdir()
     config_path.write_text(yaml.safe_dump(_config_data()), encoding="utf-8")
@@ -111,9 +109,7 @@ def test_repository_weather_precedes_environment_path(tmp_path: Path) -> None:
     path, home = _project(tmp_path)
     alternate = tmp_path / "alternate.epw"
     alternate.write_text("weather", encoding="utf-8")
-    config = load_run_config(
-        path, home, {"ENERGYPLUS_WEATHER_PATH": str(alternate)}, tmp_path
-    )
+    config = load_run_config(path, home, {"ENERGYPLUS_WEATHER_PATH": str(alternate)}, tmp_path)
     assert config.weather == (tmp_path / "weather/input/weather.epw").resolve()
 
 

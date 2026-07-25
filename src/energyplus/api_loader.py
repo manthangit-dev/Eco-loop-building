@@ -54,9 +54,7 @@ def read_dotenv_value(path: Path, name: str) -> str | None:
     return value or None
 
 
-def resolve_energyplus_home(
-    root: Path, environ: Mapping[str, str] | None = None
-) -> Path:
+def resolve_energyplus_home(root: Path, environ: Mapping[str, str] | None = None) -> Path:
     env = environ if environ is not None else os.environ
     raw = env.get("ENERGYPLUS_HOME") or read_dotenv_value(root / ".env", "ENERGYPLUS_HOME")
     if not raw:

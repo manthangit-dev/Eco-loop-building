@@ -1,6 +1,6 @@
 # Module Plan
 
-Modules 0 through 5 are completed. Module 6 is next and remains pending; no later module may
+Modules 0 through 6 are completed. Module 7 is next and remains pending; no later module may
 be implemented early.
 
 | # | Module / status | Purpose | Inputs | Expected outputs | Dependencies | Tests or verification | Definition of done |
@@ -11,7 +11,7 @@ be implemented early.
 | 3 | Python EnergyPlus runner — **Completed** | Launch and coordinate simulation | Environment, model | Minimal runner interface | 1, 2 | Executed runner check | Runner starts simulation reproducibly |
 | 4 | Live sensor extraction — **Completed** | Read declared state | Running simulation, sensor map | Timestamped structured observations | 3 | Compare reads to output records | Required available sensors are captured |
 | 5 | Actuator injection — **Completed** | Apply validated controls | Handles, safe action | Observed actuator effect | 3, 4 | Handle and response check | Primary actuator injection works safely |
-| 6 | State bus and storage — Pending | Normalize and persist state | Observations, action records | State schema and SQLite records | 4, 5 | Schema and persistence checks | Replayable state/action records exist |
+| 6 | State bus and storage — **Completed** | Normalize and persist state | Observations | Canonical state bus and SQLite records | 4, 5 | Full replay, live annual run, integrity checks | Each mode persisted 35,040 states and 210,240 zone rows |
 | 7 | Rule-based fallback controller — Pending | Provide LLM-independent control | State bus, policy limits | Deterministic proposed action | 6 | Boundary and outage tests | Valid fallback operates without LLM |
 | 8 | Safety guard — Pending | Enforce control constraints | Proposed actions, state | Accept/reject decision and reason | 5–7 | Invalid-action rejection tests | Unsafe/structurally invalid actions are rejected |
 | 9 | Comfort-debt ledger — Pending | Track fairness debt by zone | Occupancy, comfort observations | Per-zone debt ledger | 6, 8 | Ledger scenario tests | Debt affects safety/candidate logic |

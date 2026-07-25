@@ -42,9 +42,7 @@ class CallbackCollector:
             def collect() -> None:
                 if not 0 <= progress <= 100:
                     raise ValueError(f"Progress outside 0..100: {progress}")
-                self.progress_events.append(
-                    {"timestamp": self._timestamp(), "progress": progress}
-                )
+                self.progress_events.append({"timestamp": self._timestamp(), "progress": progress})
 
             self._contain("progress", collect)
 
@@ -75,9 +73,7 @@ class CallbackCollector:
         def callback(_state: Any) -> None:
             self._contain(
                 "begin_environment",
-                lambda: setattr(
-                    self, "environment_start_count", self.environment_start_count + 1
-                ),
+                lambda: setattr(self, "environment_start_count", self.environment_start_count + 1),
             )
 
         self.references.append(callback)
@@ -87,11 +83,8 @@ class CallbackCollector:
         def callback(_state: Any) -> None:
             self._contain(
                 "warmup_complete",
-                lambda: setattr(
-                    self, "warmup_complete_count", self.warmup_complete_count + 1
-                ),
+                lambda: setattr(self, "warmup_complete_count", self.warmup_complete_count + 1),
             )
 
         self.references.append(callback)
         return callback
-

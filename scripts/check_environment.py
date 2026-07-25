@@ -42,7 +42,9 @@ def result(
 ) -> CheckResult:
     """Create a required PASS/FAIL result."""
     return CheckResult(
-        name, Status.PASS if condition else Status.FAIL, success if condition else failure,
+        name,
+        Status.PASS if condition else Status.FAIL,
+        success if condition else failure,
         "" if condition else remediation,
     )
 
@@ -120,7 +122,9 @@ def run_version(executable: Path) -> tuple[str, CheckResult]:
         )
     except (OSError, subprocess.SubprocessError) as exc:
         return "", CheckResult(
-            "EnergyPlus --version", Status.FAIL, f"Could not run executable: {exc}",
+            "EnergyPlus --version",
+            Status.FAIL,
+            f"Could not run executable: {exc}",
             "Check executable permissions and installation integrity.",
         )
     text = f"{completed.stdout}\n{completed.stderr}".strip()
@@ -164,14 +168,18 @@ def load_local_env(root: Path) -> CheckResult:
     env_file = root / ".env"
     if not env_file.exists():
         return CheckResult(
-            ".env", Status.WARN, "No local .env file; .env.example documents expected values.",
+            ".env",
+            Status.WARN,
+            "No local .env file; .env.example documents expected values.",
             "Copy .env.example to .env and configure local paths.",
         )
     try:
         from dotenv import load_dotenv
     except ImportError:
         return CheckResult(
-            ".env", Status.FAIL, "python-dotenv is not installed.",
+            ".env",
+            Status.FAIL,
+            "python-dotenv is not installed.",
             "Install requirements-dev.txt inside the project virtual environment.",
         )
     load_dotenv(env_file, override=False)
@@ -259,7 +267,9 @@ def environment_checks(root: Path, environ: Mapping[str, str] | None = None) -> 
     except (ImportError, AttributeError, OSError, TypeError) as exc:
         results.append(
             CheckResult(
-                "pyenergyplus import", Status.FAIL, f"Import/API version failed: {exc}",
+                "pyenergyplus import",
+                Status.FAIL,
+                f"Import/API version failed: {exc}",
                 "Verify ENERGYPLUS_HOME and use its bundled pyenergyplus package.",
             )
         )

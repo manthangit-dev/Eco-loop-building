@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "zones": [
+    {
+      "exact_name": "PLENUM-1",
+      "zone_id": "plenum_1",
+      "classification": "PLENUM",
+      "occupancy_capable": false,
+      "is_plenum": true,
+      "evidence": "Verified return-plenum Zone object; no People object or live occupant-count key."
+    },
+    {
+      "exact_name": "SPACE1-1",
+      "zone_id": "space1_1",
+      "classification": "OCCUPIED_CONDITIONED",
+      "occupancy_capable": true,
+      "is_plenum": false,
+      "evidence": "Conditioned Zone object with live Zone People Occupant Count capability."
+    },
+    {
+      "exact_name": "SPACE2-1",
+      "zone_id": "space2_1",
+      "classification": "OCCUPIED_CONDITIONED",
+      "occupancy_capable": true,
+      "is_plenum": false,
+      "evidence": "Conditioned Zone object with live Zone People Occupant Count capability."
+    },
+    {
+      "exact_name": "SPACE3-1",
+      "zone_id": "space3_1",
+      "classification": "OCCUPIED_CONDITIONED",
+      "occupancy_capable": true,
+      "is_plenum": false,
+      "evidence": "Conditioned Zone object with live Zone People Occupant Count capability."
+    },
+    {
+      "exact_name": "SPACE4-1",
+      "zone_id": "space4_1",
+      "classification": "OCCUPIED_CONDITIONED",
+      "occupancy_capable": true,
+      "is_plenum": false,
+      "evidence": "Conditioned Zone object with live Zone People Occupant Count capability."
+    },
+    {
+      "exact_name": "SPACE5-1",
+      "zone_id": "space5_1",
+      "classification": "OCCUPIED_CONDITIONED",
+      "occupancy_capable": true,
+      "is_plenum": false,
+      "evidence": "Conditioned Zone object with live Zone People Occupant Count capability."
+    }
+  ]
+}

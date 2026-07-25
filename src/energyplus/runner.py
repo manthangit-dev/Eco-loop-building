@@ -230,9 +230,7 @@ class EnergyPlusRunner:
                 callback_errors=list(collector.errors),
                 error_message=error,
                 installation_generated_files_before=before,
-                installation_generated_files_after=_installation_outputs(
-                    loaded.energyplus_home
-                ),
+                installation_generated_files_after=_installation_outputs(loaded.energyplus_home),
             )
         except (
             RuntimeError,
@@ -301,17 +299,13 @@ class EnergyPlusRunner:
                 config.output_directory,
                 config.output_root,
             )
-            result.validation_status = (
-                "PASS" if validation_exit_code(checks) == 0 else "FAIL"
-            )
+            result.validation_status = "PASS" if validation_exit_code(checks) == 0 else "FAIL"
             result.validation_summary_path = str(
                 config.output_directory / "validation_summary.json"
             )
         if config.compare_with_module_2 and not skip_comparison:
             comparisons, _ = run_comparison(config.config_path)
-            result.comparison_status = (
-                "PASS" if comparison_exit_code(comparisons) == 0 else "FAIL"
-            )
+            result.comparison_status = "PASS" if comparison_exit_code(comparisons) == 0 else "FAIL"
 
         callbacks_ok = (
             bool(result.progress_events)

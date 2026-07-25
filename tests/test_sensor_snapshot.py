@@ -14,9 +14,7 @@ from src.energyplus.sensor_snapshot import (
 
 
 def snapshot(value: float = 21.5) -> SensorSnapshot:
-    timestamp = SimulationTimestamp(
-        1, 3, 2024, 2024, 1, 1, 1, 2, 1, 15, 0.25, 0.25, 1, 4, False
-    )
+    timestamp = SimulationTimestamp(1, 3, 2024, 2024, 1, 1, 1, 2, 1, 15, 0.25, 0.25, 1, 4, False)
     return SensorSnapshot(
         1,
         timestamp,
@@ -39,4 +37,3 @@ def test_snapshot_serializes_and_flattens_optional_nulls() -> None:
 def test_snapshot_rejects_non_finite_required_values() -> None:
     with pytest.raises(ValueError, match="finite"):
         snapshot(math.nan)
-

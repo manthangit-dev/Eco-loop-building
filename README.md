@@ -51,7 +51,7 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 3 | Python EnergyPlus runner | Completed |
 | 4 | Live sensor extraction | Completed |
 | 5 | Actuator injection | Completed |
-| 6 | State bus and storage | Pending |
+| 6 | State bus and storage | Completed |
 | 7 | Rule-based fallback controller | Pending |
 | 8 | Safety guard | Pending |
 | 9 | Comfort-debt ledger | Pending |
@@ -122,6 +122,28 @@ See [docs/RUNTIME_ACTUATOR_INJECTION.md](docs/RUNTIME_ACTUATOR_INJECTION.md).
 The deterministic one-zone test applied a bounded cooling-setpoint override,
 observed its response, and released it with `reset_actuator`. No autonomous control,
 AI, optimisation, or verified energy-saving claim exists.
+
+## Canonical state bus and SQLite storage — Module 6
+
+Module 6 normalizes immutable `BuildingState` records, publishes them through bounded
+thread-safe history, and drains a bounded dedicated writer queue into schema-versioned
+SQLite:
+
+```powershell
+python scripts/replay_sensor_states.py --state-config config/state_bus.yaml
+python scripts/run_state_bus_integration.py --api-config config/api_runner.yaml --sensor-config config/sensors.yaml --state-config config/state_bus.yaml
+python scripts/validate_state_storage.py --state-config config/state_bus.yaml --mode live
+python scripts/inspect_state_database.py --state-config config/state_bus.yaml --mode live --recent 5 --zone-id space1_1
+```
+
+Both verified annual paths persisted 35,040 states and 210,240 zone rows, drained their
+queues, and passed integrity and foreign-key checks. The live output passed comparison
+with Module 4 and recorded zero actuator access. See
+[docs/STATE_BUS_AND_STORAGE.md](docs/STATE_BUS_AND_STORAGE.md).
+
+The repository has no autonomous controller, comfort-debt ledger, AI, or dashboard, and
+no energy-saving result exists. Module 7, the deterministic fallback controller, is the
+next pending module.
 
 ## Results — not yet generated
 

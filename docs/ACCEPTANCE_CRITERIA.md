@@ -1,9 +1,14 @@
 # Acceptance Criteria
 
-Modules 0 through 5 are complete. A deterministic isolated-zone test acquired one
+Modules 0 through 6 are complete. A deterministic isolated-zone test acquired one
 cooling-setpoint handle, applied a bounded override, observed the response, reset the
 actuator, and verified normal control recovery. Autonomous control and later criteria
 remain future work.
+
+Module 6 acceptance is met: full replay and a real annual sensing-only run each
+persisted 35,040 canonical states and 210,240 zone rows, drained bounded queues, passed
+SQLite integrity/foreign-key checks, and recorded no actuator or control access. This
+is storage evidence, not an energy-saving result.
 
 ## Required MVP acceptance criteria
 

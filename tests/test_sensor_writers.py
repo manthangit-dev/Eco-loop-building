@@ -26,4 +26,3 @@ def test_writers_stream_utf8_jsonl_and_csv_atomically(tmp_path: Path) -> None:
 def test_writers_reject_approved_root_as_output(tmp_path: Path) -> None:
     with pytest.raises(ValueError, match="child"):
         SensorWriters(tmp_path, tmp_path, "a", "b", (), (), 1)
-
