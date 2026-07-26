@@ -217,3 +217,63 @@ class RunCompletion:
     queue_drained: bool
     actuator_access_count: int = 0
     control_decision_count: int = 0
+
+
+def building_state_from_dict(raw: dict[str, Any]) -> BuildingState:
+    """Rehydrate a canonical state from its persisted JSON representation."""
+    clock = raw["clock"]
+    outdoor = raw["outdoor"]
+    energy = raw["building_energy"]
+
+    def availability(items: list[dict[str, Any]]) -> tuple[SensorAvailability, ...]:
+        return tuple(SensorAvailability(**item) for item in items)
+
+    def issues(items: list[dict[str, Any]]) -> tuple[StateQualityIssue, ...]:
+        return tuple(StateQualityIssue(**item) for item in items)
+
+    zones = tuple(
+        ZoneState(
+            exact_name=item["exact_name"],
+            zone_id=item["zone_id"],
+            classification=ZoneClassification(item["classification"]),
+            occupancy_capable=item["occupancy_capable"],
+            is_plenum=item["is_plenum"],
+            mean_air_temperature_c=item["mean_air_temperature_c"],
+            occupant_count=item["occupant_count"],
+            relative_humidity_percent=item["relative_humidity_percent"],
+            pmv=item["pmv"],
+            co2_ppm=item["co2_ppm"],
+            effective_cooling_setpoint_c=item["effective_cooling_setpoint_c"],
+            availability=availability(item["availability"]),
+            quality_issues=issues(item["quality_issues"]),
+        )
+        for item in raw["zones"]
+    )
+    return BuildingState(
+        schema_version=raw["schema_version"],
+        run_id=raw["run_id"],
+        sequence=raw["sequence"],
+        source=raw["source"],
+        execution_mode=raw["execution_mode"],
+        captured_at_utc=raw["captured_at_utc"],
+        clock=SimulationClock(**clock),
+        outdoor=OutdoorState(
+            outdoor["dry_bulb_c"],
+            outdoor["relative_humidity_percent"],
+            availability(outdoor["availability"]),
+        ),
+        building_energy=BuildingEnergyState(
+            energy["facility_purchased_electricity_raw_j"],
+            energy["facility_demand_rate_w"],
+            energy["hvac_electricity_raw_j"],
+            energy["cooling_electricity_raw_j"],
+            energy["heating_electricity_raw_j"],
+            energy["meter_units"],
+            availability(energy["availability"]),
+        ),
+        zones=zones,
+        sensor_availability=availability(raw["sensor_availability"]),
+        quality_issues=issues(raw["quality_issues"]),
+        raw_snapshot_sequence=raw["raw_snapshot_sequence"],
+        fingerprint=raw["fingerprint"],
+    )

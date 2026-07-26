@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ThermoLedger AI Evidence Dashboard</title>
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <script src="/static/js/dashboard.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to evidence</a>
+  <header class="banner" role="banner">
+    <strong>SIMULATION-ONLY EVIDENCE</strong> — This system controls a bounded EnergyPlus
+    simulation, not a real building or physical HVAC system.
+    <div class="boundary" aria-label="Claims boundary">
+      <span>Annual energy savings: <b>NOT ESTABLISHED</b></span>
+      <span>Real-world comfort improvement: <b>NOT ESTABLISHED</b></span>
+      <span>Real-building control: <b>NOT IMPLEMENTED</b></span>
+      <span>Physical control tool: <b>DISABLED</b></span><span>Dashboard: <b>READ-ONLY</b></span>
+    </div>
+  </header>
+  <nav aria-label="Dashboard sections">
+    <a href="#overview">Overview</a><a href="#planning">Planning</a>
+    <a href="#microtwin">MicroTwin</a><a href="#ledger">Comfort Ledger</a>
+    <a href="#thermal-bank">Thermal Bank</a><a href="#execution">Execution</a>
+    <a href="#comparison">Native vs live</a><a href="#reconciliation">Reconciliation</a>
+    <a href="#audit">Safety</a><a href="#evidence">Provenance</a>
+    <a href="#limitations">Limitations</a>
+  </nav>
+  <main id="main">
+    <section id="overview"><h1>ThermoLedger AI evidence dashboard</h1><p class="lede">A local, read-only chain from persisted simulation state to guarded execution evidence.</p><div id="overview-cards" class="cards" aria-live="polite"></div><h2>Architecture</h2><ol class="flow"><li>EnergyPlus state</li><li>Planning context and deterministic candidates</li><li>Qualified MicroTwin rollouts</li><li>Comfort Ledger and Thermal Bank proxies</li><li>Ledger-aware selection</li><li>Exact local approval</li><li>Execution orchestrator</li><li>Module 8 safety guard</li><li>Existing EnergyPlus writer</li><li>Audit and native reset</li></ol><p>Local LLM: advisory explanation side path only; never part of physical control.</p><h2>Module status</h2><div id="modules"></div></section>
+    <section id="planning"><h2>Planning and candidate plans</h2><div id="context"></div><div id="candidates"></div></section>
+    <section id="microtwin"><h2>MicroTwin</h2><p><span class="claim">QUALIFIED_MODEL_RESULT</span> Offline Ridge ARX model; demand model availability is shown explicitly.</p><div id="micro-status"></div><div id="rollouts"></div></section>
+    <section id="ledger"><h2>Comfort Ledger</h2><p><span class="claim">ADVISORY_PROXY</span> Burden, debt, fairness, and equity values are scenario proxies—not guaranteed occupant outcomes.</p><div id="ledger-data"></div></section>
+    <section id="thermal-bank"><h2>Thermal Bank</h2><p class="warning">RTFU is a bounded relative flexibility unit. It is not kWh or physical stored energy.</p><div id="bank-data"></div></section>
+    <section id="execution"><h2>Approval and execution</h2><p>The approval is consumed and immutable. This page has no controls.</p><div id="execution-data"></div></section>
+    <section id="comparison"><h2>Native versus live</h2><p class="warning"><span class="claim">SHORT_HORIZON_SIMULATION_RESULT</span> Electricity increased in this comfort-focused three-hour experiment. This is not savings evidence.</p><canvas id="comparison-chart" width="960" height="360" aria-describedby="comparison-description"></canvas><p id="comparison-description">Line chart comparing native and live zone temperature and effective cooling setpoint over twelve aligned timesteps.</p><div id="effect-data"></div></section>
+    <section id="reconciliation"><h2>Simulation reconciliation</h2><p><span class="claim">SHORT_HORIZON_SIMULATION_RESULT</span> July 19 points are aligned but MicroTwin applicability is degraded.</p><canvas id="reconciliation-chart" width="960" height="320" aria-describedby="reconciliation-description"></canvas><p id="reconciliation-description">Predicted temperature, empirical interval, and aligned EnergyPlus temperature for twelve timesteps.</p><div id="reconciliation-data"></div><aside class="invalid"><h3>Historical invalid evidence</h3><span class="claim">HISTORICAL_INVALID_EVIDENCE</span><p>The January runtime versus July planning comparison is preserved but excluded from valid reconciliation.</p></aside></section>
+    <section id="audit"><h2>Safety and audit</h2><div id="audit-data"></div><ol class="flow"><li>Persisted scheduled action</li><li>Trusted live state</li><li>Module 8 guard decision</li><li>GuardedCommand only</li><li>Existing writer</li><li>Mandatory native reset</li></ol></section>
+    <section id="evidence"><h2>Evidence and provenance explorer</h2><p>Select an evidence record to inspect its source, checksum, calculation, classification, precision, and limitations.</p><label for="evidence-select">Evidence record</label><select id="evidence-select"></select><pre id="evidence-detail" tabindex="0"></pre></section>
+    <section id="limitations"><h2>Limitations and claims boundary</h2><div id="limitations-data"></div><p><span class="claim">NOT_ESTABLISHED</span> No annual energy-saving, real-building, or guaranteed comfort claim is supported.</p></section>
+  </main>
+  <footer>ThermoLedger AI Module 15 · local-only · snapshot-backed · read-only</footer>
+</body>
+</html>

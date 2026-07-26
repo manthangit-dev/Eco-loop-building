@@ -1,0 +1,97 @@
+# Module 10 Local LLM Supervisor
+
+Module 15 requires no Ollama; deterministic evidence remains authoritative.
+
+Module 12 adds bounded objectives for MicroTwin status, validation, rollout comparison, uncertainty, ranking differences, and ranked-plan recommendation. The LLM can explain deterministic results but cannot change scores, invent candidates, train models, execute plans, or call the disabled control tool.
+
+Module 12A requires objective-specific evidence. A direct answer without evidence receives one bounded correction. If evidence is still missing, the supervisor may prefetch only permitted mandatory tools and records `SUPERVISOR_REQUIRED_PREFETCH`; success remains impossible until required evidence exists and reconciles.
+
+Module 10 adds a local advisory tool-calling supervisor above Module 9. MCP owns typed
+building tools; code owns a bounded model loop, tool policy, context limits, correction,
+repetition detection, evidence rules, and schema-v5 audit. Module 8 remains the final
+safety authority. Physical control is disabled and proposals are dry-run only.
+
+`LLMProvider` defines health, discovery, generation, tool generation, token estimation,
+cancellation, and close operations. Implementations are `DeterministicMockProvider` and a
+loopback-only Ollama `LocalOpenSourceProvider`. The latter accepts only
+`http://127.0.0.1:11434`, disables proxies, uses finite bounds, and has no cloud fallback.
+
+Inspection on 2026-07-26 found no Ollama executable, healthy runtime, or installed model.
+No weights were downloaded. After explicitly installing Ollama and selecting a reviewed
+tool-capable instruct model, the deferred steps are:
+
+```powershell
+ollama --version
+ollama list
+ollama pull <reviewed-compatible-model>
+.\.venv\Scripts\python.exe scripts\discover_local_models.py
+.\.venv\Scripts\python.exe scripts\run_llm_real_smoke.py
+```
+
+The schema-v1 configuration fixes six iterations, six MCP calls, two corrections, a
+4,096-token input budget, 512-token output reserve, finite timeouts, local-only privacy,
+and prompt version 1. Nine objective enums are accepted. Final schema 1 forces
+`physical_write_performed: false`.
+
+The allowlist is 16 read-only tools plus `validate_control_proposal`.
+`propose_guarded_control`, unknown/disabled tools, code/shell/filesystem/network tools, and
+override fields such as `approved`, `bypass_guard`, and `enable_control` are denied.
+Structured native or JSON-fallback calls are fully parsed before execution. Non-finite,
+oversized, partial, or hostile arguments never execute.
+
+Separate prompt files preserve system, tool, evidence, final, and correction policy.
+Critical policy and the current objective cannot be trimmed. Old tool messages are removed
+first and long results receive deterministic summaries. Repeated calls stop safely;
+correction never relaxes policy. Evidence IDs must belong to successful current-session
+calls. Unsupported savings, comfort, unavailable-metric, and physical-action claims fail.
+
+Schema 5 adds normalized session, message, tool-step, policy-event, final-response, and
+provider-event tables with foreign keys, transaction rollback, duplicate protection, and
+zero-write constraints. The 50-case deterministic mock catalogue covers reads, dry-run
+proposals, corrections, loops, policy failures, provider failures, evidence, persistence,
+replay, cancellation, and shutdown. Mock output is a fixture, not AI intelligence.
+
+Module 9 closure is in `docs/MCP_REPLAY_COVERAGE.md`. Its 38-call additive replay separates
+fresh expiry, valid-TTL staleness, combined expiry/staleness, future state, and
+command-from-future. Expiry precedes staleness in guard validation.
+
+```powershell
+.\.venv\Scripts\python.exe scripts\verify_module_9_closure.py
+.\.venv\Scripts\python.exe scripts\discover_local_models.py
+.\.venv\Scripts\python.exe scripts\check_llm_provider.py
+.\.venv\Scripts\python.exe scripts\run_llm_supervisor.py examples\llm\describe_current_state.json --provider mock
+.\.venv\Scripts\python.exe scripts\run_llm_mock_replay.py --output data\output\module_10_llm\mock\mock_1.json
+.\.venv\Scripts\python.exe scripts\inspect_llm_sessions.py
+.\.venv\Scripts\python.exe scripts\validate_llm_supervisor.py
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\verify_module_10_fast.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\verify_module_10_full.ps1
+```
+
+The full verifier runs repository-wide tests and static checks once, checksum validation,
+two mock suites, MCP smoke, and one real-model discovery/smoke attempt. It never starts
+EnergyPlus. Real integration remains unverified until a compatible installed model passes.
+No autonomous control, optimization, comfort improvement, or savings claim exists.
+
+Module 10A repaired the user CLI. The stable mock invocation is
+`.\.venv\Scripts\python.exe scripts\run_llm_supervisor.py --provider mock --input-file
+outputs\demo\requests\describe_current_state.json --pretty`; requests are generated by the
+current demo rather than carrying stale run IDs.
+# Module 10B completion
+
+Module 11 adds bounded objectives for forecast inspection, deterministic candidate
+generation/comparison, and advisory selection. Trusted run/state/timing fields and
+candidate contents remain repository-owned. The model can select only an existing
+eligible candidate and cannot alter scores, actions, or execution authority.
+
+Official Ollama 0.32.4 and `qwen3:0.6b` are now verified through the existing
+loopback-only provider. Native tool calling passed without fallback. Four bounded
+recorded-data sessions completed, the control-capable tool remained denied, and
+no physical-write counter changed. Setup and measured limitations are documented
+in [LOCAL_LLM_SETUP.md](LOCAL_LLM_SETUP.md). Module 11 remains out of scope.
+# Module 13 ledger policy
+
+Ledger objectives require MCP evidence. The supervisor may summarize or recommend from authoritative deterministic records, but it rejects invented/changed debt, balance, or equity values and false claims of stored kWh, guaranteed comfort, verified savings, or physical execution. The deterministic selection remains usable when the model is unavailable.
+
+# Module 14 execution explanations
+
+Six new objectives may explain approval, status, fallback, audit, compatible runs, and reconciliation using read-only evidence. The LLM cannot create approval, choose mode, arm, schedule, write, reset, or change outcomes. Claims of LLM execution, real-building control, annual savings, or guaranteed comfort are rejected. Ollama is absent from the physical path.

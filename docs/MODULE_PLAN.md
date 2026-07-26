@@ -1,7 +1,20 @@
 # Module Plan
 
-Modules 0 through 6 are completed. Module 7 is next and remains pending; no later module may
-be implemented early.
+Module 15 is complete: read-only dashboard, provenance explorer, deterministic evidence
+package, 120-scenario replay, and hackathon demo. No later module began.
+
+Module 14A is complete with exact-window repair and three bounded aligned runs. Module 15 was not started.
+
+Module 12 is complete after Module 12C executable-coverage closure. Module 13 remains pending and was not started.
+
+- Module 12: offline MicroTwin candidate evaluation — **Incomplete**. Required-tool sessions and repository validation pass, but several replay entries currently share category-level checks instead of dedicated negative fixtures. They must not be accepted as meaningful closure coverage yet.
+
+Modules 0 through 9 are completed. Module 10 is implemented but incomplete pending a real
+installed-model smoke. No later module may be implemented early.
+
+Module 10A runtime audit/demo is complete: repaired CLIs dynamically select recorded data,
+run the real stdio MCP boundary and mock supervisor, and demonstrate two Module 8 dry runs
+with zero physical writes. It does not satisfy Module 10's missing real-model criterion.
 
 | # | Module / status | Purpose | Inputs | Expected outputs | Dependencies | Tests or verification | Definition of done |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -12,10 +25,10 @@ be implemented early.
 | 4 | Live sensor extraction — **Completed** | Read declared state | Running simulation, sensor map | Timestamped structured observations | 3 | Compare reads to output records | Required available sensors are captured |
 | 5 | Actuator injection — **Completed** | Apply validated controls | Handles, safe action | Observed actuator effect | 3, 4 | Handle and response check | Primary actuator injection works safely |
 | 6 | State bus and storage — **Completed** | Normalize and persist state | Observations | Canonical state bus and SQLite records | 4, 5 | Full replay, live annual run, integrity checks | Each mode persisted 35,040 states and 210,240 zone rows |
-| 7 | Rule-based fallback controller — Pending | Provide LLM-independent control | State bus, policy limits | Deterministic proposed action | 6 | Boundary and outage tests | Valid fallback operates without LLM |
-| 8 | Safety guard — Pending | Enforce control constraints | Proposed actions, state | Accept/reject decision and reason | 5–7 | Invalid-action rejection tests | Unsafe/structurally invalid actions are rejected |
-| 9 | Comfort-debt ledger — Pending | Track fairness debt by zone | Occupancy, comfort observations | Per-zone debt ledger | 6, 8 | Ledger scenario tests | Debt affects safety/candidate logic |
-| 10 | Zone-flexibility estimator — Pending | Estimate temporary zone flexibility | State, occupancy, comfort bounds | Zone scores and rationale | 6, 9 | Deterministic score tests | Scores are logged and bounded |
+| 7 | Rule-based fallback controller — **Completed** | Provide LLM-independent control | Canonical state, policy limits | Deterministic causal cooling commands | 6 | Repeated replay, live shadow, annual one-zone control | Verified fallback operates without LLM; Module 8 guard remains pending |
+| 8 | Safety guard — **Completed** | Enforce control constraints | Proposed actions, state | Guard decision and guarded command | 5–7 | 50-case challenges, repeated replay, annual shadow/live | All physical writes are guard-linked; invalid actions fail closed |
+| 9 | Local MCP server and deterministic building tool layer — **Completed** | Expose bounded recorded evidence and guarded dry runs | Modules 6–8 artifacts | Local stdio MCP catalogue and audit | 6–8 | Replay and subprocess smoke | 18 tools; control disabled; zero writes |
+| 10 | Local LLM adapter and controlled MCP supervisor — **Incomplete** | Bounded advisory local-model tool use | Module 9 tools | Typed recommendation and schema-v5 audit | 8–9 | Mock replay and real-model smoke | Mock passes; installed-model smoke required |
 | 11 | Thermal-battery strategy — Pending | Plan pre-cool/coast/restore | Signals, state, scores | Strategy candidates | 8–10 | Scenario simulation checks | Three phases are evaluated safely |
 | 12 | Candidate-action tournament — Pending | Compare strategy variants | Candidate actions, metrics | Selected ranked candidate | 9–11 | Ranking and tie-break tests | Comfort-first, balanced, aggressive candidates compare |
 | 13 | Ollama and local LLM — Pending | Obtain structured local proposals | Hardware inspection, state | Parsed proposal or safe error | 7, 8, 12 | Local request and failure tests | Model choice documented; failures safe |
@@ -33,3 +46,18 @@ be implemented early.
 | 25 | Presentation and demonstration — Pending | Produce hackathon delivery | Real results, dashboard, docs | Demo and presentation artifacts | 20, 21, 24 | Rehearsed demonstration | Demo accurately represents prototype limits |
 
 For every pending module, its definition of done additionally requires: requested scope only, relevant validation executed, honest reporting, and affected documentation updated.
+# Module 10 completion note
+
+Module 11 is complete as an advisory-only forecast and candidate-planning layer.
+Module 12 remains pending.
+
+Module 10 is complete after official local Ollama generation, native tool calling,
+four recorded-data sessions, persisted denial of the control-capable tool, and a
+zero-write comparison. Module 11 remains pending and was not started.
+# Module 13 — Comfort Ledger and Thermal Bank
+
+Scope: deterministic comfort accounting, RTFU bank accounting, equity-aware ranking, schema-8 persistence, MCP read/proposal tools, claim validation, replay coverage, and mock/real-model advisory demonstrations. Module 14 control work is explicitly out of scope.
+
+# Module 14 — Approval-gated simulation execution
+
+Completed scope: exact preflight and approval binding, four execution modes, state machine, scheduler, trusted live state, Module 8 guard integration, existing writer integration, fallback/reset policy, schema 9, four read-only MCP tools, 130-scenario replay, and three bounded EnergyPlus integrations. Module 15 was not started.

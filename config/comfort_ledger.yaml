@@ -1,0 +1,41 @@
+schema_version: 1
+enabled: true
+advisory_only: true
+allowed_zones: [SPACE3-1]
+target_zone: SPACE3-1
+boundary_source: local demonstration assumption; not a regulation or occupant preference
+occupied_lower_c: 22.0
+occupied_upper_c: 26.0
+unoccupied_lower_c: 18.0
+unoccupied_upper_c: 30.0
+protected_event_lower_c: 22.0
+protected_event_upper_c: 25.5
+uncertainty_policy: worst_bound
+burden_method: occupancy_duration_boundary_exceedance
+credit_method: bounded_boundary_margin
+debt_method: bounded_burden_less_repayment
+debt_ageing_per_timestep: 1
+debt_decay_fraction: 0.02
+debt_expiry_timesteps: 96
+repayment_fraction: 0.50
+consecutive_burden_limit: 3
+maximum_horizon_burden: 20.0
+maximum_debt: 50.0
+minimum_recovery: 0.25
+maximum_credit_per_timestep: 1.0
+maximum_credit_per_horizon: 8.0
+credit_decay_fraction: 0.05
+credit_expiry_timesteps: 48
+fairness_windows: 4
+missing_occupancy_policy: reject
+missing_temperature_policy: reject
+missing_uncertainty_policy: reject
+persistence_enabled: true
+replay_enabled: true
+equity_weights:
+  burden: 0.25
+  concentration: 0.15
+  consecutive: 0.15
+  recovery: 0.15
+  debt: 0.15
+  protected_event: 0.15

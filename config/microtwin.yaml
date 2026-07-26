@@ -1,0 +1,21 @@
+microtwin:
+  schema_version: 1
+  enabled: true
+  advisory_only: true
+  model_family: deterministic_ridge_arx
+  source_run: module8-live-control
+  environment_id: weather-3
+  target_zone: SPACE3-1
+  ridge_alpha: 0.001
+  split: {train: 0.70, validation: 0.15, test: 0.15}
+  feature_order: [zone_temperature_c, temperature_change_c, outdoor_temperature_c, outdoor_change_c, cooling_setpoint_c, setpoint_change_c, occupancy, previous_hvac_j, hvac_change_j, hour_sin, hour_cos]
+  qualification: {minimum_mae_improvement_fraction: 0.01, maximum_12_step_mae_c: 3.0, prohibited_feature_count: 0}
+  uncertainty_quantiles: [0.05, 0.95]
+  ood_tolerance_fraction: 0.10
+  comfort_proxy: {occupied_lower_c: 20.0, occupied_upper_c: 27.0}
+  score_weights: {temperature_risk: 10.0, uncertainty: 1.0, demand_proxy: 0.000001, peak_proxy: 0.000001, churn: 0.5, ood: 20.0}
+storage:
+  output_root: outputs/microtwin
+  model_directory: models
+  database: data/output/module_12_microtwin/microtwin.db
+  database_schema_version: 7

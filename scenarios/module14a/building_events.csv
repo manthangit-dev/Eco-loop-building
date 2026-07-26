@@ -1,0 +1,4 @@
+schema_version,scenario_id,environment_id,start_timestamp,end_timestamp,zone,event_type,priority,expected_occupancy_effect,comfort_protection,source,uncertainty
+1,module14a_aligned,weather-3,07-19 11:00,07-19 13:45,SPACE3-1,OCCUPIED_WORK_PERIOD,HIGH,8.8,true,known local schedule,LOW
+1,module14a_aligned,weather-3,07-19 11:45,07-19 13:30,SPACE3-1,PEAK_DEMAND_EVENT,HIGH,0,true,local scenario,LOW
+

@@ -4,4 +4,4 @@ ruff>=0.5,<1
 mypy>=1.10,<2
 PyYAML>=6,<7
 python-dotenv>=1,<2
-
+mcp==1.28.1

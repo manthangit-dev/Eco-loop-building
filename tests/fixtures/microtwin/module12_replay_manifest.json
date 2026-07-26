@@ -1,0 +1,3925 @@
+{
+  "schema_version": 2,
+  "module": "12A",
+  "scenario_count": 150,
+  "scenarios": [
+    {
+      "scenario_id": "MT12-001",
+      "requirement_ids": [
+        "M12-001"
+      ],
+      "category": "data_alignment",
+      "name": "Valid telemetry source.",
+      "purpose": "Execute and assert: Valid telemetry source.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-002",
+      "requirement_ids": [
+        "M12-002"
+      ],
+      "category": "data_alignment",
+      "name": "Missing source run.",
+      "purpose": "Execute and assert: Missing source run.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-002",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-002']",
+      "input_mutations": [
+        "Missing source run."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_source_run"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-003",
+      "requirement_ids": [
+        "M12-003"
+      ],
+      "category": "data_alignment",
+      "name": "Wrong environment.",
+      "purpose": "Execute and assert: Wrong environment.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-003",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-003']",
+      "input_mutations": [
+        "Wrong environment."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "wrong_environment"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-004",
+      "requirement_ids": [
+        "M12-004"
+      ],
+      "category": "data_alignment",
+      "name": "Missing target zone.",
+      "purpose": "Execute and assert: Missing target zone.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-004",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-004']",
+      "input_mutations": [
+        "Missing target zone."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_target_zone"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-005",
+      "requirement_ids": [
+        "M12-005"
+      ],
+      "category": "data_alignment",
+      "name": "Warmup rows excluded.",
+      "purpose": "Execute and assert: Warmup rows excluded.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-005",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-005']",
+      "input_mutations": [
+        "Warmup rows excluded."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "warmup_rows_excluded"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-006",
+      "requirement_ids": [
+        "M12-006"
+      ],
+      "category": "data_alignment",
+      "name": "API-not-ready rows excluded.",
+      "purpose": "Execute and assert: API-not-ready rows excluded.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-006",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-006']",
+      "input_mutations": [
+        "API-not-ready rows excluded."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "api_not_ready_rows_excluded"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-007",
+      "requirement_ids": [
+        "M12-007"
+      ],
+      "category": "data_alignment",
+      "name": "Final right-censored row excluded.",
+      "purpose": "Execute and assert: Final right-censored row excluded.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-008",
+      "requirement_ids": [
+        "M12-008"
+      ],
+      "category": "data_alignment",
+      "name": "System-timestep aggregation.",
+      "purpose": "Execute and assert: System-timestep aggregation.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-009",
+      "requirement_ids": [
+        "M12-009"
+      ],
+      "category": "data_alignment",
+      "name": "Duplicate callback records.",
+      "purpose": "Execute and assert: Duplicate callback records.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-009",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-009']",
+      "input_mutations": [
+        "Duplicate callback records."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "duplicate_callback_records"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-010",
+      "requirement_ids": [
+        "M12-010"
+      ],
+      "category": "data_alignment",
+      "name": "Non-monotonic timestamps.",
+      "purpose": "Execute and assert: Non-monotonic timestamps.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-010",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-010']",
+      "input_mutations": [
+        "Non-monotonic timestamps."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "non_monotonic_timestamps"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-011",
+      "requirement_ids": [
+        "M12-011"
+      ],
+      "category": "data_alignment",
+      "name": "Cross-environment transition.",
+      "purpose": "Execute and assert: Cross-environment transition.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-011",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-011']",
+      "input_mutations": [
+        "Cross-environment transition."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "cross_environment_transition"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-012",
+      "requirement_ids": [
+        "M12-012"
+      ],
+      "category": "data_alignment",
+      "name": "Action-to-next-state alignment.",
+      "purpose": "Execute and assert: Action-to-next-state alignment.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-013",
+      "requirement_ids": [
+        "M12-013"
+      ],
+      "category": "data_alignment",
+      "name": "Missing occupancy.",
+      "purpose": "Execute and assert: Missing occupancy.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-013",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-013']",
+      "input_mutations": [
+        "Missing occupancy."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_occupancy"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-014",
+      "requirement_ids": [
+        "M12-014"
+      ],
+      "category": "data_alignment",
+      "name": "Missing outdoor temperature.",
+      "purpose": "Execute and assert: Missing outdoor temperature.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-014",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-014']",
+      "input_mutations": [
+        "Missing outdoor temperature."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_outdoor_temperature_c"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-015",
+      "requirement_ids": [
+        "M12-015"
+      ],
+      "category": "data_alignment",
+      "name": "Missing setpoint.",
+      "purpose": "Execute and assert: Missing setpoint.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-015",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-015']",
+      "input_mutations": [
+        "Missing setpoint."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_setpoint_c"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-016",
+      "requirement_ids": [
+        "M12-016"
+      ],
+      "category": "data_alignment",
+      "name": "Missing demand metric.",
+      "purpose": "Execute and assert: Missing demand metric.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-016",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-016']",
+      "input_mutations": [
+        "Missing demand metric."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_demand_w"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-017",
+      "requirement_ids": [
+        "M12-017"
+      ],
+      "category": "data_alignment",
+      "name": "Invalid units.",
+      "purpose": "Execute and assert: Invalid units.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-017",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-017']",
+      "input_mutations": [
+        "Invalid units."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "invalid_units"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-018",
+      "requirement_ids": [
+        "M12-018"
+      ],
+      "category": "data_alignment",
+      "name": "NaN rejected.",
+      "purpose": "Execute and assert: NaN rejected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-018",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-018']",
+      "input_mutations": [
+        "NaN rejected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "nan_rejected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-019",
+      "requirement_ids": [
+        "M12-019"
+      ],
+      "category": "data_alignment",
+      "name": "Infinity rejected.",
+      "purpose": "Execute and assert: Infinity rejected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-019",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-019']",
+      "input_mutations": [
+        "Infinity rejected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "infinity_rejected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-020",
+      "requirement_ids": [
+        "M12-020"
+      ],
+      "category": "data_alignment",
+      "name": "Prohibited future feature detected.",
+      "purpose": "Execute and assert: Prohibited future feature detected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "future_temperature",
+      "real_entry_point": "negative_fixtures.FACTORIES['future_temperature']",
+      "input_mutations": [
+        "Prohibited future feature detected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-021",
+      "requirement_ids": [
+        "M12-021"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Chronological split.",
+      "purpose": "Execute and assert: Chronological split.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-022",
+      "requirement_ids": [
+        "M12-022"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Stable split fingerprint.",
+      "purpose": "Execute and assert: Stable split fingerprint.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-023",
+      "requirement_ids": [
+        "M12-023"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "No random shuffle.",
+      "purpose": "Execute and assert: No random shuffle.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-024",
+      "requirement_ids": [
+        "M12-024"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Train-only preprocessing.",
+      "purpose": "Execute and assert: Train-only preprocessing.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-025",
+      "requirement_ids": [
+        "M12-025"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Validation boundary.",
+      "purpose": "Execute and assert: Validation boundary.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-026",
+      "requirement_ids": [
+        "M12-026"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Test boundary.",
+      "purpose": "Execute and assert: Test boundary.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-027",
+      "requirement_ids": [
+        "M12-027"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "No environment leakage.",
+      "purpose": "Execute and assert: No environment leakage.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-027",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-027']",
+      "input_mutations": [
+        "No environment leakage."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "cross_environment_transition"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-028",
+      "requirement_ids": [
+        "M12-028"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Feature order determinism.",
+      "purpose": "Execute and assert: Feature order determinism.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-029",
+      "requirement_ids": [
+        "M12-029"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "Missing-value policy.",
+      "purpose": "Execute and assert: Missing-value policy.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-029",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-029']",
+      "input_mutations": [
+        "Missing-value policy."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "missing_demand_w"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-030",
+      "requirement_ids": [
+        "M12-030"
+      ],
+      "category": "splitting_preprocessing",
+      "name": "OOD metadata construction.",
+      "purpose": "Execute and assert: OOD metadata construction.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-031",
+      "requirement_ids": [
+        "M12-031"
+      ],
+      "category": "training_artifacts",
+      "name": "Persistence baseline.",
+      "purpose": "Execute and assert: Persistence baseline.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-032",
+      "requirement_ids": [
+        "M12-032"
+      ],
+      "category": "training_artifacts",
+      "name": "Thermal model fit.",
+      "purpose": "Execute and assert: Thermal model fit.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-033",
+      "requirement_ids": [
+        "M12-033"
+      ],
+      "category": "training_artifacts",
+      "name": "Demand model fit when available.",
+      "purpose": "Execute and assert: Demand model fit when available.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-034",
+      "requirement_ids": [
+        "M12-034"
+      ],
+      "category": "training_artifacts",
+      "name": "Demand model unavailable path.",
+      "purpose": "Execute and assert: Demand model unavailable path.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "demand_unavailable",
+      "real_entry_point": "negative_fixtures.FACTORIES['demand_unavailable']",
+      "input_mutations": [
+        "Demand model unavailable path."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNAVAILABLE",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-035",
+      "requirement_ids": [
+        "M12-035"
+      ],
+      "category": "training_artifacts",
+      "name": "Stable coefficients.",
+      "purpose": "Execute and assert: Stable coefficients.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-036",
+      "requirement_ids": [
+        "M12-036"
+      ],
+      "category": "training_artifacts",
+      "name": "Repeated training fingerprint.",
+      "purpose": "Execute and assert: Repeated training fingerprint.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-037",
+      "requirement_ids": [
+        "M12-037"
+      ],
+      "category": "training_artifacts",
+      "name": "Invalid configuration.",
+      "purpose": "Execute and assert: Invalid configuration.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "schema_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['schema_mismatch']",
+      "input_mutations": [
+        "Invalid configuration."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-038",
+      "requirement_ids": [
+        "M12-038"
+      ],
+      "category": "training_artifacts",
+      "name": "Singular-feature handling.",
+      "purpose": "Execute and assert: Singular-feature handling.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-039",
+      "requirement_ids": [
+        "M12-039"
+      ],
+      "category": "training_artifacts",
+      "name": "Constant feature.",
+      "purpose": "Execute and assert: Constant feature.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-040",
+      "requirement_ids": [
+        "M12-040"
+      ],
+      "category": "training_artifacts",
+      "name": "Insufficient data.",
+      "purpose": "Execute and assert: Insufficient data.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "insufficient_data",
+      "real_entry_point": "negative_fixtures.FACTORIES['insufficient_data']",
+      "input_mutations": [
+        "Insufficient data."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-041",
+      "requirement_ids": [
+        "M12-041"
+      ],
+      "category": "training_artifacts",
+      "name": "Qualification pass.",
+      "purpose": "Execute and assert: Qualification pass.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-042",
+      "requirement_ids": [
+        "M12-042"
+      ],
+      "category": "training_artifacts",
+      "name": "Qualification failure.",
+      "purpose": "Execute and assert: Qualification failure.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_failure",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_failure']",
+      "input_mutations": [
+        "Qualification failure."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-043",
+      "requirement_ids": [
+        "M12-043"
+      ],
+      "category": "training_artifacts",
+      "name": "Model artifact checksum.",
+      "purpose": "Execute and assert: Model artifact checksum.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "checksum_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['checksum_mismatch']",
+      "input_mutations": [
+        "Model artifact checksum."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-044",
+      "requirement_ids": [
+        "M12-044"
+      ],
+      "category": "training_artifacts",
+      "name": "Unsafe artifact format rejected.",
+      "purpose": "Execute and assert: Unsafe artifact format rejected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unsafe_artifact",
+      "real_entry_point": "negative_fixtures.FACTORIES['unsafe_artifact']",
+      "input_mutations": [
+        "Unsafe artifact format rejected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-045",
+      "requirement_ids": [
+        "M12-045"
+      ],
+      "category": "validation",
+      "name": "One-step metrics.",
+      "purpose": "Execute and assert: One-step metrics.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-046",
+      "requirement_ids": [
+        "M12-046"
+      ],
+      "category": "validation",
+      "name": "Three-step rollout.",
+      "purpose": "Execute and assert: Three-step rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-047",
+      "requirement_ids": [
+        "M12-047"
+      ],
+      "category": "validation",
+      "name": "Six-step rollout.",
+      "purpose": "Execute and assert: Six-step rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-048",
+      "requirement_ids": [
+        "M12-048"
+      ],
+      "category": "validation",
+      "name": "Twelve-step rollout.",
+      "purpose": "Execute and assert: Twelve-step rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-049",
+      "requirement_ids": [
+        "M12-049"
+      ],
+      "category": "validation",
+      "name": "Persistence comparison.",
+      "purpose": "Execute and assert: Persistence comparison.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-050",
+      "requirement_ids": [
+        "M12-050"
+      ],
+      "category": "validation",
+      "name": "Occupied error group.",
+      "purpose": "Execute and assert: Occupied error group.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-050",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-050']",
+      "input_mutations": [
+        "Occupied error group."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "occupied_error_group"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-051",
+      "requirement_ids": [
+        "M12-051"
+      ],
+      "category": "validation",
+      "name": "Unoccupied error group.",
+      "purpose": "Execute and assert: Unoccupied error group.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-051",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-051']",
+      "input_mutations": [
+        "Unoccupied error group."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unoccupied_error_group"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-052",
+      "requirement_ids": [
+        "M12-052"
+      ],
+      "category": "validation",
+      "name": "Residual interval.",
+      "purpose": "Execute and assert: Residual interval.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-053",
+      "requirement_ids": [
+        "M12-053"
+      ],
+      "category": "validation",
+      "name": "Interval coverage.",
+      "purpose": "Execute and assert: Interval coverage.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-054",
+      "requirement_ids": [
+        "M12-054"
+      ],
+      "category": "validation",
+      "name": "Bias accumulation.",
+      "purpose": "Execute and assert: Bias accumulation.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-055",
+      "requirement_ids": [
+        "M12-055"
+      ],
+      "category": "validation",
+      "name": "Worst-case sequence.",
+      "purpose": "Execute and assert: Worst-case sequence.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-056",
+      "requirement_ids": [
+        "M12-056"
+      ],
+      "category": "validation",
+      "name": "Held-out test not used for fitting.",
+      "purpose": "Execute and assert: Held-out test not used for fitting.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-057",
+      "requirement_ids": [
+        "M12-057"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "NATIVE_HOLD rollout.",
+      "purpose": "Execute and assert: NATIVE_HOLD rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-058",
+      "requirement_ids": [
+        "M12-058"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "COMFORT_FIRST rollout.",
+      "purpose": "Execute and assert: COMFORT_FIRST rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-059",
+      "requirement_ids": [
+        "M12-059"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "BALANCED rollout.",
+      "purpose": "Execute and assert: BALANCED rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-060",
+      "requirement_ids": [
+        "M12-060"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "PRECONDITION_BEFORE_PEAK rollout.",
+      "purpose": "Execute and assert: PRECONDITION_BEFORE_PEAK rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-061",
+      "requirement_ids": [
+        "M12-061"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "VACANCY_RELAXATION rollout.",
+      "purpose": "Execute and assert: VACANCY_RELAXATION rollout.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-062",
+      "requirement_ids": [
+        "M12-062"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "OCCUPIED_RECOVERY rollout.",
+      "purpose": "Execute and assert: OCCUPIED_RECOVERY rollout.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-062",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-062']",
+      "input_mutations": [
+        "OCCUPIED_RECOVERY rollout."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "occupied_recovery_rollout"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-063",
+      "requirement_ids": [
+        "M12-063"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Same forecast across plans.",
+      "purpose": "Execute and assert: Same forecast across plans.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-064",
+      "requirement_ids": [
+        "M12-064"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Candidate setpoint trajectory applied.",
+      "purpose": "Execute and assert: Candidate setpoint trajectory applied.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-065",
+      "requirement_ids": [
+        "M12-065"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Future actual temperature not used.",
+      "purpose": "Execute and assert: Future actual temperature not used.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-066",
+      "requirement_ids": [
+        "M12-066"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Future actual energy not used.",
+      "purpose": "Execute and assert: Future actual energy not used.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-067",
+      "requirement_ids": [
+        "M12-067"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Empirical uncertainty propagated.",
+      "purpose": "Execute and assert: Empirical uncertainty propagated.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-068",
+      "requirement_ids": [
+        "M12-068"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Boundary risk calculated.",
+      "purpose": "Execute and assert: Boundary risk calculated.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-069",
+      "requirement_ids": [
+        "M12-069"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "OOD input detected.",
+      "purpose": "Execute and assert: OOD input detected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_outdoor",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_outdoor']",
+      "input_mutations": [
+        "OOD input detected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-070",
+      "requirement_ids": [
+        "M12-070"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Strongly OOD plan not ranked.",
+      "purpose": "Execute and assert: Strongly OOD plan not ranked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_setpoint",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_setpoint']",
+      "input_mutations": [
+        "Strongly OOD plan not ranked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-071",
+      "requirement_ids": [
+        "M12-071"
+      ],
+      "category": "counterfactual_rollout",
+      "name": "Physical-write count zero.",
+      "purpose": "Execute and assert: Physical-write count zero.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-072",
+      "requirement_ids": [
+        "M12-072"
+      ],
+      "category": "scoring_ranking",
+      "name": "MicroTwin score reproducible.",
+      "purpose": "Execute and assert: MicroTwin score reproducible.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-073",
+      "requirement_ids": [
+        "M12-073"
+      ],
+      "category": "scoring_ranking",
+      "name": "NATIVE_HOLD reference.",
+      "purpose": "Execute and assert: NATIVE_HOLD reference.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-074",
+      "requirement_ids": [
+        "M12-074"
+      ],
+      "category": "scoring_ranking",
+      "name": "Temperature-risk penalty.",
+      "purpose": "Execute and assert: Temperature-risk penalty.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-075",
+      "requirement_ids": [
+        "M12-075"
+      ],
+      "category": "scoring_ranking",
+      "name": "Demand-proxy component.",
+      "purpose": "Execute and assert: Demand-proxy component.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-076",
+      "requirement_ids": [
+        "M12-076"
+      ],
+      "category": "scoring_ranking",
+      "name": "Peak-alignment component.",
+      "purpose": "Execute and assert: Peak-alignment component.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-077",
+      "requirement_ids": [
+        "M12-077"
+      ],
+      "category": "scoring_ranking",
+      "name": "Tariff proxy.",
+      "purpose": "Execute and assert: Tariff proxy.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-078",
+      "requirement_ids": [
+        "M12-078"
+      ],
+      "category": "scoring_ranking",
+      "name": "Carbon proxy.",
+      "purpose": "Execute and assert: Carbon proxy.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-079",
+      "requirement_ids": [
+        "M12-079"
+      ],
+      "category": "scoring_ranking",
+      "name": "Uncertainty penalty.",
+      "purpose": "Execute and assert: Uncertainty penalty.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-080",
+      "requirement_ids": [
+        "M12-080"
+      ],
+      "category": "scoring_ranking",
+      "name": "OOD penalty.",
+      "purpose": "Execute and assert: OOD penalty.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-081",
+      "requirement_ids": [
+        "M12-081"
+      ],
+      "category": "scoring_ranking",
+      "name": "Stable ranking.",
+      "purpose": "Execute and assert: Stable ranking.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-082",
+      "requirement_ids": [
+        "M12-082"
+      ],
+      "category": "scoring_ranking",
+      "name": "Stable tie-break.",
+      "purpose": "Execute and assert: Stable tie-break.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-083",
+      "requirement_ids": [
+        "M12-083"
+      ],
+      "category": "scoring_ranking",
+      "name": "Advisory and MicroTwin rankings agree.",
+      "purpose": "Execute and assert: Advisory and MicroTwin rankings agree.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-083",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-083']",
+      "input_mutations": [
+        "Advisory and MicroTwin rankings agree."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "rankings_agree"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-084",
+      "requirement_ids": [
+        "M12-084"
+      ],
+      "category": "scoring_ranking",
+      "name": "Advisory and MicroTwin rankings disagree.",
+      "purpose": "Execute and assert: Advisory and MicroTwin rankings disagree.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-085",
+      "requirement_ids": [
+        "M12-085"
+      ],
+      "category": "scoring_ranking",
+      "name": "Disagreement reported.",
+      "purpose": "Execute and assert: Disagreement reported.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-086",
+      "requirement_ids": [
+        "M12-086"
+      ],
+      "category": "scoring_ranking",
+      "name": "Unqualified model prevents ranking.",
+      "purpose": "Execute and assert: Unqualified model prevents ranking.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unqualified_ranking",
+      "real_entry_point": "negative_fixtures.FACTORIES['unqualified_ranking']",
+      "input_mutations": [
+        "Unqualified model prevents ranking."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-087",
+      "requirement_ids": [
+        "M12-087"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "get_microtwin_status.",
+      "purpose": "Execute and assert: get_microtwin_status.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-088",
+      "requirement_ids": [
+        "M12-088"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "get_microtwin_validation.",
+      "purpose": "Execute and assert: get_microtwin_validation.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-089",
+      "requirement_ids": [
+        "M12-089"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "evaluate persisted candidate.",
+      "purpose": "Execute and assert: evaluate persisted candidate.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-089",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-089']",
+      "input_mutations": [
+        "evaluate persisted candidate."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "persisted_candidate_evaluated"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-090",
+      "requirement_ids": [
+        "M12-090"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Unknown plan rejected.",
+      "purpose": "Execute and assert: Unknown plan rejected.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unknown_plan",
+      "real_entry_point": "negative_fixtures.FACTORIES['unknown_plan']",
+      "input_mutations": [
+        "Unknown plan rejected."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-091",
+      "requirement_ids": [
+        "M12-091"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "compare rollouts.",
+      "purpose": "Execute and assert: compare rollouts.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-092",
+      "requirement_ids": [
+        "M12-092"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "bounded rollout response.",
+      "purpose": "Execute and assert: bounded rollout response.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-092",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-092']",
+      "input_mutations": [
+        "bounded rollout response."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "bounded_rollout_response"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-093",
+      "requirement_ids": [
+        "M12-093"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "rank all candidates.",
+      "purpose": "Execute and assert: rank all candidates.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-094",
+      "requirement_ids": [
+        "M12-094"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "training tool unavailable through MCP.",
+      "purpose": "Execute and assert: training tool unavailable through MCP.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "mcp_training",
+      "real_entry_point": "negative_fixtures.FACTORIES['mcp_training']",
+      "input_mutations": [
+        "training tool unavailable through MCP."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-095",
+      "requirement_ids": [
+        "M12-095"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "propose_guarded_control remains denied.",
+      "purpose": "Execute and assert: propose_guarded_control remains denied.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "mcp_control",
+      "real_entry_point": "negative_fixtures.FACTORIES['mcp_control']",
+      "input_mutations": [
+        "propose_guarded_control remains denied."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-096",
+      "requirement_ids": [
+        "M12-096"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Mock LLM explains validation.",
+      "purpose": "Execute and assert: Mock LLM explains validation.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-096",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-096']",
+      "input_mutations": [
+        "Mock LLM explains validation."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "mock_llm_explains_validation"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-097",
+      "requirement_ids": [
+        "M12-097"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Mock LLM recommends ranked candidate.",
+      "purpose": "Execute and assert: Mock LLM recommends ranked candidate.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "MT12-097",
+      "real_entry_point": "negative_fixtures.FACTORIES['MT12-097']",
+      "input_mutations": [
+        "Mock LLM recommends ranked candidate."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "mock_llm_recommends_ranked_candidate"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-098",
+      "requirement_ids": [
+        "M12-098"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Invented rollout ID blocked.",
+      "purpose": "Execute and assert: Invented rollout ID blocked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unknown_rollout",
+      "real_entry_point": "negative_fixtures.FACTORIES['unknown_rollout']",
+      "input_mutations": [
+        "Invented rollout ID blocked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-099",
+      "requirement_ids": [
+        "M12-099"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Modified score blocked.",
+      "purpose": "Execute and assert: Modified score blocked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "modified_score",
+      "real_entry_point": "negative_fixtures.FACTORIES['modified_score']",
+      "input_mutations": [
+        "Modified score blocked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-100",
+      "requirement_ids": [
+        "M12-100"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "False EnergyPlus-result claim blocked.",
+      "purpose": "Execute and assert: False EnergyPlus-result claim blocked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_energyplus",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_energyplus']",
+      "input_mutations": [
+        "False EnergyPlus-result claim blocked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-101",
+      "requirement_ids": [
+        "M12-101"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Verified-savings claim blocked.",
+      "purpose": "Execute and assert: Verified-savings claim blocked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_energy",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_energy']",
+      "input_mutations": [
+        "Verified-savings claim blocked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-102",
+      "requirement_ids": [
+        "M12-102"
+      ],
+      "category": "mcp_llm_policy",
+      "name": "Physical-execution claim blocked.",
+      "purpose": "Execute and assert: Physical-execution claim blocked.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_physical",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_physical']",
+      "input_mutations": [
+        "Physical-execution claim blocked."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-103",
+      "requirement_ids": [
+        "M12-103"
+      ],
+      "category": "persistence_replay",
+      "name": "Exact replay.",
+      "purpose": "Execute and assert: Exact replay.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-104",
+      "requirement_ids": [
+        "M12-104"
+      ],
+      "category": "persistence_replay",
+      "name": "Repeat complete suite.",
+      "purpose": "Execute and assert: Repeat complete suite.",
+      "fixture_type": "SHARED_EXECUTABLE_FIXTURE",
+      "fixture_path": "scripts/run_microtwin_mock_replay.py",
+      "fixture_factory": null,
+      "real_entry_point": "_checks",
+      "input_mutations": [],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12-105",
+      "requirement_ids": [
+        "M12-105"
+      ],
+      "category": "persistence_replay",
+      "name": "Zero writes.",
+      "purpose": "Execute and assert: Zero writes.",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "zero_write",
+      "real_entry_point": "negative_fixtures.FACTORIES['zero_write']",
+      "input_mutations": [
+        "Zero writes."
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "QUALIFIED",
+      "expected_rollout_status": "UNCHANGED_OR_EXPECTED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-001",
+      "requirement_ids": [
+        "12B-1"
+      ],
+      "category": "leakage",
+      "name": "Future zone-temperature leakage",
+      "purpose": "Execute dedicated negative fixture: Future zone-temperature leakage",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "future_temperature",
+      "real_entry_point": "negative_fixtures.FACTORIES['future_temperature']",
+      "input_mutations": [
+        "Future zone-temperature leakage"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "prohibited_future_feature"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-002",
+      "requirement_ids": [
+        "12B-2"
+      ],
+      "category": "leakage",
+      "name": "Future actual demand leakage",
+      "purpose": "Execute dedicated negative fixture: Future actual demand leakage",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "future_demand",
+      "real_entry_point": "negative_fixtures.FACTORIES['future_demand']",
+      "input_mutations": [
+        "Future actual demand leakage"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "prohibited_future_feature"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-003",
+      "requirement_ids": [
+        "12B-3"
+      ],
+      "category": "leakage",
+      "name": "Future experimental setpoint leakage",
+      "purpose": "Execute dedicated negative fixture: Future experimental setpoint leakage",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "future_setpoint",
+      "real_entry_point": "negative_fixtures.FACTORIES['future_setpoint']",
+      "input_mutations": [
+        "Future experimental setpoint leakage"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "prohibited_future_feature"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-004",
+      "requirement_ids": [
+        "12B-4"
+      ],
+      "category": "leakage",
+      "name": "Future observed occupancy leakage",
+      "purpose": "Execute dedicated negative fixture: Future observed occupancy leakage",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "future_occupancy",
+      "real_entry_point": "negative_fixtures.FACTORIES['future_occupancy']",
+      "input_mutations": [
+        "Future observed occupancy leakage"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "prohibited_future_feature"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-005",
+      "requirement_ids": [
+        "12B-5"
+      ],
+      "category": "artifact_safety",
+      "name": "Unsafe serialized artifact",
+      "purpose": "Execute dedicated negative fixture: Unsafe serialized artifact",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unsafe_artifact",
+      "real_entry_point": "negative_fixtures.FACTORIES['unsafe_artifact']",
+      "input_mutations": [
+        "Unsafe serialized artifact"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unsafe_artifact_format"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-006",
+      "requirement_ids": [
+        "12B-6"
+      ],
+      "category": "artifact_safety",
+      "name": "Artifact checksum mismatch",
+      "purpose": "Execute dedicated negative fixture: Artifact checksum mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "checksum_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['checksum_mismatch']",
+      "input_mutations": [
+        "Artifact checksum mismatch"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "artifact_checksum_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-007",
+      "requirement_ids": [
+        "12B-7"
+      ],
+      "category": "artifact_safety",
+      "name": "Feature schema mismatch",
+      "purpose": "Execute dedicated negative fixture: Feature schema mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "schema_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['schema_mismatch']",
+      "input_mutations": [
+        "Feature schema mismatch"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "feature_schema_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-008",
+      "requirement_ids": [
+        "12B-8"
+      ],
+      "category": "artifact_safety",
+      "name": "Training fingerprint mismatch",
+      "purpose": "Execute dedicated negative fixture: Training fingerprint mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "training_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['training_mismatch']",
+      "input_mutations": [
+        "Training fingerprint mismatch"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "training_fingerprint_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-009",
+      "requirement_ids": [
+        "12B-9"
+      ],
+      "category": "qualification",
+      "name": "Unqualified thermal model ranking",
+      "purpose": "Execute dedicated negative fixture: Unqualified thermal model ranking",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unqualified_ranking",
+      "real_entry_point": "negative_fixtures.FACTORIES['unqualified_ranking']",
+      "input_mutations": [
+        "Unqualified thermal model ranking"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "model_not_qualified"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "NOT_QUALIFIED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-010",
+      "requirement_ids": [
+        "12B-10"
+      ],
+      "category": "qualification",
+      "name": "Insufficient training data",
+      "purpose": "Execute dedicated negative fixture: Insufficient training data",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "insufficient_data",
+      "real_entry_point": "negative_fixtures.FACTORIES['insufficient_data']",
+      "input_mutations": [
+        "Insufficient training data"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "insufficient_training_data"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "NOT_QUALIFIED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-011",
+      "requirement_ids": [
+        "12B-11"
+      ],
+      "category": "qualification",
+      "name": "Persistence baseline qualification failure",
+      "purpose": "Execute dedicated negative fixture: Persistence baseline qualification failure",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_failure",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_failure']",
+      "input_mutations": [
+        "Persistence baseline qualification failure"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "persistence_baseline_not_beaten"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "NOT_QUALIFIED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-012",
+      "requirement_ids": [
+        "12B-12"
+      ],
+      "category": "qualification",
+      "name": "Demand model unavailable path",
+      "purpose": "Execute dedicated negative fixture: Demand model unavailable path",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "demand_unavailable",
+      "real_entry_point": "negative_fixtures.FACTORIES['demand_unavailable']",
+      "input_mutations": [
+        "Demand model unavailable path"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "demand_model_unavailable"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "NOT_QUALIFIED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-013",
+      "requirement_ids": [
+        "12B-13"
+      ],
+      "category": "ood",
+      "name": "Mild OOD input",
+      "purpose": "Execute dedicated negative fixture: Mild OOD input",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_mild",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_mild']",
+      "input_mutations": [
+        "Mild OOD input"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "ood_detected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "OOD_POLICY_APPLIED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-014",
+      "requirement_ids": [
+        "12B-14"
+      ],
+      "category": "ood",
+      "name": "Strongly OOD setpoint",
+      "purpose": "Execute dedicated negative fixture: Strongly OOD setpoint",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_setpoint",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_setpoint']",
+      "input_mutations": [
+        "Strongly OOD setpoint"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "ood_detected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "OOD_POLICY_APPLIED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-015",
+      "requirement_ids": [
+        "12B-15"
+      ],
+      "category": "ood",
+      "name": "Strongly OOD outdoor temperature",
+      "purpose": "Execute dedicated negative fixture: Strongly OOD outdoor temperature",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_outdoor",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_outdoor']",
+      "input_mutations": [
+        "Strongly OOD outdoor temperature"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "ood_detected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "OOD_POLICY_APPLIED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-016",
+      "requirement_ids": [
+        "12B-16"
+      ],
+      "category": "ood",
+      "name": "Multiple OOD features",
+      "purpose": "Execute dedicated negative fixture: Multiple OOD features",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "ood_multiple",
+      "real_entry_point": "negative_fixtures.FACTORIES['ood_multiple']",
+      "input_mutations": [
+        "Multiple OOD features"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "ood_detected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "OOD_POLICY_APPLIED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-017",
+      "requirement_ids": [
+        "12B-17"
+      ],
+      "category": "identifier_integrity",
+      "name": "Unknown plan ID",
+      "purpose": "Execute dedicated negative fixture: Unknown plan ID",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unknown_plan",
+      "real_entry_point": "negative_fixtures.FACTORIES['unknown_plan']",
+      "input_mutations": [
+        "Unknown plan ID"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unknown_plan"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-018",
+      "requirement_ids": [
+        "12B-18"
+      ],
+      "category": "identifier_integrity",
+      "name": "Invented rollout ID",
+      "purpose": "Execute dedicated negative fixture: Invented rollout ID",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "unknown_rollout",
+      "real_entry_point": "negative_fixtures.FACTORIES['unknown_rollout']",
+      "input_mutations": [
+        "Invented rollout ID"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unknown_rollout"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-019",
+      "requirement_ids": [
+        "12B-19"
+      ],
+      "category": "identifier_integrity",
+      "name": "Plan context mismatch",
+      "purpose": "Execute dedicated negative fixture: Plan context mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "context_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['context_mismatch']",
+      "input_mutations": [
+        "Plan context mismatch"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "context_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-020",
+      "requirement_ids": [
+        "12B-20"
+      ],
+      "category": "identifier_integrity",
+      "name": "Model context mismatch",
+      "purpose": "Execute dedicated negative fixture: Model context mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "model_mismatch",
+      "real_entry_point": "negative_fixtures.FACTORIES['model_mismatch']",
+      "input_mutations": [
+        "Model context mismatch"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "model_context_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-021",
+      "requirement_ids": [
+        "12B-21"
+      ],
+      "category": "identifier_integrity",
+      "name": "Modified candidate fingerprint",
+      "purpose": "Execute dedicated negative fixture: Modified candidate fingerprint",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "modified_candidate",
+      "real_entry_point": "negative_fixtures.FACTORIES['modified_candidate']",
+      "input_mutations": [
+        "Modified candidate fingerprint"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "candidate_fingerprint_mismatch"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-022",
+      "requirement_ids": [
+        "12B-22"
+      ],
+      "category": "score_integrity",
+      "name": "Modified MicroTwin score",
+      "purpose": "Execute dedicated negative fixture: Modified MicroTwin score",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "modified_score",
+      "real_entry_point": "negative_fixtures.FACTORIES['modified_score']",
+      "input_mutations": [
+        "Modified MicroTwin score"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "modified_score"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-023",
+      "requirement_ids": [
+        "12B-23"
+      ],
+      "category": "score_integrity",
+      "name": "Modified ranking order",
+      "purpose": "Execute dedicated negative fixture: Modified ranking order",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "modified_order",
+      "real_entry_point": "negative_fixtures.FACTORIES['modified_order']",
+      "input_mutations": [
+        "Modified ranking order"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "modified_ranking_order"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-024",
+      "requirement_ids": [
+        "12B-24"
+      ],
+      "category": "score_integrity",
+      "name": "Stable tie break",
+      "purpose": "Execute dedicated negative fixture: Stable tie break",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "stable_tie",
+      "real_entry_point": "negative_fixtures.FACTORIES['stable_tie']",
+      "input_mutations": [
+        "Stable tie break"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "stable_plan_id_tie_break"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-025",
+      "requirement_ids": [
+        "12B-25"
+      ],
+      "category": "score_integrity",
+      "name": "Missing NATIVE_HOLD reference",
+      "purpose": "Execute dedicated negative fixture: Missing NATIVE_HOLD reference",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "missing_native",
+      "real_entry_point": "negative_fixtures.FACTORIES['missing_native']",
+      "input_mutations": [
+        "Missing NATIVE_HOLD reference"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "native_hold_reference_missing"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-026",
+      "requirement_ids": [
+        "12B-26"
+      ],
+      "category": "llm_claim",
+      "name": "False EnergyPlus result claim",
+      "purpose": "Execute dedicated negative fixture: False EnergyPlus result claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_energyplus",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_energyplus']",
+      "input_mutations": [
+        "False EnergyPlus result claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "false_energyplus_result_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-027",
+      "requirement_ids": [
+        "12B-27"
+      ],
+      "category": "llm_claim",
+      "name": "Unsupported energy savings claim",
+      "purpose": "Execute dedicated negative fixture: Unsupported energy savings claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_energy",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_energy']",
+      "input_mutations": [
+        "Unsupported energy savings claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unsupported_savings_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-028",
+      "requirement_ids": [
+        "12B-28"
+      ],
+      "category": "llm_claim",
+      "name": "Unsupported cost savings claim",
+      "purpose": "Execute dedicated negative fixture: Unsupported cost savings claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_cost",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_cost']",
+      "input_mutations": [
+        "Unsupported cost savings claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unsupported_cost_savings_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-029",
+      "requirement_ids": [
+        "12B-29"
+      ],
+      "category": "llm_claim",
+      "name": "Unsupported carbon reduction claim",
+      "purpose": "Execute dedicated negative fixture: Unsupported carbon reduction claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_carbon",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_carbon']",
+      "input_mutations": [
+        "Unsupported carbon reduction claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unsupported_carbon_reduction_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-030",
+      "requirement_ids": [
+        "12B-30"
+      ],
+      "category": "llm_claim",
+      "name": "Guaranteed comfort claim",
+      "purpose": "Execute dedicated negative fixture: Guaranteed comfort claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_comfort",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_comfort']",
+      "input_mutations": [
+        "Guaranteed comfort claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "guaranteed_comfort_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-031",
+      "requirement_ids": [
+        "12B-31"
+      ],
+      "category": "llm_claim",
+      "name": "False physical execution claim",
+      "purpose": "Execute dedicated negative fixture: False physical execution claim",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_physical",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_physical']",
+      "input_mutations": [
+        "False physical execution claim"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "false_physical_execution_claim"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-032",
+      "requirement_ids": [
+        "12B-32"
+      ],
+      "category": "llm_claim",
+      "name": "Invented evidence ID",
+      "purpose": "Execute dedicated negative fixture: Invented evidence ID",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_evidence",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_evidence']",
+      "input_mutations": [
+        "Invented evidence ID"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "invented_evidence_id"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-033",
+      "requirement_ids": [
+        "12B-33"
+      ],
+      "category": "llm_claim",
+      "name": "Modified metric value",
+      "purpose": "Execute dedicated negative fixture: Modified metric value",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_metric",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_metric']",
+      "input_mutations": [
+        "Modified metric value"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "modified_metric_value"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-034",
+      "requirement_ids": [
+        "12B-34"
+      ],
+      "category": "llm_claim",
+      "name": "Hidden uncertainty",
+      "purpose": "Execute dedicated negative fixture: Hidden uncertainty",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "claim_uncertainty",
+      "real_entry_point": "negative_fixtures.FACTORIES['claim_uncertainty']",
+      "input_mutations": [
+        "Hidden uncertainty"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "required_uncertainty_missing"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-035",
+      "requirement_ids": [
+        "12B-35"
+      ],
+      "category": "mcp_policy",
+      "name": "Training tool request",
+      "purpose": "Execute dedicated negative fixture: Training tool request",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "mcp_training",
+      "real_entry_point": "negative_fixtures.FACTORIES['mcp_training']",
+      "input_mutations": [
+        "Training tool request"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unknown_tool"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-036",
+      "requirement_ids": [
+        "12B-36"
+      ],
+      "category": "mcp_policy",
+      "name": "Disabled propose guarded control",
+      "purpose": "Execute dedicated negative fixture: Disabled propose guarded control",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "mcp_control",
+      "real_entry_point": "negative_fixtures.FACTORIES['mcp_control']",
+      "input_mutations": [
+        "Disabled propose guarded control"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "control_tool_disabled"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-037",
+      "requirement_ids": [
+        "12B-37"
+      ],
+      "category": "mcp_policy",
+      "name": "Direct physical writer request",
+      "purpose": "Execute dedicated negative fixture: Direct physical writer request",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "mcp_writer",
+      "real_entry_point": "negative_fixtures.FACTORIES['mcp_writer']",
+      "input_mutations": [
+        "Direct physical writer request"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "unknown_tool"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-038",
+      "requirement_ids": [
+        "12B-38"
+      ],
+      "category": "mcp_policy",
+      "name": "Invalid pagination cursor",
+      "purpose": "Execute dedicated negative fixture: Invalid pagination cursor",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "invalid_cursor",
+      "real_entry_point": "negative_fixtures.FACTORIES['invalid_cursor']",
+      "input_mutations": [
+        "Invalid pagination cursor"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "invalid_cursor"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-039",
+      "requirement_ids": [
+        "12B-39"
+      ],
+      "category": "persistence",
+      "name": "Exact duplicate idempotency",
+      "purpose": "Execute dedicated negative fixture: Exact duplicate idempotency",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "duplicate_exact",
+      "real_entry_point": "negative_fixtures.FACTORIES['duplicate_exact']",
+      "input_mutations": [
+        "Exact duplicate idempotency"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "idempotent_duplicate"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-040",
+      "requirement_ids": [
+        "12B-40"
+      ],
+      "category": "persistence",
+      "name": "Conflicting duplicate",
+      "purpose": "Execute dedicated negative fixture: Conflicting duplicate",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "duplicate_conflict",
+      "real_entry_point": "negative_fixtures.FACTORIES['duplicate_conflict']",
+      "input_mutations": [
+        "Conflicting duplicate"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "conflicting_duplicate"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-041",
+      "requirement_ids": [
+        "12B-41"
+      ],
+      "category": "persistence",
+      "name": "Transaction rollback",
+      "purpose": "Execute dedicated negative fixture: Transaction rollback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_rollback",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_rollback']",
+      "input_mutations": [
+        "Transaction rollback"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "transaction_rollback"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-042",
+      "requirement_ids": [
+        "12B-42"
+      ],
+      "category": "persistence",
+      "name": "Foreign key failure",
+      "purpose": "Execute dedicated negative fixture: Foreign key failure",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_foreign_key",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_foreign_key']",
+      "input_mutations": [
+        "Foreign key failure"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "foreign_key_failure"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-043",
+      "requirement_ids": [
+        "12B-43"
+      ],
+      "category": "persistence",
+      "name": "NaN persistence rejection",
+      "purpose": "Execute dedicated negative fixture: NaN persistence rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_nan",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_nan']",
+      "input_mutations": [
+        "NaN persistence rejection"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "nan_rejected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-044",
+      "requirement_ids": [
+        "12B-44"
+      ],
+      "category": "persistence",
+      "name": "Infinity persistence rejection",
+      "purpose": "Execute dedicated negative fixture: Infinity persistence rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "persistence_infinity",
+      "real_entry_point": "negative_fixtures.FACTORIES['persistence_infinity']",
+      "input_mutations": [
+        "Infinity persistence rejection"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "infinity_rejected"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    },
+    {
+      "scenario_id": "MT12B-045",
+      "requirement_ids": [
+        "12B-45"
+      ],
+      "category": "zero_write",
+      "name": "End-to-end zero-write comparison",
+      "purpose": "Execute dedicated negative fixture: End-to-end zero-write comparison",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_path": "tests/fixtures/microtwin/negative_fixtures.py",
+      "fixture_factory": "zero_write",
+      "real_entry_point": "negative_fixtures.FACTORIES['zero_write']",
+      "input_mutations": [
+        "End-to-end zero-write comparison"
+      ],
+      "expected_status": "PASS",
+      "expected_reason_codes": [
+        "zero_write_delta"
+      ],
+      "expected_policy_events": [],
+      "expected_persistence_effect": "no_unsafe_mutation",
+      "expected_model_qualification": "UNCHANGED",
+      "expected_rollout_status": "NOT_CREATED_OR_UNCHANGED",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "deterministic_fingerprint_required": true,
+      "assertion_reference": "scripts/run_microtwin_mock_replay.py"
+    }
+  ]
+}

@@ -1,5 +1,12 @@
 # Architecture
 
+Module 15 adds a terminal read-only branch: persisted evidence → typed aggregation →
+checksum-bound snapshot → loopback API → local dashboard, with no reverse execution path.
+
+Module 12 inserts an offline MicroTwin after Module 11 plan generation: recorded telemetry -> causal dataset -> qualified JSON surrogate -> counterfactual plan rollouts -> deterministic ranking -> bounded MCP/LLM explanation. It has no path to EnergyPlus or the physical writer.
+
+Module 12A adds a supervisor-owned required-evidence contract. Missing evidence triggers one correction, then a permitted deterministic prefetch labeled separately from model-selected calls. Neither path expands tool authority.
+
 ## Implemented execution path through Module 3
 
 ```mermaid
@@ -136,3 +143,86 @@ Bounded history    Persistence worker
 
 This implemented path is sensing-only. The future fallback, controller, comfort ledger,
 LLM, and dashboard are not implemented by Module 6.
+
+## Implemented Module 7 fallback path
+
+## Implemented Module 8 safety boundary
+
+## Implemented Module 9 MCP boundary
+
+## Module 10 advisory supervisor boundary
+
+Module 10A adds a user-facing runtime shell around this boundary: deterministic run
+selection, validated request generation, real stdio calls, mock supervision, and bounded
+audit inspection. It adds no new controller or physical path.
+
+```text
+Local model or mock -> bounded supervisor -> independent tool policy
+    -> Module 9 MCP tools -> recorded evidence / Module 8 dry run -> no writer
+```
+
+The adapter accepts loopback Ollama only. Models cannot alter tool policy, limits,
+evidence checks, or the zero-write final schema. Real-model smoke remains pending.
+
+```text
+Local MCP stdio client -> typed bounded tool envelope -> recorded Modules 6–8 stores
+                                             |
+                                             +-> Module 8 guard dry run -> no writer
+```
+
+The official MCP server uses a fixed catalogue and separate schema-v4 audit. Its only
+control-capable tool is disabled, so no MCP path reaches the physical writer.
+
+```text
+Module 7 ControlCommand
+        |
+ProposedCommand
+        |
+Independent SafetyGuard
+        |
+GuardDecision -> schema-v3 audit
+        |
+GuardedCommand
+        |
+Runtime-validated physical write gate
+        |
+SPACE3-1 cooling-setpoint actuator
+```
+
+The writer accepts only guard-created immutable commands and rechecks authority, run,
+environment, expiry, and exact actuator identity. Module 9 comfort-debt work remains pending.
+
+```text
+Canonical BuildingState
+        |
+Deterministic fallback decision engine
+        |
+ControlDecision
+        |
+Bounded latest-command buffer
+        |
+Single approved cooling actuator executor
+        |
+EnergyPlus
+        |
+Subsequent BuildingState observation
+```
+
+Module 8 — independent safety guard: **Completed**. Module 7 historical records contain minimal execution
+invariants and is not an LLM-action safety boundary.
+# Module 10 local inference boundary
+
+The advisory model is `qwen3:0.6b` through loopback-only Ollama. Native model
+tool selections are checked by deterministic schemas and policy before Module 9;
+Module 8 remains the only proposal authority and the physical path is disabled.
+
+Module 11 adds `PlanningContext -> deterministic templates -> validation -> first-action
+Module 8 dry-run -> advisory scoring -> advisory selection`. Future plan actions never
+become `GuardedCommand` objects; Module 12 MicroTwin work remains pending.
+# Module 13 advisory layer
+
+The Comfort Ledger consumes immutable planning context, candidate plans, and Module 12 rollouts. Deterministic evaluation produces ledger entries, debt records, fairness assessments, Thermal Bank accounting, and a ledger-aware ranking. Schema 8 persists these records additively. Ten MCP tools expose read/proposal-only access; the supervisor treats computed values as authoritative and keeps the control tool disabled. The layer has no path to the physical writer.
+
+# Module 14 execution boundary
+
+Exact approval binding and committed live state are new prerequisites before Module 8. Only the existing `PhysicalWriteGate` receives the guard-created command. Schema 9 stores approvals, sessions, transitions, actions, writer attempts, fallback/reset evidence, comparisons, and reconciliation. Four MCP tools expose records read-only; none can arm or execute.

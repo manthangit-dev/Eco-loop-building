@@ -1,0 +1,7 @@
+{
+  "request_id": "example-describe-state",
+  "objective_type": "DESCRIBE_CURRENT_STATE",
+  "objective_text": "Describe the latest recorded building state.",
+  "run_id": "module8-live-control",
+  "dry_run_only": true
+}

@@ -1,5 +1,15 @@
 # ThermoLedger AI
 
+Module 14A now rejects the original January/July mismatch and records three exact July 19
+short runs. The live result had a meaningful measured effect, one guarded set, one guarded
+reset, and zero unguarded writes. See `docs/CONTEXT_ALIGNED_EXECUTION.md`.
+
+Module 15 provides the final local-only, read-only evidence dashboard and deterministic
+hackathon package. It has no planning, approval, execution, EnergyPlus, or Ollama path. See
+`docs/EVIDENCE_DASHBOARD.md` and `docs/HACKATHON_DEMO_SCRIPT.md`.
+
+Module 12 adds a qualified offline MicroTwin for deterministic, advisory-only candidate-plan rollouts. It is not an EnergyPlus result and does not claim verified savings or comfort improvement. See [docs/MICROTWIN.md](docs/MICROTWIN.md).
+
 > A Fair, Carbon-Aware Thermal Battery Agent for Autonomous Building Control
 
 ## Hackathon problem
@@ -52,15 +62,15 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 4 | Live sensor extraction | Completed |
 | 5 | Actuator injection | Completed |
 | 6 | State bus and storage | Completed |
-| 7 | Rule-based fallback controller | Pending |
-| 8 | Safety guard | Pending |
-| 9 | Comfort-debt ledger | Pending |
-| 10 | Zone-flexibility estimator | Pending |
-| 11 | Thermal-battery strategy | Pending |
-| 12 | Candidate-action tournament | Pending |
-| 13 | Ollama and local LLM | Pending |
-| 14 | MCP tool server | Pending |
-| 15 | Agent orchestration | Pending |
+| 7 | Rule-based fallback controller | Completed |
+| 8 | Safety guard | Completed |
+| 9 | Local MCP server and deterministic building tool layer | Completed |
+| 10 | Local LLM adapter and controlled MCP supervisor | Completed |
+| 11 | Forecast context and deterministic advisory planning | Completed |
+| 12 | Offline MicroTwin candidate evaluation | Completed |
+| 13 | Comfort Ledger and Thermal Bank | Completed |
+| 14 | Approval-gated simulation execution | Completed |
+| 15 | Read-only evidence dashboard and hackathon package | Completed |
 | 16 | Critic and self-correction | Pending |
 | 17 | Failure handling | Pending |
 | 18 | Logging and observability | Pending |
@@ -71,6 +81,23 @@ Progress one module at a time. Preserve reproducibility, separate LLM planning f
 | 23 | Experiment scenarios | Pending |
 | 24 | Documentation | Pending |
 | 25 | Presentation and demonstration | Pending |
+
+Module 9 provides 18 deterministic local stdio tools over recorded Modules 6–8 evidence.
+The control-capable tool is disabled. See [docs/MCP_SERVER.md](docs/MCP_SERVER.md).
+
+Module 10 adds a bounded advisory supervisor, deterministic mock, loopback-only Ollama
+adapter, strict tool policy, and schema-v5 audit. Official Ollama with `qwen3:0.6b`
+completed native tool calling and recorded-data real-model smoke with zero writes.
+See [docs/LLM_SUPERVISOR.md](docs/LLM_SUPERVISOR.md).
+
+Module 11 adds versioned local forecast scenarios, deterministic advisory candidate
+plans, transparent scoring, six MCP planning tools, and bounded local-model plan
+selection. It performs no physical execution and makes no savings prediction. See
+[docs/PLANNING_ENGINE.md](docs/PLANNING_ENGINE.md).
+
+For a tested recorded-data demonstration with no Ollama, EnergyPlus process, or physical
+write, run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File
+scripts\run_current_demo.ps1`. See [docs/CURRENT_DEMO.md](docs/CURRENT_DEMO.md).
 
 ## Setup — Module 1
 
@@ -141,12 +168,64 @@ queues, and passed integrity and foreign-key checks. The live output passed comp
 with Module 4 and recorded zero actuator access. See
 [docs/STATE_BUS_AND_STORAGE.md](docs/STATE_BUS_AND_STORAGE.md).
 
-The repository has no autonomous controller, comfort-debt ledger, AI, or dashboard, and
-no energy-saving result exists. Module 7, the deterministic fallback controller, is the
-next pending module.
+Through Module 6 the repository had no controller; Module 7 below adds only the deterministic
+fallback. Comfort debt, AI, MCP, the dashboard, and energy-saving results remain absent.
+
+## Deterministic fallback controller — Module 7
+
+Module 7 consumes canonical states and produces causal, bounded cooling-setpoint commands
+without an LLM or external service. Replay and live shadow evaluate all five occupied zones;
+real control is restricted to the verified `SPACE3-1` cooling-setpoint actuator.
+
+```powershell
+python scripts/replay_fallback_controller.py --output-directory data/output/module_7_fallback_controller/replay_shadow/run_1
+python scripts/run_fallback_shadow.py
+python scripts/run_fallback_controller.py
+python scripts/validate_fallback_controller.py --mode live_control
+python scripts/inspect_controller_decisions.py --database data/output/module_7_fallback_controller/live_control/current/thermoledger_state.db --query recent
+```
+
+Two annual replays were deterministic; annual live shadow preserved Module 6 physical parity
+with zero writes; annual live control persisted 35,040 states and decisions, used one
+actuator, observed setpoint response, and reset on shutdown. See
+[docs/FALLBACK_CONTROLLER.md](docs/FALLBACK_CONTROLLER.md).
+
+Module 7's historical records correctly state that the guard was pending during its run.
+Module 8 below now protects the physical path. No LLM, MCP, comfort debt, optimization, or
+validated energy-saving result exists.
+
+## Independent safety guard — Module 8
+
+Module 8 now places an independent, deterministic, fail-closed gate between every proposal
+and the physical writer. Only an immutable runtime-validated `GuardedCommand` for the exact
+`SPACE3-1` cooling-setpoint actuator can be written; raw commands, forged commands, plenums,
+wrong identities, non-finite values, stale/future commands, and audit failures fail closed.
+
+```powershell
+.\.venv\Scripts\python.exe scripts/run_safety_challenges.py --output data/output/module_8_safety_guard/challenges/run_1/safety_challenge_report.json
+.\.venv\Scripts\python.exe scripts/replay_safety_guard.py --output data/output/module_8_safety_guard/replay/run_1/safety_replay_report.json
+.\.venv\Scripts\python.exe scripts/run_safety_shadow.py
+.\.venv\Scripts\python.exe scripts/run_guarded_controller.py
+.\.venv\Scripts\python.exe scripts/validate_safety_guard.py
+.\.venv\Scripts\python.exe scripts/inspect_safety_guard.py --query summary
+```
+
+The challenge suite, repeated replay, annual shadow, and annual guarded-control run pass.
+All 51,539 physical set/reset attempts are traceable to guard decisions. See
+[docs/SAFETY_GUARD.md](docs/SAFETY_GUARD.md). Module 9 is next and remains pending. No LLM,
+MCP, optimization, or validated saving result exists.
 
 ## Results — not yet generated
 
 No results have been generated. The 10% energy and peak-demand reductions, 95% occupied comfort compliance, and 98% successful control cycles are targets, not achievements.
 
 Achieved savings may be claimed only after real baseline and controlled simulations use the identical building, weather, occupancy, external signals, and time periods, and their outputs are compared.
+# Module 13: Comfort Ledger and Thermal Bank
+
+Status: **Completed and fully verified.**
+
+Module 13 adds an advisory-only, equity-aware decision layer over the five qualified Module 12 MicroTwin rollouts. It deterministically records comfort burden and debt, evaluates fairness, maintains a zero-overdraft Thermal Bank in RTFU, and compares Module 11, Module 12, and ledger-aware rankings. It performs no physical control, EnergyPlus execution, model retraining, or verified-savings measurement. See [Comfort Ledger](docs/COMFORT_LEDGER.md), [Thermal Bank](docs/THERMAL_BANK.md), and [Module 13 design decision](docs/MODULE_13_DESIGN_DECISION.md).
+
+# Module 14: Approval-Gated Simulation Execution
+
+Status: **Completed and fully verified.** Module 14 binds the persisted ledger-selected plan to an immutable local operator approval, schedules it against committed EnergyPlus state, revalidates every action through Module 8, and uses the existing physical writer. The bounded live test made one guarded set and one guarded reset; no annual or real-building claim is made. See [Execution Orchestrator](docs/EXECUTION_ORCHESTRATOR.md), [Operator Approval](docs/OPERATOR_APPROVAL.md), and [Short-Horizon Validation](docs/SHORT_HORIZON_VALIDATION.md).

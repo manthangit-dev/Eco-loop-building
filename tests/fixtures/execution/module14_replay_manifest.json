@@ -1,0 +1,1175 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "scenario_id": "EX14-001",
+      "requirement_id": "M14-001",
+      "name": "Valid replay approval",
+      "category": "approval",
+      "fixture_key": "execution_001_valid_replay_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "valid_replay_approval"
+    },
+    {
+      "scenario_id": "EX14-002",
+      "requirement_id": "M14-002",
+      "name": "Valid shadow approval",
+      "category": "approval",
+      "fixture_key": "execution_002_valid_shadow_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "valid_shadow_approval"
+    },
+    {
+      "scenario_id": "EX14-003",
+      "requirement_id": "M14-003",
+      "name": "Valid live-short approval",
+      "category": "approval",
+      "fixture_key": "execution_003_valid_live_short_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "valid_live-short_approval"
+    },
+    {
+      "scenario_id": "EX14-004",
+      "requirement_id": "M14-004",
+      "name": "Missing approval",
+      "category": "approval",
+      "fixture_key": "execution_004_missing_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "missing_approval"
+    },
+    {
+      "scenario_id": "EX14-005",
+      "requirement_id": "M14-005",
+      "name": "Expired approval",
+      "category": "approval",
+      "fixture_key": "execution_005_expired_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "expired_approval"
+    },
+    {
+      "scenario_id": "EX14-006",
+      "requirement_id": "M14-006",
+      "name": "Invalid approval fingerprint",
+      "category": "approval",
+      "fixture_key": "execution_006_invalid_approval_fingerprint",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "invalid_approval_fingerprint"
+    },
+    {
+      "scenario_id": "EX14-007",
+      "requirement_id": "M14-007",
+      "name": "Plan fingerprint mismatch",
+      "category": "approval",
+      "fixture_key": "execution_007_plan_fingerprint_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "plan_fingerprint_mismatch"
+    },
+    {
+      "scenario_id": "EX14-008",
+      "requirement_id": "M14-008",
+      "name": "Rollout fingerprint mismatch",
+      "category": "approval",
+      "fixture_key": "execution_008_rollout_fingerprint_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "rollout_fingerprint_mismatch"
+    },
+    {
+      "scenario_id": "EX14-009",
+      "requirement_id": "M14-009",
+      "name": "Ledger fingerprint mismatch",
+      "category": "approval",
+      "fixture_key": "execution_009_ledger_fingerprint_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "ledger_fingerprint_mismatch"
+    },
+    {
+      "scenario_id": "EX14-010",
+      "requirement_id": "M14-010",
+      "name": "Model fingerprint mismatch",
+      "category": "approval",
+      "fixture_key": "execution_010_model_fingerprint_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "model_fingerprint_mismatch"
+    },
+    {
+      "scenario_id": "EX14-011",
+      "requirement_id": "M14-011",
+      "name": "Wrong zone",
+      "category": "approval",
+      "fixture_key": "execution_011_wrong_zone",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_zone"
+    },
+    {
+      "scenario_id": "EX14-012",
+      "requirement_id": "M14-012",
+      "name": "Wrong actuator",
+      "category": "approval",
+      "fixture_key": "execution_012_wrong_actuator",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_actuator"
+    },
+    {
+      "scenario_id": "EX14-013",
+      "requirement_id": "M14-013",
+      "name": "Wrong units",
+      "category": "approval",
+      "fixture_key": "execution_013_wrong_units",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_units"
+    },
+    {
+      "scenario_id": "EX14-014",
+      "requirement_id": "M14-014",
+      "name": "Simulation-only missing",
+      "category": "approval",
+      "fixture_key": "execution_014_simulation_only_missing",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "simulation-only_missing"
+    },
+    {
+      "scenario_id": "EX14-015",
+      "requirement_id": "M14-015",
+      "name": "Invalid write limit",
+      "category": "approval",
+      "fixture_key": "execution_015_invalid_write_limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "invalid_write_limit"
+    },
+    {
+      "scenario_id": "EX14-016",
+      "requirement_id": "M14-016",
+      "name": "Invalid reset limit",
+      "category": "approval",
+      "fixture_key": "execution_016_invalid_reset_limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "invalid_reset_limit"
+    },
+    {
+      "scenario_id": "EX14-017",
+      "requirement_id": "M14-017",
+      "name": "Wrong execution mode",
+      "category": "approval",
+      "fixture_key": "execution_017_wrong_execution_mode",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_execution_mode"
+    },
+    {
+      "scenario_id": "EX14-018",
+      "requirement_id": "M14-018",
+      "name": "IDF checksum mismatch",
+      "category": "approval",
+      "fixture_key": "execution_018_idf_checksum_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "idf_checksum_mismatch"
+    },
+    {
+      "scenario_id": "EX14-019",
+      "requirement_id": "M14-019",
+      "name": "EPW checksum mismatch",
+      "category": "approval",
+      "fixture_key": "execution_019_epw_checksum_mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "epw_checksum_mismatch"
+    },
+    {
+      "scenario_id": "EX14-020",
+      "requirement_id": "M14-020",
+      "name": "Approval reused",
+      "category": "approval",
+      "fixture_key": "execution_020_approval_reused",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval_reused"
+    },
+    {
+      "scenario_id": "EX14-021",
+      "requirement_id": "M14-021",
+      "name": "Plan no longer eligible",
+      "category": "approval",
+      "fixture_key": "execution_021_plan_no_longer_eligible",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "plan_no_longer_eligible"
+    },
+    {
+      "scenario_id": "EX14-022",
+      "requirement_id": "M14-022",
+      "name": "Blocking debt",
+      "category": "approval",
+      "fixture_key": "execution_022_blocking_debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "blocking_debt"
+    },
+    {
+      "scenario_id": "EX14-023",
+      "requirement_id": "M14-023",
+      "name": "Strong OOD",
+      "category": "approval",
+      "fixture_key": "execution_023_strong_ood",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "strong_ood"
+    },
+    {
+      "scenario_id": "EX14-024",
+      "requirement_id": "M14-024",
+      "name": "Unqualified rollout",
+      "category": "approval",
+      "fixture_key": "execution_024_unqualified_rollout",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "unqualified_rollout"
+    },
+    {
+      "scenario_id": "EX14-025",
+      "requirement_id": "M14-025",
+      "name": "Valid full transition",
+      "category": "state_machine",
+      "fixture_key": "execution_025_valid_full_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "valid_full_transition"
+    },
+    {
+      "scenario_id": "EX14-026",
+      "requirement_id": "M14-026",
+      "name": "Invalid IDLE to EXECUTING transition",
+      "category": "state_machine",
+      "fixture_key": "execution_026_invalid_idle_to_executing_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "invalid_idle_to_executing_transition"
+    },
+    {
+      "scenario_id": "EX14-027",
+      "requirement_id": "M14-027",
+      "name": "Approval-required transition",
+      "category": "state_machine",
+      "fixture_key": "execution_027_approval_required_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval-required_transition"
+    },
+    {
+      "scenario_id": "EX14-028",
+      "requirement_id": "M14-028",
+      "name": "Armed transition",
+      "category": "state_machine",
+      "fixture_key": "execution_028_armed_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "armed_transition"
+    },
+    {
+      "scenario_id": "EX14-029",
+      "requirement_id": "M14-029",
+      "name": "Waiting-for-state transition",
+      "category": "state_machine",
+      "fixture_key": "execution_029_waiting_for_state_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "waiting-for-state_transition"
+    },
+    {
+      "scenario_id": "EX14-030",
+      "requirement_id": "M14-030",
+      "name": "Executing and holding",
+      "category": "state_machine",
+      "fixture_key": "execution_030_executing_and_holding",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "executing_and_holding"
+    },
+    {
+      "scenario_id": "EX14-031",
+      "requirement_id": "M14-031",
+      "name": "Fallback transition",
+      "category": "state_machine",
+      "fixture_key": "execution_031_fallback_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "fallback_transition"
+    },
+    {
+      "scenario_id": "EX14-032",
+      "requirement_id": "M14-032",
+      "name": "Reset transition",
+      "category": "state_machine",
+      "fixture_key": "execution_032_reset_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "reset_transition"
+    },
+    {
+      "scenario_id": "EX14-033",
+      "requirement_id": "M14-033",
+      "name": "Completed transition",
+      "category": "state_machine",
+      "fixture_key": "execution_033_completed_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "completed_transition"
+    },
+    {
+      "scenario_id": "EX14-034",
+      "requirement_id": "M14-034",
+      "name": "Aborted transition",
+      "category": "state_machine",
+      "fixture_key": "execution_034_aborted_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "aborted_transition"
+    },
+    {
+      "scenario_id": "EX14-035",
+      "requirement_id": "M14-035",
+      "name": "Failed transition",
+      "category": "state_machine",
+      "fixture_key": "execution_035_failed_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "failed_transition"
+    },
+    {
+      "scenario_id": "EX14-036",
+      "requirement_id": "M14-036",
+      "name": "Duplicate terminal transition",
+      "category": "state_machine",
+      "fixture_key": "execution_036_duplicate_terminal_transition",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "duplicate_terminal_transition"
+    },
+    {
+      "scenario_id": "EX14-037",
+      "requirement_id": "M14-037",
+      "name": "Single action",
+      "category": "scheduler",
+      "fixture_key": "execution_037_single_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "single_action"
+    },
+    {
+      "scenario_id": "EX14-038",
+      "requirement_id": "M14-038",
+      "name": "Multiple ordered actions",
+      "category": "scheduler",
+      "fixture_key": "execution_038_multiple_ordered_actions",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "multiple_ordered_actions"
+    },
+    {
+      "scenario_id": "EX14-039",
+      "requirement_id": "M14-039",
+      "name": "Early action",
+      "category": "scheduler",
+      "fixture_key": "execution_039_early_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "early_action"
+    },
+    {
+      "scenario_id": "EX14-040",
+      "requirement_id": "M14-040",
+      "name": "Late action",
+      "category": "scheduler",
+      "fixture_key": "execution_040_late_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "late_action"
+    },
+    {
+      "scenario_id": "EX14-041",
+      "requirement_id": "M14-041",
+      "name": "Duplicate callback",
+      "category": "scheduler",
+      "fixture_key": "execution_041_duplicate_callback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "duplicate_callback"
+    },
+    {
+      "scenario_id": "EX14-042",
+      "requirement_id": "M14-042",
+      "name": "Duplicate action",
+      "category": "scheduler",
+      "fixture_key": "execution_042_duplicate_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "duplicate_action"
+    },
+    {
+      "scenario_id": "EX14-043",
+      "requirement_id": "M14-043",
+      "name": "Missing action",
+      "category": "scheduler",
+      "fixture_key": "execution_043_missing_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "missing_action"
+    },
+    {
+      "scenario_id": "EX14-044",
+      "requirement_id": "M14-044",
+      "name": "Unexpected action",
+      "category": "scheduler",
+      "fixture_key": "execution_044_unexpected_action",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "unexpected_action"
+    },
+    {
+      "scenario_id": "EX14-045",
+      "requirement_id": "M14-045",
+      "name": "Changed value",
+      "category": "scheduler",
+      "fixture_key": "execution_045_changed_value",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "changed_value"
+    },
+    {
+      "scenario_id": "EX14-046",
+      "requirement_id": "M14-046",
+      "name": "Changed action sequence",
+      "category": "scheduler",
+      "fixture_key": "execution_046_changed_action_sequence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "changed_action_sequence"
+    },
+    {
+      "scenario_id": "EX14-047",
+      "requirement_id": "M14-047",
+      "name": "Action-count limit",
+      "category": "scheduler",
+      "fixture_key": "execution_047_action_count_limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "action-count_limit"
+    },
+    {
+      "scenario_id": "EX14-048",
+      "requirement_id": "M14-048",
+      "name": "Write-count limit",
+      "category": "scheduler",
+      "fixture_key": "execution_048_write_count_limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "write-count_limit"
+    },
+    {
+      "scenario_id": "EX14-049",
+      "requirement_id": "M14-049",
+      "name": "Minimum hold",
+      "category": "scheduler",
+      "fixture_key": "execution_049_minimum_hold",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "minimum_hold"
+    },
+    {
+      "scenario_id": "EX14-050",
+      "requirement_id": "M14-050",
+      "name": "Mandatory restoration",
+      "category": "scheduler",
+      "fixture_key": "execution_050_mandatory_restoration",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "mandatory_restoration"
+    },
+    {
+      "scenario_id": "EX14-051",
+      "requirement_id": "M14-051",
+      "name": "Valid committed state",
+      "category": "live_state",
+      "fixture_key": "execution_051_valid_committed_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "valid_committed_state"
+    },
+    {
+      "scenario_id": "EX14-052",
+      "requirement_id": "M14-052",
+      "name": "Warmup state",
+      "category": "live_state",
+      "fixture_key": "execution_052_warmup_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "warmup_state"
+    },
+    {
+      "scenario_id": "EX14-053",
+      "requirement_id": "M14-053",
+      "name": "API-not-ready state",
+      "category": "live_state",
+      "fixture_key": "execution_053_api_not_ready_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "api-not-ready_state"
+    },
+    {
+      "scenario_id": "EX14-054",
+      "requirement_id": "M14-054",
+      "name": "Stale state",
+      "category": "live_state",
+      "fixture_key": "execution_054_stale_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "stale_state"
+    },
+    {
+      "scenario_id": "EX14-055",
+      "requirement_id": "M14-055",
+      "name": "Future state",
+      "category": "live_state",
+      "fixture_key": "execution_055_future_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "future_state"
+    },
+    {
+      "scenario_id": "EX14-056",
+      "requirement_id": "M14-056",
+      "name": "Wrong environment",
+      "category": "live_state",
+      "fixture_key": "execution_056_wrong_environment",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_environment"
+    },
+    {
+      "scenario_id": "EX14-057",
+      "requirement_id": "M14-057",
+      "name": "Wrong callback",
+      "category": "live_state",
+      "fixture_key": "execution_057_wrong_callback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "wrong_callback"
+    },
+    {
+      "scenario_id": "EX14-058",
+      "requirement_id": "M14-058",
+      "name": "Missing state",
+      "category": "live_state",
+      "fixture_key": "execution_058_missing_state",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "missing_state"
+    },
+    {
+      "scenario_id": "EX14-059",
+      "requirement_id": "M14-059",
+      "name": "PLENUM target",
+      "category": "live_state",
+      "fixture_key": "execution_059_plenum_target",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "plenum_target"
+    },
+    {
+      "scenario_id": "EX14-060",
+      "requirement_id": "M14-060",
+      "name": "Boolean-as-number rejection",
+      "category": "live_state",
+      "fixture_key": "execution_060_boolean_as_number_rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "boolean-as-number_rejection"
+    },
+    {
+      "scenario_id": "EX14-061",
+      "requirement_id": "M14-061",
+      "name": "NaN value",
+      "category": "live_state",
+      "fixture_key": "execution_061_nan_value",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "nan_value"
+    },
+    {
+      "scenario_id": "EX14-062",
+      "requirement_id": "M14-062",
+      "name": "Infinity value",
+      "category": "live_state",
+      "fixture_key": "execution_062_infinity_value",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "infinity_value"
+    },
+    {
+      "scenario_id": "EX14-063",
+      "requirement_id": "M14-063",
+      "name": "Guard ALLOW",
+      "category": "guard_writer",
+      "fixture_key": "execution_063_guard_allow",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "guard_allow"
+    },
+    {
+      "scenario_id": "EX14-064",
+      "requirement_id": "M14-064",
+      "name": "Guard CLAMP",
+      "category": "guard_writer",
+      "fixture_key": "execution_064_guard_clamp",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "guard_clamp"
+    },
+    {
+      "scenario_id": "EX14-065",
+      "requirement_id": "M14-065",
+      "name": "Guard HOLD_LAST_SAFE",
+      "category": "guard_writer",
+      "fixture_key": "execution_065_guard_hold_last_safe",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "guard_hold_last_safe"
+    },
+    {
+      "scenario_id": "EX14-066",
+      "requirement_id": "M14-066",
+      "name": "Guard RESET_TO_NATIVE",
+      "category": "guard_writer",
+      "fixture_key": "execution_066_guard_reset_to_native",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "guard_reset_to_native"
+    },
+    {
+      "scenario_id": "EX14-067",
+      "requirement_id": "M14-067",
+      "name": "Guard REJECT_NO_WRITE",
+      "category": "guard_writer",
+      "fixture_key": "execution_067_guard_reject_no_write",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "guard_reject_no_write"
+    },
+    {
+      "scenario_id": "EX14-068",
+      "requirement_id": "M14-068",
+      "name": "Raw command bypass",
+      "category": "guard_writer",
+      "fixture_key": "execution_068_raw_command_bypass",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "raw_command_bypass"
+    },
+    {
+      "scenario_id": "EX14-069",
+      "requirement_id": "M14-069",
+      "name": "Forged GuardedCommand",
+      "category": "guard_writer",
+      "fixture_key": "execution_069_forged_guardedcommand",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "forged_guardedcommand"
+    },
+    {
+      "scenario_id": "EX14-070",
+      "requirement_id": "M14-070",
+      "name": "Writer unavailable",
+      "category": "guard_writer",
+      "fixture_key": "execution_070_writer_unavailable",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "writer_unavailable"
+    },
+    {
+      "scenario_id": "EX14-071",
+      "requirement_id": "M14-071",
+      "name": "Writer exception",
+      "category": "guard_writer",
+      "fixture_key": "execution_071_writer_exception",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "writer_exception"
+    },
+    {
+      "scenario_id": "EX14-072",
+      "requirement_id": "M14-072",
+      "name": "Duplicate writer call",
+      "category": "guard_writer",
+      "fixture_key": "execution_072_duplicate_writer_call",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "duplicate_writer_call"
+    },
+    {
+      "scenario_id": "EX14-073",
+      "requirement_id": "M14-073",
+      "name": "Audit failure before write",
+      "category": "guard_writer",
+      "fixture_key": "execution_073_audit_failure_before_write",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "audit_failure_before_write"
+    },
+    {
+      "scenario_id": "EX14-074",
+      "requirement_id": "M14-074",
+      "name": "Persistence failure after guard",
+      "category": "guard_writer",
+      "fixture_key": "execution_074_persistence_failure_after_guard",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "persistence_failure_after_guard"
+    },
+    {
+      "scenario_id": "EX14-075",
+      "requirement_id": "M14-075",
+      "name": "Unknown write status",
+      "category": "guard_writer",
+      "fixture_key": "execution_075_unknown_write_status",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "unknown_write_status"
+    },
+    {
+      "scenario_id": "EX14-076",
+      "requirement_id": "M14-076",
+      "name": "Set limit reached",
+      "category": "guard_writer",
+      "fixture_key": "execution_076_set_limit_reached",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "set_limit_reached"
+    },
+    {
+      "scenario_id": "EX14-077",
+      "requirement_id": "M14-077",
+      "name": "Reset limit reached",
+      "category": "guard_writer",
+      "fixture_key": "execution_077_reset_limit_reached",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "reset_limit_reached"
+    },
+    {
+      "scenario_id": "EX14-078",
+      "requirement_id": "M14-078",
+      "name": "Approval expiry fallback",
+      "category": "fallback",
+      "fixture_key": "execution_078_approval_expiry_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval_expiry_fallback"
+    },
+    {
+      "scenario_id": "EX14-079",
+      "requirement_id": "M14-079",
+      "name": "Stale-state fallback",
+      "category": "fallback",
+      "fixture_key": "execution_079_stale_state_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "stale-state_fallback"
+    },
+    {
+      "scenario_id": "EX14-080",
+      "requirement_id": "M14-080",
+      "name": "API failure fallback",
+      "category": "fallback",
+      "fixture_key": "execution_080_api_failure_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "api_failure_fallback"
+    },
+    {
+      "scenario_id": "EX14-081",
+      "requirement_id": "M14-081",
+      "name": "Scheduler failure fallback",
+      "category": "fallback",
+      "fixture_key": "execution_081_scheduler_failure_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "scheduler_failure_fallback"
+    },
+    {
+      "scenario_id": "EX14-082",
+      "requirement_id": "M14-082",
+      "name": "Writer failure fallback",
+      "category": "fallback",
+      "fixture_key": "execution_082_writer_failure_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "writer_failure_fallback"
+    },
+    {
+      "scenario_id": "EX14-083",
+      "requirement_id": "M14-083",
+      "name": "Persistence failure fallback",
+      "category": "fallback",
+      "fixture_key": "execution_083_persistence_failure_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "persistence_failure_fallback"
+    },
+    {
+      "scenario_id": "EX14-084",
+      "requirement_id": "M14-084",
+      "name": "Operator abort fallback",
+      "category": "fallback",
+      "fixture_key": "execution_084_operator_abort_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "operator_abort_fallback"
+    },
+    {
+      "scenario_id": "EX14-085",
+      "requirement_id": "M14-085",
+      "name": "Timeout fallback",
+      "category": "fallback",
+      "fixture_key": "execution_085_timeout_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "timeout_fallback"
+    },
+    {
+      "scenario_id": "EX14-086",
+      "requirement_id": "M14-086",
+      "name": "Environment-end fallback",
+      "category": "fallback",
+      "fixture_key": "execution_086_environment_end_fallback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "environment-end_fallback"
+    },
+    {
+      "scenario_id": "EX14-087",
+      "requirement_id": "M14-087",
+      "name": "Fallback guard rejection",
+      "category": "fallback",
+      "fixture_key": "execution_087_fallback_guard_rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "fallback_guard_rejection"
+    },
+    {
+      "scenario_id": "EX14-088",
+      "requirement_id": "M14-088",
+      "name": "Fallback native reset",
+      "category": "fallback",
+      "fixture_key": "execution_088_fallback_native_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "fallback_native_reset"
+    },
+    {
+      "scenario_id": "EX14-089",
+      "requirement_id": "M14-089",
+      "name": "Normal completion reset",
+      "category": "shutdown",
+      "fixture_key": "execution_089_normal_completion_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "normal_completion_reset"
+    },
+    {
+      "scenario_id": "EX14-090",
+      "requirement_id": "M14-090",
+      "name": "Abort reset",
+      "category": "shutdown",
+      "fixture_key": "execution_090_abort_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "abort_reset"
+    },
+    {
+      "scenario_id": "EX14-091",
+      "requirement_id": "M14-091",
+      "name": "Failure reset",
+      "category": "shutdown",
+      "fixture_key": "execution_091_failure_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "failure_reset"
+    },
+    {
+      "scenario_id": "EX14-092",
+      "requirement_id": "M14-092",
+      "name": "Timeout reset",
+      "category": "shutdown",
+      "fixture_key": "execution_092_timeout_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "timeout_reset"
+    },
+    {
+      "scenario_id": "EX14-093",
+      "requirement_id": "M14-093",
+      "name": "Environment-end reset",
+      "category": "shutdown",
+      "fixture_key": "execution_093_environment_end_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "environment-end_reset"
+    },
+    {
+      "scenario_id": "EX14-094",
+      "requirement_id": "M14-094",
+      "name": "Duplicate reset",
+      "category": "shutdown",
+      "fixture_key": "execution_094_duplicate_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "duplicate_reset"
+    },
+    {
+      "scenario_id": "EX14-095",
+      "requirement_id": "M14-095",
+      "name": "Reset writer failure",
+      "category": "shutdown",
+      "fixture_key": "execution_095_reset_writer_failure",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "reset_writer_failure"
+    },
+    {
+      "scenario_id": "EX14-096",
+      "requirement_id": "M14-096",
+      "name": "Completion blocked without reset",
+      "category": "shutdown",
+      "fixture_key": "execution_096_completion_blocked_without_reset",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "completion_blocked_without_reset"
+    },
+    {
+      "scenario_id": "EX14-097",
+      "requirement_id": "M14-097",
+      "name": "Replay performs zero writes",
+      "category": "modes",
+      "fixture_key": "execution_097_replay_performs_zero_writes",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "replay_performs_zero_writes"
+    },
+    {
+      "scenario_id": "EX14-098",
+      "requirement_id": "M14-098",
+      "name": "Shadow performs zero writes",
+      "category": "modes",
+      "fixture_key": "execution_098_shadow_performs_zero_writes",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "shadow_performs_zero_writes"
+    },
+    {
+      "scenario_id": "EX14-099",
+      "requirement_id": "M14-099",
+      "name": "Fake writer performs zero real writes",
+      "category": "modes",
+      "fixture_key": "execution_099_fake_writer_performs_zero_real_writes",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "fake_writer_performs_zero_real_writes"
+    },
+    {
+      "scenario_id": "EX14-100",
+      "requirement_id": "M14-100",
+      "name": "Live mode requires approval",
+      "category": "modes",
+      "fixture_key": "execution_100_live_mode_requires_approval",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "live_mode_requires_approval"
+    },
+    {
+      "scenario_id": "EX14-101",
+      "requirement_id": "M14-101",
+      "name": "Request cannot change mode",
+      "category": "modes",
+      "fixture_key": "execution_101_request_cannot_change_mode",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "request_cannot_change_mode"
+    },
+    {
+      "scenario_id": "EX14-102",
+      "requirement_id": "M14-102",
+      "name": "LLM cannot enable live mode",
+      "category": "modes",
+      "fixture_key": "execution_102_llm_cannot_enable_live_mode",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "llm_cannot_enable_live_mode"
+    },
+    {
+      "scenario_id": "EX14-103",
+      "requirement_id": "M14-103",
+      "name": "MCP cannot enable live mode",
+      "category": "modes",
+      "fixture_key": "execution_103_mcp_cannot_enable_live_mode",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "mcp_cannot_enable_live_mode"
+    },
+    {
+      "scenario_id": "EX14-104",
+      "requirement_id": "M14-104",
+      "name": "propose_guarded_control remains disabled",
+      "category": "modes",
+      "fixture_key": "execution_104_propose_guarded_control_remains_disabled",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "propose_guarded_control_remains_disabled"
+    },
+    {
+      "scenario_id": "EX14-105",
+      "requirement_id": "M14-105",
+      "name": "No execution-trigger MCP tool exists",
+      "category": "modes",
+      "fixture_key": "execution_105_no_execution_trigger_mcp_tool_exists",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "no_execution-trigger_mcp_tool_exists"
+    },
+    {
+      "scenario_id": "EX14-106",
+      "requirement_id": "M14-106",
+      "name": "Approval persistence",
+      "category": "persistence",
+      "fixture_key": "execution_106_approval_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval_persistence"
+    },
+    {
+      "scenario_id": "EX14-107",
+      "requirement_id": "M14-107",
+      "name": "Approval immutability",
+      "category": "persistence",
+      "fixture_key": "execution_107_approval_immutability",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval_immutability"
+    },
+    {
+      "scenario_id": "EX14-108",
+      "requirement_id": "M14-108",
+      "name": "One-time approval consumption",
+      "category": "persistence",
+      "fixture_key": "execution_108_one_time_approval_consumption",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "one-time_approval_consumption"
+    },
+    {
+      "scenario_id": "EX14-109",
+      "requirement_id": "M14-109",
+      "name": "Session persistence",
+      "category": "persistence",
+      "fixture_key": "execution_109_session_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "session_persistence"
+    },
+    {
+      "scenario_id": "EX14-110",
+      "requirement_id": "M14-110",
+      "name": "Action persistence",
+      "category": "persistence",
+      "fixture_key": "execution_110_action_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "action_persistence"
+    },
+    {
+      "scenario_id": "EX14-111",
+      "requirement_id": "M14-111",
+      "name": "Transition persistence",
+      "category": "persistence",
+      "fixture_key": "execution_111_transition_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "transition_persistence"
+    },
+    {
+      "scenario_id": "EX14-112",
+      "requirement_id": "M14-112",
+      "name": "Writer-attempt persistence",
+      "category": "persistence",
+      "fixture_key": "execution_112_writer_attempt_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "writer-attempt_persistence"
+    },
+    {
+      "scenario_id": "EX14-113",
+      "requirement_id": "M14-113",
+      "name": "Fallback persistence",
+      "category": "persistence",
+      "fixture_key": "execution_113_fallback_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "fallback_persistence"
+    },
+    {
+      "scenario_id": "EX14-114",
+      "requirement_id": "M14-114",
+      "name": "Reset persistence",
+      "category": "persistence",
+      "fixture_key": "execution_114_reset_persistence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "reset_persistence"
+    },
+    {
+      "scenario_id": "EX14-115",
+      "requirement_id": "M14-115",
+      "name": "Exact duplicate idempotency",
+      "category": "persistence",
+      "fixture_key": "execution_115_exact_duplicate_idempotency",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "exact_duplicate_idempotency"
+    },
+    {
+      "scenario_id": "EX14-116",
+      "requirement_id": "M14-116",
+      "name": "Conflicting duplicate",
+      "category": "persistence",
+      "fixture_key": "execution_116_conflicting_duplicate",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "conflicting_duplicate"
+    },
+    {
+      "scenario_id": "EX14-117",
+      "requirement_id": "M14-117",
+      "name": "Transaction rollback",
+      "category": "persistence",
+      "fixture_key": "execution_117_transaction_rollback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "transaction_rollback"
+    },
+    {
+      "scenario_id": "EX14-118",
+      "requirement_id": "M14-118",
+      "name": "Foreign-key rejection",
+      "category": "persistence",
+      "fixture_key": "execution_118_foreign_key_rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "foreign-key_rejection"
+    },
+    {
+      "scenario_id": "EX14-119",
+      "requirement_id": "M14-119",
+      "name": "NaN persistence rejection",
+      "category": "persistence",
+      "fixture_key": "execution_119_nan_persistence_rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "nan_persistence_rejection"
+    },
+    {
+      "scenario_id": "EX14-120",
+      "requirement_id": "M14-120",
+      "name": "Infinity persistence rejection",
+      "category": "persistence",
+      "fixture_key": "execution_120_infinity_persistence_rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "infinity_persistence_rejection"
+    },
+    {
+      "scenario_id": "EX14-121",
+      "requirement_id": "M14-121",
+      "name": "Execution status tool",
+      "category": "observation_claims",
+      "fixture_key": "execution_121_execution_status_tool",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "execution_status_tool"
+    },
+    {
+      "scenario_id": "EX14-122",
+      "requirement_id": "M14-122",
+      "name": "Execution audit tool",
+      "category": "observation_claims",
+      "fixture_key": "execution_122_execution_audit_tool",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "execution_audit_tool"
+    },
+    {
+      "scenario_id": "EX14-123",
+      "requirement_id": "M14-123",
+      "name": "Approval-status tool",
+      "category": "observation_claims",
+      "fixture_key": "execution_123_approval_status_tool",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "approval-status_tool"
+    },
+    {
+      "scenario_id": "EX14-124",
+      "requirement_id": "M14-124",
+      "name": "Compatible run comparison",
+      "category": "observation_claims",
+      "fixture_key": "execution_124_compatible_run_comparison",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "compatible_run_comparison"
+    },
+    {
+      "scenario_id": "EX14-125",
+      "requirement_id": "M14-125",
+      "name": "Incompatible run comparison",
+      "category": "observation_claims",
+      "fixture_key": "execution_125_incompatible_run_comparison",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "incompatible_run_comparison"
+    },
+    {
+      "scenario_id": "EX14-126",
+      "requirement_id": "M14-126",
+      "name": "False real-building claim blocked",
+      "category": "observation_claims",
+      "fixture_key": "execution_126_false_real_building_claim_blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "false_real-building_claim_blocked"
+    },
+    {
+      "scenario_id": "EX14-127",
+      "requirement_id": "M14-127",
+      "name": "False annual-savings claim blocked",
+      "category": "observation_claims",
+      "fixture_key": "execution_127_false_annual_savings_claim_blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "false_annual-savings_claim_blocked"
+    },
+    {
+      "scenario_id": "EX14-128",
+      "requirement_id": "M14-128",
+      "name": "False guaranteed-comfort claim blocked",
+      "category": "observation_claims",
+      "fixture_key": "execution_128_false_guaranteed_comfort_claim_blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "false_guaranteed-comfort_claim_blocked"
+    },
+    {
+      "scenario_id": "EX14-129",
+      "requirement_id": "M14-129",
+      "name": "False LLM-executed claim blocked",
+      "category": "observation_claims",
+      "fixture_key": "execution_129_false_llm_executed_claim_blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "false_llm-executed_claim_blocked"
+    },
+    {
+      "scenario_id": "EX14-130",
+      "requirement_id": "M14-130",
+      "name": "Zero unguarded writes",
+      "category": "observation_claims",
+      "fixture_key": "execution_130_zero_unguarded_writes",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "concrete_mutation": "zero_unguarded_writes"
+    }
+  ]
+}

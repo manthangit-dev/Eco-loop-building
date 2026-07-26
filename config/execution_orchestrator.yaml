@@ -1,0 +1,24 @@
+execution:
+  schema_version: 1
+  approval_schema_version: 1
+  default_mode: REPLAY_DRY_RUN
+  live_mode_enabled_by_default: false
+  simulation_only: true
+  public_listener_allowed: false
+  target_zone: SPACE3-1
+  actuator_identity: Zone Temperature Control|Cooling Setpoint|SPACE3-1|C
+  units: C
+  maximum_actions: 12
+  maximum_writes: 20
+  maximum_resets: 2
+  timeout_seconds: 300
+  state_max_age_seconds: 120
+  minimum_hold_timesteps: 1
+  permitted_environment: weather-3
+artifacts:
+  source_idf: models/source/5ZoneAirCooled_v26_1_original.idf
+  baseline_idf: models/baseline/thermoledger_5zone_baseline.idf
+  epw: weather/input/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw
+  database: data/output/module_12_microtwin/microtwin.db
+output:
+  root: outputs/module14

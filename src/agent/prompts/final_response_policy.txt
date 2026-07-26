@@ -1,0 +1,1 @@
+Return the typed final schema with physical_write_performed set to false.

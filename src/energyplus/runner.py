@@ -141,6 +141,8 @@ class EnergyPlusRunner:
         output_root_override: Path | None = None,
         output_directory_override: Path | None = None,
         extension: RunnerExtension | None = None,
+        model_override: Path | None = None,
+        weather_override: Path | None = None,
     ) -> RunResult:
         if not _RUN_LOCK.acquire(blocking=False):
             raise RuntimeError("A concurrent in-process EnergyPlus run is not allowed.")
@@ -157,6 +159,22 @@ class EnergyPlusRunner:
         try:
             loaded = loaded or load_energyplus_api(self.root)
             config = load_run_config(self.config_path, loaded.energyplus_home)
+            if model_override is not None or weather_override is not None:
+                model = (model_override or config.model).resolve()
+                weather = (weather_override or config.weather).resolve()
+                model.relative_to(self.root)
+                weather.relative_to(self.root)
+                if not model.is_file() or not weather.is_file():
+                    raise ValueError("Approved model and weather overrides must exist.")
+                from scripts.validate_baseline import sha256_file
+
+                config = replace(
+                    config,
+                    model=model,
+                    model_sha256=sha256_file(model),
+                    weather=weather,
+                    weather_sha256=sha256_file(weather),
+                )
             if output_root_override is not None or output_directory_override is not None:
                 if output_root_override is None or output_directory_override is None:
                     raise ValueError("Both output overrides are required together.")

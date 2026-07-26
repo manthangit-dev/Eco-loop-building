@@ -1,0 +1,5 @@
+schema_version,scenario_id,environment_id,simulation_timestamp,value,units,source,uncertainty
+1,module14a_aligned,weather-3,07-19 11:00,0.5,relative,local carbon scenario,MEDIUM
+1,module14a_aligned,weather-3,07-19 11:45,1.5,relative,local carbon scenario,MEDIUM
+1,module14a_aligned,weather-3,07-19 12:30,1.8,relative,local carbon scenario,MEDIUM
+1,module14a_aligned,weather-3,07-19 13:30,1.2,relative,local carbon scenario,MEDIUM

@@ -1,0 +1,6 @@
+schema_version,scenario_id,environment_id,simulation_timestamp,zone,expected_occupancy,units,source,uncertainty
+1,module14a_aligned,weather-3,07-19 11:00,SPACE3-1,8.8,people,known local schedule forecast,LOW
+1,module14a_aligned,weather-3,07-19 11:45,SPACE3-1,8.8,people,known local schedule forecast,LOW
+1,module14a_aligned,weather-3,07-19 12:30,SPACE3-1,8.8,people,known local schedule forecast,LOW
+1,module14a_aligned,weather-3,07-19 13:30,SPACE3-1,8.8,people,known local schedule forecast,LOW
+

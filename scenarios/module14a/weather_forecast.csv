@@ -1,0 +1,6 @@
+schema_version,scenario_id,environment_id,simulation_timestamp,outdoor_dry_bulb_c,units,source,uncertainty
+1,module14a_aligned,weather-3,07-19 11:00,32.8,C,EPW deterministic simulation forecast,LOW
+1,module14a_aligned,weather-3,07-19 11:45,32.8,C,EPW deterministic simulation forecast,LOW
+1,module14a_aligned,weather-3,07-19 12:30,32.8,C,EPW deterministic simulation forecast,LOW
+1,module14a_aligned,weather-3,07-19 13:30,34.1,C,EPW deterministic simulation forecast,MEDIUM
+

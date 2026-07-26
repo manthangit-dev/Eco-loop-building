@@ -1,0 +1,30 @@
+planning:
+  schema_version: 1
+  enabled: true
+  advisory_only: true
+  timestep_minutes: 15
+  horizon: {minimum: 6, default: 12, maximum: 24}
+  planning_interval_timesteps: 1
+  candidate_limit: 6
+  action_limit_per_plan: 4
+  supported_strategies: [NATIVE_HOLD, COMFORT_FIRST, BALANCED, PRECONDITION_BEFORE_PEAK, VACANCY_RELAXATION, OCCUPIED_RECOVERY]
+  allowed_zones: [SPACE3-1]
+  actuator: {component_type: Zone Temperature Control, control_type: Cooling Setpoint, actuator_key: SPACE3-1, units: C}
+  missing_forecast_policy: reject
+  uncertainty_categories: [LOW, MEDIUM, HIGH]
+  first_action_guard_validation: required_dry_run
+  deterministic_fallback_selection: lowest_advisory_score_then_strategy_then_plan_id
+  llm_selection_policy: existing_eligible_candidates_only
+  limits: {minimum_celsius: 22.0, maximum_celsius: 30.0, maximum_change_celsius: 1.61}
+  score_weights: {intervention: 1.0, churn: 0.5, occupancy_risk: 2.0, peak_alignment: -1.0, carbon_alignment: -0.5, uncertainty: 1.0, missing_data: 2.0, guard_rejection: 100.0}
+sources:
+  weather: scenarios/weather_forecast.csv
+  occupancy: scenarios/occupancy_forecast.csv
+  tariff: scenarios/tariff_profile.csv
+  carbon: scenarios/carbon_intensity.csv
+  events: scenarios/building_events.csv
+storage:
+  output_root: data/output/module_11_planning
+  database: planning.db
+  schema_version: 6
+replay: {scenario_count: 66, repeat_count: 2}

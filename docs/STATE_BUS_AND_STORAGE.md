@@ -101,3 +101,10 @@ monitoring. PMV, CO2, and effective setpoint are unavailable in the current stre
 
 There is no controller, comfort-debt ledger, AI/LLM, or dashboard. Module 6 makes no
 autonomous decision and no energy-saving claim. Module 7 remains pending.
+# Schema 8 ledger persistence
+
+Schema 8 adds comfort accounts/entries, debt and repayment records, fairness assessments, Thermal Bank accounts/transactions, plan evaluations, rankings, and ledger sessions. Migration is additive; persistence uses transactions, foreign keys, and idempotent identifiers. No telemetry or earlier module tables are removed.
+
+# Schema 9 execution persistence
+
+Schema 9 additively stores immutable approvals, sessions, transitions, exactly-once actions, guarded writer attempts, fallback events, native resets, compatible-run comparisons, and per-timestep simulation reconciliation. Integrity and foreign-key checks pass with zero orphans.

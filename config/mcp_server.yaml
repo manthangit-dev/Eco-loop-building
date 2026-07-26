@@ -1,0 +1,26 @@
+mcp:
+  schema_version: 1
+  catalogue_version: 5
+  implementation: official_python_mcp_sdk
+  implementation_version: 1.28.1
+  transport: stdio
+  local_only: true
+  host: null
+  port: null
+  control_tools_enabled: false
+  required_control_runtime_mode: guarded_control
+limits:
+  default_rows: 20
+  maximum_rows: 100
+  maximum_history_points: 96
+  maximum_error_entries: 50
+  maximum_response_bytes: 262144
+  timeout_seconds: 10
+storage:
+  output_root: data/output/module_9_mcp
+  audit_database: mcp_audit.db
+runs:
+  module6-live: data/output/module_6_state_bus/live/current
+  module7-live-control: data/output/module_7_fallback_controller/live_control/current
+  module8-live-shadow: data/output/module_8_safety_guard/live_shadow/current
+  module8-live-control: data/output/module_8_safety_guard/live_control/current

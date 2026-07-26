@@ -1,0 +1,41 @@
+safety:
+  schema_version: 1
+  enabled: true
+  fail_closed: true
+  persistence_failure: reject_no_write
+  internal_error: reset_to_native
+approved_actuator:
+  component_type: Zone Temperature Control
+  control_type: Cooling Setpoint
+  actuator_key: SPACE3-1
+  units: C
+  zone: SPACE3-1
+approved_zones: [SPACE3-1]
+plenum_zones: [PLENUM-1]
+runtime:
+  permitted_environment_types: [3]
+  reject_warmup: true
+  require_api_ready: true
+  command_ttl_zone_timesteps: 2
+  maximum_state_age_zone_timesteps: 1
+  last_safe_ttl_zone_timesteps: 2
+limits:
+  minimum_celsius: 22.0
+  maximum_celsius: 30.0
+  maximum_change_per_decision_celsius: 1.61
+  maximum_change_per_zone_timestep_celsius: 1.61
+  marginal_clamp_celsius: 0.25
+recovery:
+  native_reset_enabled: true
+  hold_last_safe_enabled: true
+duplicates:
+  exact_duplicate: return_persisted_result
+  conflicting_duplicate: reject_no_write
+shutdown:
+  native_reset: true
+audit:
+  required_before_write: true
+  database_schema_version: 3
+  challenge_report: safety_challenge_report.json
+  validation_report: safety_guard_validation_summary.json
+  output_root: data/output/module_8_safety_guard

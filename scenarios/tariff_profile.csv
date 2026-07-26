@@ -1,0 +1,5 @@
+schema_version,scenario_id,environment_id,simulation_timestamp,value,units,category,source,uncertainty
+1,afternoon_peak,weather-3,07-21 12:30,1.0,relative,LOW,local tariff scenario,LOW
+1,afternoon_peak,weather-3,07-21 13:15,3.0,relative,PEAK,local tariff scenario,LOW
+1,afternoon_peak,weather-3,07-21 14:00,3.0,relative,PEAK,local tariff scenario,LOW
+1,afternoon_peak,weather-3,07-21 15:00,2.0,relative,HIGH,local tariff scenario,LOW

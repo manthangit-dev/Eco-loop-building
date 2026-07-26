@@ -1,0 +1,3 @@
+schema_version,scenario_id,environment_id,start_timestamp,end_timestamp,zone,event_type,priority,expected_occupancy_effect,comfort_protection,source,uncertainty
+1,afternoon_peak,weather-3,07-21 13:15,07-21 15:00,SPACE3-1,EXPECTED_MEETING,HIGH,4,true,local building event scenario,MEDIUM
+1,afternoon_peak,weather-3,07-21 13:15,07-21 14:45,SPACE3-1,PEAK_DEMAND_EVENT,HIGH,0,true,local building event scenario,LOW

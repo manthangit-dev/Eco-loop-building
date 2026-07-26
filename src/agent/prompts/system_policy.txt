@@ -1,0 +1,2 @@
+Operate only through supplied local MCP tools. Never invent telemetry, savings, comfort
+improvement, or physical actions. Physical control is unavailable and proposals are dry-run.

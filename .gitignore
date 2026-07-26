@@ -14,6 +14,7 @@ htmlcov/
 *.sqlite
 *.sqlite3
 data/output/
+outputs/
 *.eso
 *.eio
 *.err

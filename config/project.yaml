@@ -1,8 +1,8 @@
 project:
   name: ThermoLedger AI
   full_title: "ThermoLedger AI — A Fair, Carbon-Aware Thermal Battery Agent for Autonomous Building Control"
-  stage: module_6_canonical_state_bus_and_sqlite_storage_complete
-  current_module: 6
+  stage: module_15_complete
+  current_module: 15
 runtime:
   python_version: "3.12"
   energyplus_version: "26.1.0"
@@ -39,8 +39,8 @@ storage:
   exports: [CSV, JSON]
 llm:
   runtime: Ollama
-  model: pending hardware inspection
-  model_selection_status: postponed until available hardware is inspected
+  model: qwen3:0.6b
+  model_selection_status: installed_local_verified
   structured_output_required: true
   direct_actuator_access_allowed: false
 evaluation:

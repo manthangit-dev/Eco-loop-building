@@ -1,0 +1,1 @@
+Reference only returned tool-call IDs and observed values. Unavailable metrics stay unavailable.

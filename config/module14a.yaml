@@ -1,0 +1,32 @@
+module14a:
+  schema_version: 1
+  approval_schema_version: 2
+  experiment_path: PATH_B
+  target_zone: SPACE3-1
+  source_run_id: module8-live-control
+  source_environment_id: weather-3
+  source_state_id: 19147
+  planning_year: 2013
+  planning_month: 7
+  planning_day: 19
+  planning_hour: 10
+  planning_minute: 45
+  forecast_start: "07-19 11:00"
+  forecast_end: "07-19 13:45"
+  runperiod_start_month: 7
+  runperiod_start_day: 19
+  runperiod_end_month: 7
+  runperiod_end_day: 19
+  runperiod_start_day_of_week: Friday
+  zone_timestep_minutes: 15
+  horizon_timesteps: 12
+  setpoint_difference_tolerance_c: 0.05
+  temperature_response_tolerance_c: 0.001
+  energy_response_tolerance_j: 1.0
+  initial_temperature_tolerance_c: 0.05
+  initial_outdoor_tolerance_c: 0.05
+  initial_setpoint_tolerance_c: 0.05
+  timestamp_tolerance_seconds: 1
+  runtime_idf: outputs/module14a/runtime/context_aligned_2013_07_19.idf
+  parent_idf: models/baseline/thermoledger_5zone_baseline.idf
+  weather: weather/input/USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw

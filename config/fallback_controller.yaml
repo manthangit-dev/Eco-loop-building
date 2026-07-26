@@ -1,0 +1,100 @@
+controller:
+  name: ThermoLedger deterministic fallback
+  enabled: true
+  controller_type: deterministic_rule_based_fallback
+  schema_version: 1
+  decision_interval_zone_timesteps: 1
+  source: canonical_building_state
+  default_mode: shadow
+  fail_closed: true
+  release_control_on_uncertainty: true
+  require_state_sequence_progress: true
+  require_weather_run: true
+  ignore_warmup: true
+  ignore_plenums: true
+  evaluate_all_occupied_zones: true
+  real_actuation_maximum_zones: 1
+modes: {shadow: true, live: true, disabled: true}
+targets:
+  selection_policy: module_5_verified_isolated_zone
+  approved_zone_names: [SPACE1-1, SPACE2-1, SPACE3-1, SPACE4-1, SPACE5-1]
+  real_actuation_zone: SPACE3-1
+  approved_component_type: Zone Temperature Control
+  approved_control_type: Cooling Setpoint
+  approved_unique_key: SPACE3-1
+  approved_units: C
+  effective_setpoint_variable: Zone Thermostat Cooling Setpoint Temperature
+occupied_policy:
+  baseline_strategy: latest_verified_effective_setpoint
+  preferred_setpoint_celsius: 23.9
+  hot_temperature_threshold_celsius: 25.0
+  recovery_setpoint_celsius: 23.9
+  hysteresis_celsius: 0.5
+  minimum_hold_zone_timesteps: 4
+  occupancy_grace_zone_timesteps: 4
+  maximum_setpoint_celsius: 30.0
+  minimum_setpoint_celsius: 22.0
+  maximum_delta_from_baseline_celsius: 1.0
+unoccupied_policy:
+  enabled: true
+  grace_zone_timesteps: 4
+  relaxed_offset_celsius: 1.0
+  maximum_relaxed_setpoint_celsius: 30.0
+  temperature_protection_threshold_celsius: 27.0
+  minimum_hold_zone_timesteps: 4
+staleness:
+  maximum_state_age_seconds: 900
+  maximum_sequence_gap: 1
+  command_ttl_zone_timesteps: 2
+  reset_on_expiry: true
+actuation:
+  callback: after_predictor_before_hvac_managers
+  reapply_each_system_timestep: true
+  reset_when_no_command: true
+  final_cleanup_reset: true
+  maximum_actuators: 1
+  reject_arbitrary_actuator_lookup: true
+storage:
+  database_path: controller.db
+  schema_version: 2
+  decision_batch_size: 100
+  event_jsonl: controller_events.jsonl
+  event_csv: controller_events.csv
+  summary_json: fallback_controller_summary.json
+  validation_json: fallback_controller_validation_summary.json
+  comparison_json: fallback_run_comparison.json
+execution:
+  output_root: data/output/module_7_fallback_controller
+  replay_shadow_directory: replay_shadow
+  live_shadow_directory: live_shadow/current
+  live_control_directory: live_control/current
+  expected_annual_states: 35040
+validation:
+  require_deterministic_replay: true
+  require_shadow_no_writes: true
+  require_live_shadow_physical_parity: true
+  require_live_control_run: true
+  require_state_decision_causality: true
+  require_command_expiry: true
+  require_hysteresis: true
+  require_minimum_hold: true
+  require_reset_on_uncertainty: true
+  require_zero_plenum_actions: true
+  require_zero_out_of_bounds_actions: true
+  require_zero_unapproved_actuator_actions: true
+  require_zero_api_errors: true
+  require_zero_callback_errors: true
+  require_zero_severe_errors: true
+  require_zero_fatal_errors: true
+  require_complete_states: true
+  require_complete_storage: true
+  require_checksum_match: true
+safety_boundary:
+  final_safety_guard_implemented: false
+  final_safety_guard_module: 8
+  allow_llm_actions: false
+  allow_network_calls: false
+  allow_multiple_actuator_types: false
+  allow_ventilation_control: false
+  allow_idf_modification: false
+  allow_weather_modification: false

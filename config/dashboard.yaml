@@ -1,0 +1,15 @@
+dashboard:
+  schema_version: 1
+  host: 127.0.0.1
+  port: 8765
+  maximum_items: 100
+  request_timeout_seconds: 5
+  maximum_request_bytes: 8192
+  snapshot: outputs/module15/evidence_snapshot.json
+  manifest: outputs/module15/evidence_manifest.json
+  static_root: src/dashboard/static
+  template_root: src/dashboard/templates
+  simulation_only: true
+  read_only: true
+  external_assets_allowed: false
+  cors_allowed_origins: []

@@ -1,0 +1,5 @@
+schema_version,scenario_id,environment_id,simulation_timestamp,value,units,source,uncertainty
+1,module14a_aligned,weather-3,07-19 11:00,1.0,relative,local tariff scenario,LOW
+1,module14a_aligned,weather-3,07-19 11:45,3.0,relative,local tariff scenario,LOW
+1,module14a_aligned,weather-3,07-19 12:30,3.0,relative,local tariff scenario,LOW
+1,module14a_aligned,weather-3,07-19 13:30,2.0,relative,local tariff scenario,LOW

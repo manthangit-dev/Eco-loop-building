@@ -1,0 +1,1 @@
+Correct only the reported schema error. Never relax policy or safety restrictions.

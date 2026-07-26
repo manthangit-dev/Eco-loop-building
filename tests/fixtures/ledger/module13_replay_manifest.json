@@ -1,0 +1,3126 @@
+{
+  "schema_version": 1,
+  "scenario_count": 156,
+  "scenarios": [
+    {
+      "scenario_id": "MT13-001",
+      "requirement_ids": [
+        "M13-001"
+      ],
+      "category": "burden",
+      "name": "Valid occupied temperature inside bounds",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-001",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "valid_occupied_temperature_inside_bounds",
+      "expected_status": "PASS",
+      "expected_reason_code": "valid_occupied_temperature_inside_bounds",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-002",
+      "requirement_ids": [
+        "M13-002"
+      ],
+      "category": "burden",
+      "name": "Upper-boundary burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-002",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "upper_boundary_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "upper_boundary_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-003",
+      "requirement_ids": [
+        "M13-003"
+      ],
+      "category": "burden",
+      "name": "Lower-boundary burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-003",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "lower_boundary_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "lower_boundary_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-004",
+      "requirement_ids": [
+        "M13-004"
+      ],
+      "category": "burden",
+      "name": "Unoccupied timestep",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-004",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "unoccupied_timestep",
+      "expected_status": "PASS",
+      "expected_reason_code": "unoccupied_timestep",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-005",
+      "requirement_ids": [
+        "M13-005"
+      ],
+      "category": "burden",
+      "name": "Protected-event boundary",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-005",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "protected_event_boundary",
+      "expected_status": "PASS",
+      "expected_reason_code": "protected_event_boundary",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-006",
+      "requirement_ids": [
+        "M13-006"
+      ],
+      "category": "burden",
+      "name": "Missing occupancy",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-006",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_occupancy",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_occupancy",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-007",
+      "requirement_ids": [
+        "M13-007"
+      ],
+      "category": "burden",
+      "name": "Missing predicted temperature",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-007",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_predicted_temperature",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_predicted_temperature",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-008",
+      "requirement_ids": [
+        "M13-008"
+      ],
+      "category": "burden",
+      "name": "Missing uncertainty",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-008",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_uncertainty",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_uncertainty",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-009",
+      "requirement_ids": [
+        "M13-009"
+      ],
+      "category": "burden",
+      "name": "NaN temperature",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-009",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "nan_temperature",
+      "expected_status": "PASS",
+      "expected_reason_code": "nan_temperature",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-010",
+      "requirement_ids": [
+        "M13-010"
+      ],
+      "category": "burden",
+      "name": "Infinite burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-010",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "infinite_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "infinite_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-011",
+      "requirement_ids": [
+        "M13-011"
+      ],
+      "category": "burden",
+      "name": "Central burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-011",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "central_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "central_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-012",
+      "requirement_ids": [
+        "M13-012"
+      ],
+      "category": "burden",
+      "name": "Uncertainty-adjusted burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-012",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "uncertainty_adjusted_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "uncertainty_adjusted_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-013",
+      "requirement_ids": [
+        "M13-013"
+      ],
+      "category": "burden",
+      "name": "Duration weighting",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-013",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "duration_weighting",
+      "expected_status": "PASS",
+      "expected_reason_code": "duration_weighting",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-014",
+      "requirement_ids": [
+        "M13-014"
+      ],
+      "category": "burden",
+      "name": "Event weighting",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-014",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "event_weighting",
+      "expected_status": "PASS",
+      "expected_reason_code": "event_weighting",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-015",
+      "requirement_ids": [
+        "M13-015"
+      ],
+      "category": "burden",
+      "name": "Zero burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-015",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "zero_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "zero_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-016",
+      "requirement_ids": [
+        "M13-016"
+      ],
+      "category": "credit",
+      "name": "Valid bounded credit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-016",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "valid_bounded_credit",
+      "expected_status": "PASS",
+      "expected_reason_code": "valid_bounded_credit",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-017",
+      "requirement_ids": [
+        "M13-017"
+      ],
+      "category": "credit",
+      "name": "Credit at boundary",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-017",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_at_boundary",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_at_boundary",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-018",
+      "requirement_ids": [
+        "M13-018"
+      ],
+      "category": "credit",
+      "name": "Credit maximum per timestep",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-018",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_maximum_per_timestep",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_maximum_per_timestep",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-019",
+      "requirement_ids": [
+        "M13-019"
+      ],
+      "category": "credit",
+      "name": "Credit maximum per horizon",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-019",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_maximum_per_horizon",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_maximum_per_horizon",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-020",
+      "requirement_ids": [
+        "M13-020"
+      ],
+      "category": "credit",
+      "name": "Missing-data credit rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-020",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_data_credit_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_data_credit_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-021",
+      "requirement_ids": [
+        "M13-021"
+      ],
+      "category": "credit",
+      "name": "OOD credit rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-021",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "ood_credit_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "ood_credit_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-022",
+      "requirement_ids": [
+        "M13-022"
+      ],
+      "category": "credit",
+      "name": "Credit expiry",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-022",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_expiry",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_expiry",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-023",
+      "requirement_ids": [
+        "M13-023"
+      ],
+      "category": "credit",
+      "name": "Credit decay",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-023",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_decay",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_decay",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-024",
+      "requirement_ids": [
+        "M13-024"
+      ],
+      "category": "credit",
+      "name": "Credit cannot bypass blocking debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-024",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_cannot_bypass_blocking_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_cannot_bypass_blocking_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-025",
+      "requirement_ids": [
+        "M13-025"
+      ],
+      "category": "credit",
+      "name": "Credit cannot authorise safety violation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-025",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "credit_cannot_authorise_safety_violation",
+      "expected_status": "PASS",
+      "expected_reason_code": "credit_cannot_authorise_safety_violation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-026",
+      "requirement_ids": [
+        "M13-026"
+      ],
+      "category": "debt",
+      "name": "New low debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-026",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "new_low_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "new_low_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-027",
+      "requirement_ids": [
+        "M13-027"
+      ],
+      "category": "debt",
+      "name": "Moderate debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-027",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "moderate_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "moderate_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-028",
+      "requirement_ids": [
+        "M13-028"
+      ],
+      "category": "debt",
+      "name": "High debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-028",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "high_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "high_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-029",
+      "requirement_ids": [
+        "M13-029"
+      ],
+      "category": "debt",
+      "name": "Blocking debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-029",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "blocking_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "blocking_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-030",
+      "requirement_ids": [
+        "M13-030"
+      ],
+      "category": "debt",
+      "name": "Debt ageing",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-030",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_ageing",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_ageing",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-031",
+      "requirement_ids": [
+        "M13-031"
+      ],
+      "category": "debt",
+      "name": "Debt decay",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-031",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_decay",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_decay",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-032",
+      "requirement_ids": [
+        "M13-032"
+      ],
+      "category": "debt",
+      "name": "Debt repayment",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-032",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_repayment",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_repayment",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-033",
+      "requirement_ids": [
+        "M13-033"
+      ],
+      "category": "debt",
+      "name": "Repayment capped at debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-033",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "repayment_capped_at_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "repayment_capped_at_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-034",
+      "requirement_ids": [
+        "M13-034"
+      ],
+      "category": "debt",
+      "name": "Debt never negative",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-034",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_never_negative",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_never_negative",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-035",
+      "requirement_ids": [
+        "M13-035"
+      ],
+      "category": "debt",
+      "name": "Debt persists across sessions",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-035",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_persists_across_sessions",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_persists_across_sessions",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-036",
+      "requirement_ids": [
+        "M13-036"
+      ],
+      "category": "debt",
+      "name": "New burden during recovery",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-036",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "new_burden_during_recovery",
+      "expected_status": "PASS",
+      "expected_reason_code": "new_burden_during_recovery",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-037",
+      "requirement_ids": [
+        "M13-037"
+      ],
+      "category": "debt",
+      "name": "Recovery completed",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-037",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "recovery_completed",
+      "expected_status": "PASS",
+      "expected_reason_code": "recovery_completed",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-038",
+      "requirement_ids": [
+        "M13-038"
+      ],
+      "category": "debt",
+      "name": "Recovery insufficient",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-038",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "recovery_insufficient",
+      "expected_status": "PASS",
+      "expected_reason_code": "recovery_insufficient",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-039",
+      "requirement_ids": [
+        "M13-039"
+      ],
+      "category": "debt",
+      "name": "Expired debt handling",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-039",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "expired_debt_handling",
+      "expected_status": "PASS",
+      "expected_reason_code": "expired_debt_handling",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-040",
+      "requirement_ids": [
+        "M13-040"
+      ],
+      "category": "debt",
+      "name": "Duplicate debt idempotency",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-040",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "duplicate_debt_idempotency",
+      "expected_status": "PASS",
+      "expected_reason_code": "duplicate_debt_idempotency",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-041",
+      "requirement_ids": [
+        "M13-041"
+      ],
+      "category": "consecutive",
+      "name": "One burden timestep",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-041",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "one_burden_timestep",
+      "expected_status": "PASS",
+      "expected_reason_code": "one_burden_timestep",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-042",
+      "requirement_ids": [
+        "M13-042"
+      ],
+      "category": "consecutive",
+      "name": "Multiple consecutive timesteps",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-042",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "multiple_consecutive_timesteps",
+      "expected_status": "PASS",
+      "expected_reason_code": "multiple_consecutive_timesteps",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-043",
+      "requirement_ids": [
+        "M13-043"
+      ],
+      "category": "consecutive",
+      "name": "Limit reached",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-043",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "limit_reached",
+      "expected_status": "PASS",
+      "expected_reason_code": "limit_reached",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-044",
+      "requirement_ids": [
+        "M13-044"
+      ],
+      "category": "consecutive",
+      "name": "Limit exceeded",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-044",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "limit_exceeded",
+      "expected_status": "PASS",
+      "expected_reason_code": "limit_exceeded",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-045",
+      "requirement_ids": [
+        "M13-045"
+      ],
+      "category": "consecutive",
+      "name": "Recovery breaks sequence",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-045",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "recovery_breaks_sequence",
+      "expected_status": "PASS",
+      "expected_reason_code": "recovery_breaks_sequence",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-046",
+      "requirement_ids": [
+        "M13-046"
+      ],
+      "category": "consecutive",
+      "name": "Protected event overlap",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-046",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "protected_event_overlap",
+      "expected_status": "PASS",
+      "expected_reason_code": "protected_event_overlap",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-047",
+      "requirement_ids": [
+        "M13-047"
+      ],
+      "category": "consecutive",
+      "name": "Repeated burden pattern",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-047",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "repeated_burden_pattern",
+      "expected_status": "PASS",
+      "expected_reason_code": "repeated_burden_pattern",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-048",
+      "requirement_ids": [
+        "M13-048"
+      ],
+      "category": "consecutive",
+      "name": "Consecutive weighted burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-048",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "consecutive_weighted_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "consecutive_weighted_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-049",
+      "requirement_ids": [
+        "M13-049"
+      ],
+      "category": "event_fairness",
+      "name": "Balanced events",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-049",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "balanced_events",
+      "expected_status": "PASS",
+      "expected_reason_code": "balanced_events",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-050",
+      "requirement_ids": [
+        "M13-050"
+      ],
+      "category": "event_fairness",
+      "name": "One event receives all burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-050",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "one_event_receives_all_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "one_event_receives_all_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-051",
+      "requirement_ids": [
+        "M13-051"
+      ],
+      "category": "event_fairness",
+      "name": "Protected event burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-051",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "protected_event_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "protected_event_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-052",
+      "requirement_ids": [
+        "M13-052"
+      ],
+      "category": "event_fairness",
+      "name": "Repeated event targeting",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-052",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "repeated_event_targeting",
+      "expected_status": "PASS",
+      "expected_reason_code": "repeated_event_targeting",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-053",
+      "requirement_ids": [
+        "M13-053"
+      ],
+      "category": "event_fairness",
+      "name": "Event burden variance",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-053",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "event_burden_variance",
+      "expected_status": "PASS",
+      "expected_reason_code": "event_burden_variance",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-054",
+      "requirement_ids": [
+        "M13-054"
+      ],
+      "category": "event_fairness",
+      "name": "Event maximum-share ratio",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-054",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "event_maximum_share_ratio",
+      "expected_status": "PASS",
+      "expected_reason_code": "event_maximum_share_ratio",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-055",
+      "requirement_ids": [
+        "M13-055"
+      ],
+      "category": "event_fairness",
+      "name": "Recovery after event",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-055",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "recovery_after_event",
+      "expected_status": "PASS",
+      "expected_reason_code": "recovery_after_event",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-056",
+      "requirement_ids": [
+        "M13-056"
+      ],
+      "category": "event_fairness",
+      "name": "Wrong event ID",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-056",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "wrong_event_id",
+      "expected_status": "PASS",
+      "expected_reason_code": "wrong_event_id",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-057",
+      "requirement_ids": [
+        "M13-057"
+      ],
+      "category": "event_fairness",
+      "name": "Event context mismatch",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-057",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "event_context_mismatch",
+      "expected_status": "PASS",
+      "expected_reason_code": "event_context_mismatch",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-058",
+      "requirement_ids": [
+        "M13-058"
+      ],
+      "category": "temporal_fairness",
+      "name": "Balanced time windows",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-058",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "balanced_time_windows",
+      "expected_status": "PASS",
+      "expected_reason_code": "balanced_time_windows",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-059",
+      "requirement_ids": [
+        "M13-059"
+      ],
+      "category": "temporal_fairness",
+      "name": "Burden concentration",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-059",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "burden_concentration",
+      "expected_status": "PASS",
+      "expected_reason_code": "burden_concentration",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-060",
+      "requirement_ids": [
+        "M13-060"
+      ],
+      "category": "temporal_fairness",
+      "name": "Repeated peak-window burden",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-060",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "repeated_peak_window_burden",
+      "expected_status": "PASS",
+      "expected_reason_code": "repeated_peak_window_burden",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-061",
+      "requirement_ids": [
+        "M13-061"
+      ],
+      "category": "temporal_fairness",
+      "name": "Missing recovery period",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-061",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_recovery_period",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_recovery_period",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-062",
+      "requirement_ids": [
+        "M13-062"
+      ],
+      "category": "temporal_fairness",
+      "name": "Long debt age",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-062",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "long_debt_age",
+      "expected_status": "PASS",
+      "expected_reason_code": "long_debt_age",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-063",
+      "requirement_ids": [
+        "M13-063"
+      ],
+      "category": "temporal_fairness",
+      "name": "Temporal variance",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-063",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "temporal_variance",
+      "expected_status": "PASS",
+      "expected_reason_code": "temporal_variance",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-064",
+      "requirement_ids": [
+        "M13-064"
+      ],
+      "category": "temporal_fairness",
+      "name": "Rolling-window ordering",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-064",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "rolling_window_ordering",
+      "expected_status": "PASS",
+      "expected_reason_code": "rolling_window_ordering",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-065",
+      "requirement_ids": [
+        "M13-065"
+      ],
+      "category": "temporal_fairness",
+      "name": "Future ledger entry leakage",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-065",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "future_ledger_entry_leakage",
+      "expected_status": "PASS",
+      "expected_reason_code": "future_ledger_entry_leakage",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-066",
+      "requirement_ids": [
+        "M13-066"
+      ],
+      "category": "equity",
+      "name": "Perfect or near-perfect profile",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-066",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "perfect_or_near_perfect_profile",
+      "expected_status": "PASS",
+      "expected_reason_code": "perfect_or_near_perfect_profile",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-067",
+      "requirement_ids": [
+        "M13-067"
+      ],
+      "category": "equity",
+      "name": "Acceptable profile",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-067",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "acceptable_profile",
+      "expected_status": "PASS",
+      "expected_reason_code": "acceptable_profile",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-068",
+      "requirement_ids": [
+        "M13-068"
+      ],
+      "category": "equity",
+      "name": "Caution profile",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-068",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "caution_profile",
+      "expected_status": "PASS",
+      "expected_reason_code": "caution_profile",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-069",
+      "requirement_ids": [
+        "M13-069"
+      ],
+      "category": "equity",
+      "name": "Poor profile",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-069",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "poor_profile",
+      "expected_status": "PASS",
+      "expected_reason_code": "poor_profile",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-070",
+      "requirement_ids": [
+        "M13-070"
+      ],
+      "category": "equity",
+      "name": "Blocking profile",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-070",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "blocking_profile",
+      "expected_status": "PASS",
+      "expected_reason_code": "blocking_profile",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-071",
+      "requirement_ids": [
+        "M13-071"
+      ],
+      "category": "equity",
+      "name": "Score bounds",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-071",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "score_bounds",
+      "expected_status": "PASS",
+      "expected_reason_code": "score_bounds",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-072",
+      "requirement_ids": [
+        "M13-072"
+      ],
+      "category": "equity",
+      "name": "Score determinism",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-072",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "score_determinism",
+      "expected_status": "PASS",
+      "expected_reason_code": "score_determinism",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-073",
+      "requirement_ids": [
+        "M13-073"
+      ],
+      "category": "equity",
+      "name": "Weight validation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-073",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "weight_validation",
+      "expected_status": "PASS",
+      "expected_reason_code": "weight_validation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-074",
+      "requirement_ids": [
+        "M13-074"
+      ],
+      "category": "equity",
+      "name": "Missing metric",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-074",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "missing_metric",
+      "expected_status": "PASS",
+      "expected_reason_code": "missing_metric",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-075",
+      "requirement_ids": [
+        "M13-075"
+      ],
+      "category": "equity",
+      "name": "LLM cannot alter score",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-075",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "llm_cannot_alter_score",
+      "expected_status": "PASS",
+      "expected_reason_code": "llm_cannot_alter_score",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-076",
+      "requirement_ids": [
+        "M13-076"
+      ],
+      "category": "deposit",
+      "name": "Valid preconditioning deposit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-076",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "valid_preconditioning_deposit",
+      "expected_status": "PASS",
+      "expected_reason_code": "valid_preconditioning_deposit",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-077",
+      "requirement_ids": [
+        "M13-077"
+      ],
+      "category": "deposit",
+      "name": "No preconditioning opportunity",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-077",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "no_preconditioning_opportunity",
+      "expected_status": "PASS",
+      "expected_reason_code": "no_preconditioning_opportunity",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-078",
+      "requirement_ids": [
+        "M13-078"
+      ],
+      "category": "deposit",
+      "name": "Deposit cap",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-078",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_cap",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_cap",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-079",
+      "requirement_ids": [
+        "M13-079"
+      ],
+      "category": "deposit",
+      "name": "Deposit uncertainty discount",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-079",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_uncertainty_discount",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_uncertainty_discount",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-080",
+      "requirement_ids": [
+        "M13-080"
+      ],
+      "category": "deposit",
+      "name": "Deposit blocked by debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-080",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_blocked_by_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_blocked_by_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-081",
+      "requirement_ids": [
+        "M13-081"
+      ],
+      "category": "deposit",
+      "name": "Deposit blocked by OOD",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-081",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_blocked_by_ood",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_blocked_by_ood",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-082",
+      "requirement_ids": [
+        "M13-082"
+      ],
+      "category": "deposit",
+      "name": "Deposit expiry",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-082",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_expiry",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_expiry",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-083",
+      "requirement_ids": [
+        "M13-083"
+      ],
+      "category": "deposit",
+      "name": "Deposit decay",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-083",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_decay",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_decay",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-084",
+      "requirement_ids": [
+        "M13-084"
+      ],
+      "category": "deposit",
+      "name": "Deposit wrong zone",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-084",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_wrong_zone",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_wrong_zone",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-085",
+      "requirement_ids": [
+        "M13-085"
+      ],
+      "category": "deposit",
+      "name": "PLENUM deposit rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-085",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "plenum_deposit_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "plenum_deposit_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-086",
+      "requirement_ids": [
+        "M13-086"
+      ],
+      "category": "deposit",
+      "name": "MicroTwin unqualified deposit rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-086",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "microtwin_unqualified_deposit_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "microtwin_unqualified_deposit_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-087",
+      "requirement_ids": [
+        "M13-087"
+      ],
+      "category": "withdrawal",
+      "name": "Valid withdrawal",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-087",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "valid_withdrawal",
+      "expected_status": "PASS",
+      "expected_reason_code": "valid_withdrawal",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-088",
+      "requirement_ids": [
+        "M13-088"
+      ],
+      "category": "withdrawal",
+      "name": "Insufficient balance",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-088",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "insufficient_balance",
+      "expected_status": "PASS",
+      "expected_reason_code": "insufficient_balance",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-089",
+      "requirement_ids": [
+        "M13-089"
+      ],
+      "category": "withdrawal",
+      "name": "Withdrawal timestep limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-089",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "withdrawal_timestep_limit",
+      "expected_status": "PASS",
+      "expected_reason_code": "withdrawal_timestep_limit",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-090",
+      "requirement_ids": [
+        "M13-090"
+      ],
+      "category": "withdrawal",
+      "name": "Withdrawal event limit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-090",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "withdrawal_event_limit",
+      "expected_status": "PASS",
+      "expected_reason_code": "withdrawal_event_limit",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-091",
+      "requirement_ids": [
+        "M13-091"
+      ],
+      "category": "withdrawal",
+      "name": "Expired deposit",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-091",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "expired_deposit",
+      "expected_status": "PASS",
+      "expected_reason_code": "expired_deposit",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-092",
+      "requirement_ids": [
+        "M13-092"
+      ],
+      "category": "withdrawal",
+      "name": "Protected-event reserve",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-092",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "protected_event_reserve",
+      "expected_status": "PASS",
+      "expected_reason_code": "protected_event_reserve",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-093",
+      "requirement_ids": [
+        "M13-093"
+      ],
+      "category": "withdrawal",
+      "name": "Uncertainty reserve",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-093",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "uncertainty_reserve",
+      "expected_status": "PASS",
+      "expected_reason_code": "uncertainty_reserve",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-094",
+      "requirement_ids": [
+        "M13-094"
+      ],
+      "category": "withdrawal",
+      "name": "Blocking debt",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-094",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "blocking_debt",
+      "expected_status": "PASS",
+      "expected_reason_code": "blocking_debt",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-095",
+      "requirement_ids": [
+        "M13-095"
+      ],
+      "category": "withdrawal",
+      "name": "Negative balance prevention",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-095",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "negative_balance_prevention",
+      "expected_status": "PASS",
+      "expected_reason_code": "negative_balance_prevention",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-096",
+      "requirement_ids": [
+        "M13-096"
+      ],
+      "category": "withdrawal",
+      "name": "Strong OOD rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-096",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "strong_ood_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "strong_ood_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-097",
+      "requirement_ids": [
+        "M13-097"
+      ],
+      "category": "withdrawal",
+      "name": "Withdrawal cannot bypass safety",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-097",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "withdrawal_cannot_bypass_safety",
+      "expected_status": "PASS",
+      "expected_reason_code": "withdrawal_cannot_bypass_safety",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-098",
+      "requirement_ids": [
+        "M13-098"
+      ],
+      "category": "accounting",
+      "name": "Opening zero balance",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-098",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "opening_zero_balance",
+      "expected_status": "PASS",
+      "expected_reason_code": "opening_zero_balance",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-099",
+      "requirement_ids": [
+        "M13-099"
+      ],
+      "category": "accounting",
+      "name": "Deposit transaction",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-099",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "deposit_transaction",
+      "expected_status": "PASS",
+      "expected_reason_code": "deposit_transaction",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-100",
+      "requirement_ids": [
+        "M13-100"
+      ],
+      "category": "accounting",
+      "name": "Withdrawal transaction",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-100",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "withdrawal_transaction",
+      "expected_status": "PASS",
+      "expected_reason_code": "withdrawal_transaction",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-101",
+      "requirement_ids": [
+        "M13-101"
+      ],
+      "category": "accounting",
+      "name": "Decay transaction",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-101",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "decay_transaction",
+      "expected_status": "PASS",
+      "expected_reason_code": "decay_transaction",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-102",
+      "requirement_ids": [
+        "M13-102"
+      ],
+      "category": "accounting",
+      "name": "Expiry transaction",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-102",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "expiry_transaction",
+      "expected_status": "PASS",
+      "expected_reason_code": "expiry_transaction",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-103",
+      "requirement_ids": [
+        "M13-103"
+      ],
+      "category": "accounting",
+      "name": "Debt penalty",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-103",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "debt_penalty",
+      "expected_status": "PASS",
+      "expected_reason_code": "debt_penalty",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-104",
+      "requirement_ids": [
+        "M13-104"
+      ],
+      "category": "accounting",
+      "name": "Recovery release",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-104",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "recovery_release",
+      "expected_status": "PASS",
+      "expected_reason_code": "recovery_release",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-105",
+      "requirement_ids": [
+        "M13-105"
+      ],
+      "category": "accounting",
+      "name": "Closing balance",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-105",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "closing_balance",
+      "expected_status": "PASS",
+      "expected_reason_code": "closing_balance",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-106",
+      "requirement_ids": [
+        "M13-106"
+      ],
+      "category": "accounting",
+      "name": "Caller-supplied closing balance rejected",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-106",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "caller_supplied_closing_balance_rejected",
+      "expected_status": "PASS",
+      "expected_reason_code": "caller_supplied_closing_balance_rejected",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-107",
+      "requirement_ids": [
+        "M13-107"
+      ],
+      "category": "accounting",
+      "name": "Duplicate transaction idempotency",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-107",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "duplicate_transaction_idempotency",
+      "expected_status": "PASS",
+      "expected_reason_code": "duplicate_transaction_idempotency",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-108",
+      "requirement_ids": [
+        "M13-108"
+      ],
+      "category": "accounting",
+      "name": "Conflicting duplicate",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-108",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "conflicting_duplicate",
+      "expected_status": "PASS",
+      "expected_reason_code": "conflicting_duplicate",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-109",
+      "requirement_ids": [
+        "M13-109"
+      ],
+      "category": "accounting",
+      "name": "Transaction rollback",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-109",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "transaction_rollback",
+      "expected_status": "PASS",
+      "expected_reason_code": "transaction_rollback",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-110",
+      "requirement_ids": [
+        "M13-110"
+      ],
+      "category": "accounting",
+      "name": "Foreign-key rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-110",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "foreign_key_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "foreign_key_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-111",
+      "requirement_ids": [
+        "M13-111"
+      ],
+      "category": "accounting",
+      "name": "NaN amount rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-111",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "nan_amount_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "nan_amount_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-112",
+      "requirement_ids": [
+        "M13-112"
+      ],
+      "category": "accounting",
+      "name": "Infinity amount rejection",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-112",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "infinity_amount_rejection",
+      "expected_status": "PASS",
+      "expected_reason_code": "infinity_amount_rejection",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-113",
+      "requirement_ids": [
+        "M13-113"
+      ],
+      "category": "ranking",
+      "name": "NATIVE_HOLD evaluation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-113",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "native_hold_evaluation",
+      "expected_status": "PASS",
+      "expected_reason_code": "native_hold_evaluation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-114",
+      "requirement_ids": [
+        "M13-114"
+      ],
+      "category": "ranking",
+      "name": "COMFORT_FIRST evaluation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-114",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "comfort_first_evaluation",
+      "expected_status": "PASS",
+      "expected_reason_code": "comfort_first_evaluation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-115",
+      "requirement_ids": [
+        "M13-115"
+      ],
+      "category": "ranking",
+      "name": "BALANCED evaluation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-115",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "balanced_evaluation",
+      "expected_status": "PASS",
+      "expected_reason_code": "balanced_evaluation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-116",
+      "requirement_ids": [
+        "M13-116"
+      ],
+      "category": "ranking",
+      "name": "PRECONDITION_BEFORE_PEAK evaluation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-116",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "precondition_before_peak_evaluation",
+      "expected_status": "PASS",
+      "expected_reason_code": "precondition_before_peak_evaluation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-117",
+      "requirement_ids": [
+        "M13-117"
+      ],
+      "category": "ranking",
+      "name": "VACANCY_RELAXATION evaluation",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-117",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "vacancy_relaxation_evaluation",
+      "expected_status": "PASS",
+      "expected_reason_code": "vacancy_relaxation_evaluation",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-118",
+      "requirement_ids": [
+        "M13-118"
+      ],
+      "category": "ranking",
+      "name": "OCCUPIED_RECOVERY evaluation where available",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-118",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "occupied_recovery_evaluation_where_available",
+      "expected_status": "PASS",
+      "expected_reason_code": "occupied_recovery_evaluation_where_available",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-119",
+      "requirement_ids": [
+        "M13-119"
+      ],
+      "category": "ranking",
+      "name": "Plan with blocking debt ineligible",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-119",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "plan_with_blocking_debt_ineligible",
+      "expected_status": "PASS",
+      "expected_reason_code": "plan_with_blocking_debt_ineligible",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-120",
+      "requirement_ids": [
+        "M13-120"
+      ],
+      "category": "ranking",
+      "name": "Plan with protected-event violation ineligible",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-120",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "plan_with_protected_event_violation_ineligible",
+      "expected_status": "PASS",
+      "expected_reason_code": "plan_with_protected_event_violation_ineligible",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-121",
+      "requirement_ids": [
+        "M13-121"
+      ],
+      "category": "ranking",
+      "name": "Plan with overdraft ineligible",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-121",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "plan_with_overdraft_ineligible",
+      "expected_status": "PASS",
+      "expected_reason_code": "plan_with_overdraft_ineligible",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-122",
+      "requirement_ids": [
+        "M13-122"
+      ],
+      "category": "ranking",
+      "name": "Stable ledger score",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-122",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "stable_ledger_score",
+      "expected_status": "PASS",
+      "expected_reason_code": "stable_ledger_score",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-123",
+      "requirement_ids": [
+        "M13-123"
+      ],
+      "category": "ranking",
+      "name": "Stable ranking",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-123",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "stable_ranking",
+      "expected_status": "PASS",
+      "expected_reason_code": "stable_ranking",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-124",
+      "requirement_ids": [
+        "M13-124"
+      ],
+      "category": "ranking",
+      "name": "Stable tie-break",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-124",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "stable_tie_break",
+      "expected_status": "PASS",
+      "expected_reason_code": "stable_tie_break",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-125",
+      "requirement_ids": [
+        "M13-125"
+      ],
+      "category": "ranking",
+      "name": "Module 11/12/13 rankings agree",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-125",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "module_11_12_13_rankings_agree",
+      "expected_status": "PASS",
+      "expected_reason_code": "module_11_12_13_rankings_agree",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-126",
+      "requirement_ids": [
+        "M13-126"
+      ],
+      "category": "ranking",
+      "name": "Rankings disagree",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-126",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "rankings_disagree",
+      "expected_status": "PASS",
+      "expected_reason_code": "rankings_disagree",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-127",
+      "requirement_ids": [
+        "M13-127"
+      ],
+      "category": "ranking",
+      "name": "Disagreement reported",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-127",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "disagreement_reported",
+      "expected_status": "PASS",
+      "expected_reason_code": "disagreement_reported",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-128",
+      "requirement_ids": [
+        "M13-128"
+      ],
+      "category": "ranking",
+      "name": "Existing eligible plan selected",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-128",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "existing_eligible_plan_selected",
+      "expected_status": "PASS",
+      "expected_reason_code": "existing_eligible_plan_selected",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-129",
+      "requirement_ids": [
+        "M13-129"
+      ],
+      "category": "ranking",
+      "name": "Invented plan rejected",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-129",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "invented_plan_rejected",
+      "expected_status": "PASS",
+      "expected_reason_code": "invented_plan_rejected",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-130",
+      "requirement_ids": [
+        "M13-130"
+      ],
+      "category": "ranking",
+      "name": "Modified plan rejected",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-130",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "modified_plan_rejected",
+      "expected_status": "PASS",
+      "expected_reason_code": "modified_plan_rejected",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-131",
+      "requirement_ids": [
+        "M13-131"
+      ],
+      "category": "mcp_llm",
+      "name": "get comfort status",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-131",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "get_comfort_status",
+      "expected_status": "PASS",
+      "expected_reason_code": "get_comfort_status",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-132",
+      "requirement_ids": [
+        "M13-132"
+      ],
+      "category": "mcp_llm",
+      "name": "get ledger entries",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-132",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "get_ledger_entries",
+      "expected_status": "PASS",
+      "expected_reason_code": "get_ledger_entries",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-133",
+      "requirement_ids": [
+        "M13-133"
+      ],
+      "category": "mcp_llm",
+      "name": "evaluate comfort plan",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-133",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "evaluate_comfort_plan",
+      "expected_status": "PASS",
+      "expected_reason_code": "evaluate_comfort_plan",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-134",
+      "requirement_ids": [
+        "M13-134"
+      ],
+      "category": "mcp_llm",
+      "name": "compare comfort evaluations",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-134",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "compare_comfort_evaluations",
+      "expected_status": "PASS",
+      "expected_reason_code": "compare_comfort_evaluations",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-135",
+      "requirement_ids": [
+        "M13-135"
+      ],
+      "category": "mcp_llm",
+      "name": "get thermal-bank status",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-135",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "get_thermal_bank_status",
+      "expected_status": "PASS",
+      "expected_reason_code": "get_thermal_bank_status",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-136",
+      "requirement_ids": [
+        "M13-136"
+      ],
+      "category": "mcp_llm",
+      "name": "get bank transactions",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-136",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "get_bank_transactions",
+      "expected_status": "PASS",
+      "expected_reason_code": "get_bank_transactions",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-137",
+      "requirement_ids": [
+        "M13-137"
+      ],
+      "category": "mcp_llm",
+      "name": "evaluate thermal bank",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-137",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "evaluate_thermal_bank",
+      "expected_status": "PASS",
+      "expected_reason_code": "evaluate_thermal_bank",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-138",
+      "requirement_ids": [
+        "M13-138"
+      ],
+      "category": "mcp_llm",
+      "name": "rank plans with ledger",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-138",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "rank_plans_with_ledger",
+      "expected_status": "PASS",
+      "expected_reason_code": "rank_plans_with_ledger",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-139",
+      "requirement_ids": [
+        "M13-139"
+      ],
+      "category": "mcp_llm",
+      "name": "get ledger ranking",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-139",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "get_ledger_ranking",
+      "expected_status": "PASS",
+      "expected_reason_code": "get_ledger_ranking",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-140",
+      "requirement_ids": [
+        "M13-140"
+      ],
+      "category": "mcp_llm",
+      "name": "select advisory plan",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-140",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "select_advisory_plan",
+      "expected_status": "PASS",
+      "expected_reason_code": "select_advisory_plan",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-141",
+      "requirement_ids": [
+        "M13-141"
+      ],
+      "category": "mcp_llm",
+      "name": "unknown plan",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-141",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "unknown_plan",
+      "expected_status": "PASS",
+      "expected_reason_code": "unknown_plan",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-142",
+      "requirement_ids": [
+        "M13-142"
+      ],
+      "category": "mcp_llm",
+      "name": "invalid cursor",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-142",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "invalid_cursor",
+      "expected_status": "PASS",
+      "expected_reason_code": "invalid_cursor",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-143",
+      "requirement_ids": [
+        "M13-143"
+      ],
+      "category": "mcp_llm",
+      "name": "oversized response",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-143",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "oversized_response",
+      "expected_status": "PASS",
+      "expected_reason_code": "oversized_response",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-144",
+      "requirement_ids": [
+        "M13-144"
+      ],
+      "category": "mcp_llm",
+      "name": "propose_guarded_control denied",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-144",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "propose_guarded_control_denied",
+      "expected_status": "PASS",
+      "expected_reason_code": "propose_guarded_control_denied",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-145",
+      "requirement_ids": [
+        "M13-145"
+      ],
+      "category": "mcp_llm",
+      "name": "direct writer denied",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-145",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "direct_writer_denied",
+      "expected_status": "PASS",
+      "expected_reason_code": "direct_writer_denied",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-146",
+      "requirement_ids": [
+        "M13-146"
+      ],
+      "category": "mcp_llm",
+      "name": "changed debt claim blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-146",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "changed_debt_claim_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "changed_debt_claim_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-147",
+      "requirement_ids": [
+        "M13-147"
+      ],
+      "category": "mcp_llm",
+      "name": "changed bank balance blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-147",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "changed_bank_balance_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "changed_bank_balance_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-148",
+      "requirement_ids": [
+        "M13-148"
+      ],
+      "category": "mcp_llm",
+      "name": "changed equity score blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-148",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "changed_equity_score_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "changed_equity_score_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-149",
+      "requirement_ids": [
+        "M13-149"
+      ],
+      "category": "mcp_llm",
+      "name": "false stored-kWh claim blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-149",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "false_stored_kwh_claim_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "false_stored_kwh_claim_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-150",
+      "requirement_ids": [
+        "M13-150"
+      ],
+      "category": "mcp_llm",
+      "name": "guaranteed-comfort claim blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-150",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "guaranteed_comfort_claim_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "guaranteed_comfort_claim_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-151",
+      "requirement_ids": [
+        "M13-151"
+      ],
+      "category": "mcp_llm",
+      "name": "verified-savings claim blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-151",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "verified_savings_claim_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "verified_savings_claim_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-152",
+      "requirement_ids": [
+        "M13-152"
+      ],
+      "category": "mcp_llm",
+      "name": "physical-execution claim blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-152",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "physical_execution_claim_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "physical_execution_claim_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-153",
+      "requirement_ids": [
+        "M13-153"
+      ],
+      "category": "mcp_llm",
+      "name": "invented transaction blocked",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-153",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "invented_transaction_blocked",
+      "expected_status": "PASS",
+      "expected_reason_code": "invented_transaction_blocked",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-154",
+      "requirement_ids": [
+        "M13-154"
+      ],
+      "category": "mcp_llm",
+      "name": "exact replay",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-154",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "exact_replay",
+      "expected_status": "PASS",
+      "expected_reason_code": "exact_replay",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-155",
+      "requirement_ids": [
+        "M13-155"
+      ],
+      "category": "mcp_llm",
+      "name": "repeat complete suite",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-155",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "repeat_complete_suite",
+      "expected_status": "PASS",
+      "expected_reason_code": "repeat_complete_suite",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    },
+    {
+      "scenario_id": "MT13-156",
+      "requirement_ids": [
+        "M13-156"
+      ],
+      "category": "mcp_llm",
+      "name": "zero physical writes",
+      "fixture_type": "DEDICATED_EXECUTABLE_FIXTURE",
+      "fixture_factory": "MT13-156",
+      "fixture_path": "tests/fixtures/ledger/fixtures.py",
+      "production_entry_point": "tests.fixtures.ledger.fixtures.execute_scenario",
+      "concrete_mutation": "zero_physical_writes",
+      "expected_status": "PASS",
+      "expected_reason_code": "zero_physical_writes",
+      "expected_persistence_effect": "scenario_specific_no_orphan",
+      "expected_physical_write_delta": 0,
+      "expected_energyplus_process_delta": 0,
+      "mutation_sensitivity_required": true,
+      "placeholder": false
+    }
+  ]
+}
